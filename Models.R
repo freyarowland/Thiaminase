@@ -25,7 +25,6 @@ library(lme4)
 library(rstanarm)
 library(ggplot2)
 library(bayesplot)
-#library(easystats)
 library(ggrepel)
 library(bayestestR)
 library(ggridges)
@@ -397,11 +396,12 @@ color_scheme_set("red")
 ppc_dens_overlay(y = allfit$y,
                  yrep = posterior_predict(allfit, draws = 50))
 
-# look at posterior distributions
-library("dplyr")
-color_scheme_set("brightblue")
-allfit %>%
-  posterior_predict(draws = 500) %>%
-  ppc_stat_grouped(y = dat2$Thiaminase,
-                   group = dat2$Omega3,
-                   stat = "median")
+
+## look at climate vs. PUFA
+ggplot(dat2, aes(x = Region, y = Omega3, fill = Continent, label = ï..Common)) +
+  geom_jitter(width = 0.05, size = 4, pch = 21, alpha = 0.7) +
+  scale_fill_viridis_d() + 
+  theme_bw(base_size = 16) +
+  xlab("Climate region") +
+  geom_label_repel(alpha = 0.5)
+
