@@ -33,6 +33,22 @@ library(dplyr)
 library(modelr)
 library(shinystan)
 
+# summarize data
+dat2 %>%
+  group_by(Climate)  %>%
+  summarize(total = sum(Thiaminase == 1 | Thiaminase == 0, na.rm = TRUE),
+            thiaminase_pos = sum(Thiaminase == 1, na.rm = TRUE),
+            marine = sum(Marine == 1, na.rm = TRUE),
+            fresh = sum(Marine == 0, na.rm = TRUE),
+            marine_pos = sum(Marine == 1 & Thiaminase == 1, na.rm = TRUE),
+            avg_size = mean(MaxTL, na.rm = TRUE),
+            CV_size = sd(MaxTL, na.rm = TRUE)/mean(MaxTL, na.rm = TRUE)*100,
+            avg_age = mean(MaxAge, na.rm = TRUE),
+            CV_age = sd(MaxAge, na.rm = TRUE)/mean(MaxAge, na.rm = TRUE)*100,
+            benthic = sum(Habitat2 == "BE"),
+            benthopelagic = sum(Habitat2 == "BP"),
+            pelagic = sum(Habitat2 == "PE"))
+
 # habitat and relationship to trophic level?
 ggplot(data = dat2) +
   #geom_jitter(height = 0.05, width = 0.05) +
@@ -436,7 +452,7 @@ ppc_dens_overlay(y = allfit$y,
                  yrep = posterior_predict(allfit, draws = 50))
 
 
-## look at climate vs. PUFA
+## look at climate vs. PUFA ----
 ggplot(dat2, aes(x = Climate, y = Omega3, fill = Continent, label = ï..Common)) +
   geom_jitter(width = 0.05, size = 4, pch = 21, alpha = 0.7) +
   scale_fill_viridis_d() + 
@@ -444,3 +460,6 @@ ggplot(dat2, aes(x = Climate, y = Omega3, fill = Continent, label = ï..Common))
   xlab("Climate region") +
   geom_label_repel(alpha = 0.5)
 
+pufa_mod <- aov(Omega3 ~ Tropical, data = dat2)
+summary(pufa_mod)
+TukeyHSD(pufa_mod, conf.level= 0.95)
