@@ -1,7 +1,7 @@
 # thiaminase
 
 # load data
-dat <- read.csv("RileyEvans2008Redo.csv", header = TRUE)
+#dat <- read.csv("RileyEvans2008Redo.csv", header = TRUE)
 dat2 <- read.csv("AllData.csv", header = TRUE)
 
 str(dat2)
@@ -14,8 +14,8 @@ dat2$Order <- as.factor(dat2$Order)
 dat2$Tropical <- as.factor(dat2$Tropical)
 
 # separate marine and freshwater
-fresh <- subset(dat, Marine == 0)
-salt <- subset(dat, Marine == 1)
+# fresh <- subset(dat, Marine == 0)
+# salt <- subset(dat, Marine == 1)
 
 fresh2 <- subset(dat2, Marine == 0)
 salt2 <- subset(dat2, Marine == 1)
@@ -31,6 +31,7 @@ library(ggridges)
 library(tidybayes)
 library(dplyr)
 library(modelr)
+library(shinystan)
 
 # habitat and relationship to trophic level?
 ggplot(data = dat2) +
@@ -125,9 +126,9 @@ describe_posterior(
 summary(fit1, digits = 3)
 summary(fit1_fresh, digits = 3)
 summary(fit1_salt, digits = 3)
-round(posterior_interval(fit1, prob = 0.99), digits = 3)
-round(posterior_interval(fit1_fresh, prob = 0.99), digits = 3)
-round(posterior_interval(fit1_salt, prob = 0.99), digits = 3)
+round(posterior_interval(fit1, prob = 0.95), digits = 3)
+round(posterior_interval(fit1_fresh, prob = 0.95), digits = 3)
+round(posterior_interval(fit1_salt, prob = 0.95), digits = 3)
 
 # calculate probabilities
 logit2prob <- function(logit){
@@ -147,9 +148,9 @@ pr_thia <- function(x, ests) plogis(ests[1] + ests[2] * x)
 #   geom_point(aes_string(...), position = position_jitter(height = 0.05, width = 0.1),
 #              size = 2, shape = 21, stroke = 0.2)
 # }
-dat2 %>%
-  data_grid(TL_fooditems = seq_range(TL_fooditems, n = 51)) %>%
-  add_predicted_draws(fit1) %>%
+#dat2 %>%
+  #data_grid(TL_fooditems = seq_range(TL_fooditems, n = 51)) %>%
+  #add_predicted_draws(fit1) %>%
   ggplot(dat2, aes(x = TL_fooditems, y = Thiaminase, fill = Continent, label = ï..Common)) +
   scale_y_continuous(breaks = c(0, 0.5, 1)) +
   geom_jitter(height = 0.02, width = 0.02, size = 4, pch = 21, alpha = 0.7) +
@@ -167,28 +168,55 @@ dat2 %>%
 
 
 
-## add in PUFA age ----
-fit2 <- update(fit1, formula = Thiaminase ~ TL_fooditems + Omega3)
-(coef_fit2 <- round(coef(fit2), 3))
+## add in PUFA ----
+  
+# make separate salty figure
+fit2_salt <- update(fit1_salt, formula = Thiaminase ~ TL_fooditems + Omega3)
+(coef_fit2 <- round(coef(fit2_salt), 3))
 
 pr_thia2 <- function(x, y, ests) plogis(ests[1] + ests[2] * x + ests[3] * y)
 grid <- expand.grid(TL_fooditems = seq(2, 5, length.out = 100),
                     Omega3 = seq(0, 3, length.out = 100))
-grid$prob <- with(grid, pr_thia2(TL_fooditems, Omega3, coef(fit2)))
+grid$prob <- with(grid, pr_thia2(TL_fooditems, Omega3, coef(fit2_salt)))
 
 ggplot(grid, aes(x = TL_fooditems, y = Omega3)) +
   geom_tile(aes(fill = prob)) +
-  geom_point(data = dat2, aes(color = factor(Continent), label = ï..Common), size = 3) +
-  #geom_point(data = dat2, aes(color = factor(Thiaminase), label = ï..Common), size = 3) +
+  #geom_point(data = salt2, aes(color = factor(Continent), label = ï..Common), size = 3) +
+  geom_point(data = salt2, aes(color = factor(Thiaminase), label = ï..Common), size = 3) +
   #geom_point(data = dat2, aes(color = Tropical, label = ï..Common), size = 3) +
-  scale_fill_gradient(low = "#e0ecf4", high = "#8856a7") +
+  scale_fill_gradient(low = "#e5f5e0", high = "#31a354") +
   theme_bw(base_size = 16) +
-  #scale_color_manual("Thiaminase", values = c("white", "black"), labels = c("No", "Yes")) +
+  scale_color_manual("Thiaminase", values = c("white", "black"), labels = c("No", "Yes")) +
   xlab("Trophic level estimate") +
-  scale_color_viridis_d() +
+  #scale_color_viridis_d() +
   ylab("PUFA concentration (g/100 g)") +
-  geom_text_repel(aes(label = ï..Common), data = dat2)
+  geom_text_repel(aes(label = ï..Common), data = salt2)
 
+
+
+
+
+# make separate freshwater figure
+fit2_fresh <- update(fit1_fresh, formula = Thiaminase ~ TL_fooditems + Omega3)
+(coef_fit2 <- round(coef(fit2_fresh), 3))
+
+pr_thia2 <- function(x, y, ests) plogis(ests[1] + ests[2] * x + ests[3] * y)
+grid <- expand.grid(TL_fooditems = seq(2, 5, length.out = 100),
+                    Omega3 = seq(0, 3, length.out = 100))
+grid$prob <- with(grid, pr_thia2(TL_fooditems, Omega3, coef(fit2_fresh)))
+
+ggplot(grid, aes(x = TL_fooditems, y = Omega3)) +
+  geom_tile(aes(fill = prob)) +
+  #geom_point(data = salt2, aes(color = factor(Continent), label = ï..Common), size = 3) +
+  geom_point(data = fresh2, aes(color = factor(Thiaminase), label = ï..Common), size = 3) +
+  #geom_point(data = dat2, aes(color = Tropical, label = ï..Common), size = 3) +
+  scale_fill_gradient(low = "#deebf7", high = "#3182bd") +
+  theme_bw(base_size = 16) +
+  scale_color_manual("Thiaminase", values = c("white", "black"), labels = c("No", "Yes")) +
+  xlab("Trophic level estimate") +
+  #scale_color_viridis_d() +
+  ylab("PUFA concentration (g/100 g)") +
+  geom_text_repel(aes(label = ï..Common), data = fresh2)
 
 
 
@@ -368,15 +396,26 @@ allfit <- stan_glm(
 
 summary(allfit)
 
+# check fit
+loo(allfit) # good
+
+# look at model fit with shiny stan
+launch_shinystan(allfit)
+
+
+# plot of posteriors
 posterior <- as.matrix(allfit)
 
 # plot it
 plot_title <- ggtitle("Posterior distributions",
                       "with medians and 95% intervals")
-mcmc_areas(posterior,
+multreg_plot <- mcmc_areas(posterior,
            pars = c("TL_fooditems", "Omega3", "Marine1", 
                     "Tropical1", "scale(MaxTL)", "Invasive", "Habitat2BP", "Habitat2PE"),
-           prob = 0.95) + plot_title
+           prob = 0.95) + 
+  plot_title +
+  theme_bw(base_size = 16) +
+  geom_vline(xintercept=0, linetype = "dashed", colour = "gray50")
 
 
 # calculate probabilities
@@ -398,7 +437,7 @@ ppc_dens_overlay(y = allfit$y,
 
 
 ## look at climate vs. PUFA
-ggplot(dat2, aes(x = Region, y = Omega3, fill = Continent, label = ï..Common)) +
+ggplot(dat2, aes(x = Climate, y = Omega3, fill = Continent, label = ï..Common)) +
   geom_jitter(width = 0.05, size = 4, pch = 21, alpha = 0.7) +
   scale_fill_viridis_d() + 
   theme_bw(base_size = 16) +
