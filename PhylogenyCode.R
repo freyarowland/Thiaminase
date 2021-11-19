@@ -11,15 +11,103 @@ my.tree <- read.tree('fishorder_skeletal.tre')
 d <- cophenetic(my.tree)
 d
 
-# plot tree
-plot(my.tree, edge.width = 2)
+# compute total tree height
+h <- max(nodeHeights(my.tree))
 
-# drop off orders I don't have?
-# get names of tips
-my.tree$tip.label
+# plot tree
+plot(my.tree, edge.width = 1)
+plot(my.tree, font = 1, cex = 0.45)
+
+# generate sampling points
+interval <- 30 # every 30 million years
+dd <- seq(h,0, by =-interval)
+
+# plot with millions of years
+plotTree(my.tree, mar = c(5.1, 4.1, 1.1, 1.1), cex = 0.35)
+axis(1)
+xlab("Millions of years")
+abline(v = dd, lty = "dotted", col = "grey")
 
 # trim a phylogeny
-drop.tip
+# drop.tip
+no_data <- c("Acanthuriformes", "Alepocephaliformes",
+             "Argentiniformes", "Ateleopodiformes",
+             "Beryciformes", "Ephippiformes",
+             "Galaxiiformes", "Hiodontiformes",
+             "Istiophoriformes", "Lampridiformes",
+             "Lepidogalaxiiformes", "Myctophiformes",
+             "Notacanthiformes", "Pempheriformes",
+             "Percopsiformes", "Pholidichthyiformes",
+             "Polymixiiformes", "Spariformes",
+             "Stomiatiformes", "Stylephoriformes",
+             "Uranoscopiformes", "Zeiformes")
+plot(drop.tip(fish.tree, no_data))
+
+# pruned tree
+my.tree$tip.label
+
+# taxa to keep
+keep_taxa <- c("Polypteriformes", "Acipenseriformes",
+                "Lepisosteiformes", "Amiiformes",
+                "Elopiformes", "Anguilliformes",
+                "Albuliformes", "Osteoglossiformes",
+                "Clupeiformes", "Gonorynchiformes",
+                "Cypriniformes", "Gymnotiformes",
+                "Siluriformes", "Characiformes",
+                "Salmoniformes", "Esociformes",
+                "Osmeriformes", "Aulopiformes",
+                "Gadiformes", "Holocentriformes",
+                "Ophidiiformes", "Batrachoidiformes",
+                "Labriformes", "Tetraodontiformes",
+                "Lophiiformes", "Incertae_sedis_in_Eupercaria",
+                "Perciformes", "Centrarchiformes",
+                "Gobiiformes", "Kurtiformes",
+                "Syngnathiformes", "Pleuronectiformes",
+                "Incertae_sedis_in_Carangaria", 
+                "Carangiformes", "Mugiliformes",
+                "Incertae_sedis_in_Ovalentaria",
+                "Cichliformes", "Scombriformes",
+                "Atheriniformes", "Cyprinodontiformes",
+                "Beloniformes", "Synbranchiformes")
+
+# check to see which taxa are being removed
+setdiff(my.tree$tip.label, keep_taxa)      
+
+# remove
+remove_taxa <- setdiff(my.tree$tip.label, keep_taxa)
+
+# pruned tree
+pruned_tree <- drop.tip(my.tree, remove_taxa)
+pruned_tree$tip.label
+
+# get tree statistics ----
+summary(pruned_tree)
+
+# how to plot with thiaminase presence/absence ----
+fish.tree<-read.tree("fishorder_skeletal.tre")
+fish.data<-read.csv("OrderPresAbsNA.csv",row.names=1)
+fmode<-as.factor(setNames(fish.data[,1],rownames(fish.data)))
+dotTree(drop.tip(fish.tree, no_data),
+        fmode,
+        colors=setNames(c("white","red"),
+                                       c("absent","present")),
+        legend = FALSE,
+        edge.width = 1,
+        ftype="i",
+        fsize=0.55,
+        mar = c(5.1, 4.1, 1.1, 1.1), cex = 0.55)
+axis(1)
+
+# make simulation of probability of thiaminase ----
+# equal probability across the whole tree? LOL
+thia.trees<-make.simmap(drop.tip(fish.tree, no_data),
+                        fmode,
+                        nsim=200)
+obj<-densityMap(thia.trees,states=c("present","absent"),plot=FALSE)
+plot(obj,lwd=4,outline=TRUE,fsize=c(0.7,0.9),legend=50)
+
+
+
 
 # infer the number of times a character evolved
 make.simmmap

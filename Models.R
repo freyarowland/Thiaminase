@@ -14,13 +14,10 @@ dat2$Order <- as.factor(dat2$Order)
 dat2$Tropical <- as.factor(dat2$Tropical)
 
 # separate marine and freshwater
-# fresh <- subset(dat, Marine == 0)
-# salt <- subset(dat, Marine == 1)
-
 fresh2 <- subset(dat2, Marine == 0)
 salt2 <- subset(dat2, Marine == 1)
 
-# logistic regression
+# libraries
 library(lme4)
 library(rstanarm)
 library(ggplot2)
@@ -32,6 +29,10 @@ library(tidybayes)
 library(dplyr)
 library(modelr)
 library(shinystan)
+
+# get orders that are thiaminase positive
+plus <- subset(dat2, Thiaminase == 1)
+summary(plus$Order)
 
 # summarize data
 dat2 %>%
@@ -463,3 +464,4 @@ ggplot(dat2, aes(x = Climate, y = Omega3, fill = Continent, label = ï..Common))
 pufa_mod <- aov(Omega3 ~ Tropical, data = dat2)
 summary(pufa_mod)
 TukeyHSD(pufa_mod, conf.level= 0.95)
+
