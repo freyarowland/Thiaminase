@@ -7,6 +7,7 @@ library(phytools)
 # read in the data from https://fishtreeoflife.org/taxonomy/
 my.tree <- read.tree('fishorder_skeletal.tre')
 
+
 # pairwise taxa-taxa distance matrix
 d <- cophenetic(my.tree)
 d
@@ -98,6 +99,9 @@ dotTree(drop.tip(fish.tree, no_data),
         mar = c(5.1, 4.1, 1.1, 1.1), cex = 0.55)
 axis(1)
 
+## anova
+phylANOVA(y = pruned_tree, x = fmode, nsim = 200, posthoc = TRUE, p.adj = "holm")
+
 # make simulation of probability of thiaminase ----
 # equal probability across the whole tree? LOL
 thia.trees<-make.simmap(drop.tip(fish.tree, no_data),
@@ -106,13 +110,19 @@ thia.trees<-make.simmap(drop.tip(fish.tree, no_data),
 obj<-densityMap(thia.trees,states=c("present","absent"),plot=FALSE)
 plot(obj,lwd=4,outline=TRUE,fsize=c(0.7,0.9),legend=50)
 
+# stochastic mapping ----
+smap.trees <- make.simmap(pruned_tree, fmode, 
+                          model = "ER", nsim = 100)
+summary(smap.trees)
 
+cols <- setNames(c("red", "black"), c("present", "absent"))
+plot(summary(smap.trees))
+legend("topleft", c("present", "absent"),
+       pch = 21, pt.bg = cols, pt.cex = 2)
 
-
-# infer the number of times a character evolved
-make.simmmap
 
 # visualize MCC using function plotTree.wBars in the R package phytools
+# this is if have continuous something
 
 # phylogenetic ANOVA to test for difference in body size using
 # phy.anova in geiger package
