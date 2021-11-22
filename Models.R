@@ -17,6 +17,9 @@ dat2$Tropical <- as.factor(dat2$Tropical)
 fresh2 <- subset(dat2, Marine == 0)
 salt2 <- subset(dat2, Marine == 1)
 
+nontrop2 <- subset(nontrop, Marine == 0)
+saltnontrop2 <- subset(nontrop, Marine == 1)
+
 # libraries
 library(lme4)
 library(rstanarm)
@@ -33,6 +36,9 @@ library(shinystan)
 # get orders that are thiaminase positive
 plus <- subset(dat2, Thiaminase == 1)
 summary(plus$Order)
+
+# subset data for only non-tropical
+nontrop <- subset(dat2, Tropical == 0)
 
 # summarize data
 dat2 %>%
@@ -105,6 +111,23 @@ fit1_fresh <- stan_glm(Thiaminase ~ TL_fooditems, data = fresh2,
                        cores = 2, seed = 12345)
 
 fit1_salt <- stan_glm(Thiaminase ~ TL_fooditems, data = salt2,
+                      family = binomial(link = "logit"),
+                      prior = t_prior, prior_intercept = t_prior,
+                      cores = 2, seed = 12345)
+
+# non tropical only
+t_prior <- student_t(df = 7, location = 0, scale = 2.5)
+fit1 <- stan_glm(Thiaminase ~ TL_fooditems, data = nontrop,
+                 family = binomial(link = "logit"),
+                 prior = t_prior, prior_intercept = t_prior,
+                 cores = 2, seed = 12345)
+
+fit1_fresh <- stan_glm(Thiaminase ~ TL_fooditems, data = nontrop2,
+                       family = binomial(link = "logit"),
+                       prior = t_prior, prior_intercept = t_prior,
+                       cores = 2, seed = 12345)
+
+fit1_salt <- stan_glm(Thiaminase ~ TL_fooditems, data = saltnontrop2,
                       family = binomial(link = "logit"),
                       prior = t_prior, prior_intercept = t_prior,
                       cores = 2, seed = 12345)
