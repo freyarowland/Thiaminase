@@ -7,13 +7,14 @@ library(phytools)
 # read in the data from https://fishtreeoflife.org/taxonomy/
 my.tree <- read.tree('fishorder_skeletal.tre')
 
-
 # pairwise taxa-taxa distance matrix
 d <- cophenetic(my.tree)
 d
 
+
 # compute total tree height
 h <- max(nodeHeights(my.tree))
+
 
 # plot tree
 plot(my.tree, edge.width = 1)
@@ -99,8 +100,9 @@ dotTree(drop.tip(fish.tree, no_data),
         mar = c(5.1, 4.1, 1.1, 1.1), cex = 0.55)
 axis(1)
 
-## anova
-phylANOVA(y = pruned_tree, x = fmode, nsim = 200, posthoc = TRUE, p.adj = "holm")
+## anova ----
+# won't work because response is yes/no
+phylANOVA(tree = pruned_tree, x= pruned_tree$tip.label, y = fmode, nsim = 200, posthoc = TRUE, p.adj = "holm")
 
 # make simulation of probability of thiaminase ----
 # equal probability across the whole tree? LOL
