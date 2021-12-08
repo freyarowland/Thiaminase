@@ -191,7 +191,7 @@ pr_thia <- function(x, ests) plogis(ests[1] + ests[2] * x)
 #dat2 %>%
   #data_grid(TL_fooditems = seq_range(TL_fooditems, n = 51)) %>%
   #add_predicted_draws(fit1) %>%
-  ggplot(dat2, aes(x = TL_fooditems, y = Thiaminase, fill = Continent, label = ï..Common)) +
+  ggplot(nontrop, aes(x = TL_fooditems, y = Thiaminase, fill = Continent, label = ï..Common)) +
   scale_y_continuous(breaks = c(0, 0.5, 1)) +
   geom_jitter(height = 0.02, width = 0.02, size = 4, pch = 21, alpha = 0.7) +
   #jitt(x="TrophicLevelEst") +
@@ -323,6 +323,23 @@ fit1_salt <- stan_glm(Thiaminase ~ Omega3, data = salt2,
                       prior = t_prior, prior_intercept = t_prior,
                       cores = 2, seed = 12345)
 
+## non tropical 
+t_prior <- student_t(df = 7, location = 0, scale = 2.5)
+fit1 <- stan_glm(Thiaminase ~ Omega3, data = nontrop,
+                 family = binomial(link = "logit"),
+                 prior = t_prior, prior_intercept = t_prior,
+                 cores = 2, seed = 12345)
+
+fit1_fresh <- stan_glm(Thiaminase ~ Omega3, data = nontrop2,
+                       family = binomial(link = "logit"),
+                       prior = t_prior, prior_intercept = t_prior,
+                       cores = 2, seed = 12345)
+
+fit1_salt <- stan_glm(Thiaminase ~ Omega3, data = saltnontrop2,
+                      family = binomial(link = "logit"),
+                      prior = t_prior, prior_intercept = t_prior,
+                      cores = 2, seed = 12345)
+
 # explore fit
 fit1_loo <- loo(fit1)
 fit1_fresh_loo <- loo(fit1_fresh)
@@ -382,7 +399,7 @@ pr_thia <- function(x, ests) plogis(ests[1] + ests[2] * x)
 #   geom_point(aes_string(...), position = position_jitter(height = 0.05, width = 0.1),
 #              size = 2, shape = 21, stroke = 0.2)
 # }
-ggplot(dat2, aes(x = Omega3, y = Thiaminase, fill = Continent, label = ï..Common)) +
+ggplot(nontrop, aes(x = Omega3, y = Thiaminase, fill = Continent, label = ï..Common)) +
   scale_y_continuous(breaks = c(0, 0.5, 1)) +
   geom_jitter(height = 0.02, width = 0.02, size = 4, pch = 21, alpha = 0.7) +
   #geom_point(data = dat2, size = 3) +
