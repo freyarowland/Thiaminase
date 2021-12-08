@@ -1,7 +1,6 @@
 # thiaminase
 
 # load data
-#dat <- read.csv("RileyEvans2008Redo.csv", header = TRUE)
 dat2 <- read.csv("AllData.csv", header = TRUE)
 
 str(dat2)
@@ -47,14 +46,14 @@ dat2 %>%
             thiaminase_pos = sum(Thiaminase == 1, na.rm = TRUE),
             marine = sum(Marine == 1, na.rm = TRUE),
             fresh = sum(Marine == 0, na.rm = TRUE),
-            marine_pos = sum(Marine == 1 & Thiaminase == 1, na.rm = TRUE),
+            #marine_pos = sum(Marine == 1 & Thiaminase == 1, na.rm = TRUE),
             avg_size = mean(MaxTL, na.rm = TRUE),
-            CV_size = sd(MaxTL, na.rm = TRUE)/mean(MaxTL, na.rm = TRUE)*100,
-            avg_age = mean(MaxAge, na.rm = TRUE),
-            CV_age = sd(MaxAge, na.rm = TRUE)/mean(MaxAge, na.rm = TRUE)*100,
-            benthic = sum(Habitat2 == "BE"),
-            benthopelagic = sum(Habitat2 == "BP"),
-            pelagic = sum(Habitat2 == "PE"))
+            #CV_size = sd(MaxTL, na.rm = TRUE)/mean(MaxTL, na.rm = TRUE)*100,
+            avg_Omega3 = mean(Omega3, na.rm = TRUE),
+           # CV_Omega3 = sd(Omega3, na.rm = TRUE)/mean(Omega3, na.rm = TRUE)*100,
+            benthic = sum(Habitat2 == "BE", na.rm = TRUE),
+            benthopelagic = sum(Habitat2 == "BP", na.rm = TRUE),
+            pelagic = sum(Habitat2 == "PE", na.rm = TRUE))
 
 # habitat and relationship to trophic level?
 ggplot(data = dat2) +
@@ -191,9 +190,9 @@ pr_thia <- function(x, ests) plogis(ests[1] + ests[2] * x)
 #dat2 %>%
   #data_grid(TL_fooditems = seq_range(TL_fooditems, n = 51)) %>%
   #add_predicted_draws(fit1) %>%
-  ggplot(nontrop, aes(x = TL_fooditems, y = Thiaminase, fill = Continent, label = ï..Common)) +
+  ggplot(nontrop, aes(x = TL_fooditems, y = Thiaminase, fill = Climate)) + #, label = ï..Common)) +
   scale_y_continuous(breaks = c(0, 0.5, 1)) +
-  geom_jitter(height = 0.02, width = 0.02, size = 4, pch = 21, alpha = 0.7) +
+  geom_jitter(height = 0.04, width = 0.02, size = 4, pch = 21, alpha = 0.7) +
   #jitt(x="TrophicLevelEst") +
   stat_function(fun = pr_thia, args = list(ests = coef(fit1)),
                 size = 2, color = "#1f78b4") +
@@ -203,26 +202,26 @@ pr_thia <- function(x, ests) plogis(ests[1] + ests[2] * x)
                 size = 2, color = "#b2df8a") +
   theme_bw(base_size = 16) +
   scale_fill_viridis_d() +
-  xlab("Trophic level estimate") +
-  geom_text_repel(force = 3, max.overlaps = 20)
+  xlab("Trophic level estimate") 
+  #geom_text_repel(force = 3, max.overlaps = 20)
 
 
 
 ## add in PUFA ----
   
 # make separate salty figure
-fit2_salt <- update(fit1_salt, formula = Thiaminase ~ TL_fooditems + Omega3)
-(coef_fit2 <- round(coef(fit2_salt), 3))
+fit2 <- update(fit1, formula = Thiaminase ~ TL_fooditems + Omega3)
+(coef_fit2 <- round(coef(fit2), 3))
 
 pr_thia2 <- function(x, y, ests) plogis(ests[1] + ests[2] * x + ests[3] * y)
 grid <- expand.grid(TL_fooditems = seq(2, 5, length.out = 100),
                     Omega3 = seq(0, 3, length.out = 100))
-grid$prob <- with(grid, pr_thia2(TL_fooditems, Omega3, coef(fit2_salt)))
+grid$prob <- with(grid, pr_thia2(TL_fooditems, Omega3, coef(fit2)))
 
 ggplot(grid, aes(x = TL_fooditems, y = Omega3)) +
   geom_tile(aes(fill = prob)) +
   #geom_point(data = salt2, aes(color = factor(Continent), label = ï..Common), size = 3) +
-  geom_point(data = salt2, aes(color = factor(Thiaminase), label = ï..Common), size = 3) +
+  geom_point(data = dat2, aes(color = factor(Thiaminase), label = ï..Common), size = 3) +
   #geom_point(data = dat2, aes(color = Tropical, label = ï..Common), size = 3) +
   scale_fill_gradient(low = "#e5f5e0", high = "#31a354") +
   theme_bw(base_size = 16) +
@@ -230,7 +229,7 @@ ggplot(grid, aes(x = TL_fooditems, y = Omega3)) +
   xlab("Trophic level estimate") +
   #scale_color_viridis_d() +
   ylab("PUFA concentration (g/100 g)") +
-  geom_text_repel(aes(label = ï..Common), data = salt2)
+  geom_text_repel(aes(label = ï..Common), data = dat2)
 
 
 
