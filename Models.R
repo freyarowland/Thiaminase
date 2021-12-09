@@ -81,7 +81,6 @@ ggplot(data = dat2, aes(x = MaxTL, y = as.factor(Thiaminase), fill = 0.5 - abs(0
 
 # trophic level model 
 # trophic level is a significant predictor of thiaminase activity! ----
-troph_mod <- lm(TL_fooditems ~ Habitat2, data = dat2)
 troph_mod <- aov(TL_fooditems ~ Habitat2, data = dat2)
 summary(troph_mod)
 TukeyHSD(troph_mod, conf.level=.95)
@@ -262,49 +261,37 @@ ggplot(grid, aes(x = TL_fooditems, y = Omega3)) +
 
 
 
-## add in max length ----
-# ggplot(aes(x = MaxTL, y = Thiaminase, group = Thiaminase), data = dat) +
-#   geom_violin(draw_quantiles = TRUE) +
+
+# # only plot max length
+# # Predicted probability as a function of x
+# pr_thia <- function(x, ests) plogis(ests[1] + ests[2] * x)
+# 
+# ggplot(dat, aes(x = MaxTL, y = Thiaminase, fill = Thiaminase)) +
+#   scale_y_continuous(breaks = c(0, 0.5, 1)) +
+#   geom_point(size = 4, pch = 21) +
+#   #jitt(x="TrophicLevelEst") +
+#   stat_function(fun = pr_thia, args = list(ests = coef(fit2)),
+#                 size = 2, color = "gray35") +
 #   theme_bw(base_size = 16)
-
-
-ggplot(aes(x = MaxTL, y = Thiaminase, fill = Thiaminase), data = dat) +
-  theme_bw(base_size = 16) +
-  geom_point(pch = 21, size = 4)
-TLmod <- stan_glm(Thiaminase ~ MaxTL, data = dat,
-                  family = binomial(link = "logit"))
-summary(TLmod, digits = 3)
-fit2 <- update(fit1, formula = Thiaminase ~ TL_fooditems + MaxTL)
-(coef_fit2 <- round(coef(fit2), 3))
-
-# only plot max length
-# Predicted probability as a function of x
-pr_thia <- function(x, ests) plogis(ests[1] + ests[2] * x)
-
-ggplot(dat, aes(x = MaxTL, y = Thiaminase, fill = Thiaminase)) +
-  scale_y_continuous(breaks = c(0, 0.5, 1)) +
-  geom_point(size = 4, pch = 21) +
-  #jitt(x="TrophicLevelEst") +
-  stat_function(fun = pr_thia, args = list(ests = coef(fit2)),
-                size = 2, color = "gray35") +
-  theme_bw(base_size = 16)
-
-# plot max length and trophic level together
-pr_thia2 <- function(x, y, ests) plogis(ests[1] + ests[2] * x + ests[3] * y)
-grid <- expand.grid(TrophicLevelEst = seq(2, 5, length.out = 100),
-                    MaxTL = seq(0, 155, length.out = 100))
-grid$prob <- with(grid, pr_thia2(TrophicLevelEst, MaxTL, coef(fit2)))
-ggplot(grid, aes(x = TrophicLevelEst, y = MaxTL)) +
-  geom_tile(aes(fill = prob)) +
-  theme_bw(base_size = 16) +
-  geom_point(data = dat, aes(color = factor(Thiaminase)), size = 4, alpha = 0.85) +
-  scale_fill_gradient(low = "#fee6ce", high = "#e6550d") +
-  scale_color_manual("Thiaminase", values = c("white", "black"), labels = c("No", "Yes"))
+# 
+# # plot max length and trophic level together
+# pr_thia2 <- function(x, y, ests) plogis(ests[1] + ests[2] * x + ests[3] * y)
+# grid <- expand.grid(TrophicLevelEst = seq(2, 5, length.out = 100),
+#                     MaxTL = seq(0, 155, length.out = 100))
+# grid$prob <- with(grid, pr_thia2(TrophicLevelEst, MaxTL, coef(fit2)))
+# ggplot(grid, aes(x = TrophicLevelEst, y = MaxTL)) +
+#   geom_tile(aes(fill = prob)) +
+#   theme_bw(base_size = 16) +
+#   geom_point(data = dat, aes(color = factor(Thiaminase)), size = 4, alpha = 0.85) +
+#   scale_fill_gradient(low = "#fee6ce", high = "#e6550d") +
+#   scale_color_manual("Thiaminase", values = c("white", "black"), labels = c("No", "Yes"))
 
 
 ## PUFAs and thiaminase ----
 
+# PUFA is not related to trophic level
 lm <- lm(Omega3 ~ TL_fooditems, data = dat2)
+summary(lm)
 
 t_prior <- student_t(df = 7, location = 0, scale = 2.5)
 fit1 <- stan_glm(Thiaminase ~ Omega3, data = dat2,
@@ -398,9 +385,9 @@ pr_thia <- function(x, ests) plogis(ests[1] + ests[2] * x)
 #   geom_point(aes_string(...), position = position_jitter(height = 0.05, width = 0.1),
 #              size = 2, shape = 21, stroke = 0.2)
 # }
-ggplot(nontrop, aes(x = Omega3, y = Thiaminase, fill = Continent, label = ï..Common)) +
+ggplot(nontrop, aes(x = Omega3, y = Thiaminase, fill = Climate)) +
   scale_y_continuous(breaks = c(0, 0.5, 1)) +
-  geom_jitter(height = 0.02, width = 0.02, size = 4, pch = 21, alpha = 0.7) +
+  geom_jitter(height = 0.04, width = 0.02, size = 4, pch = 21, alpha = 0.7) +
   #geom_point(data = dat2, size = 3) +
   #jitt(x="TrophicLevelEst") +
   stat_function(fun = pr_thia, args = list(ests = coef(fit1)),
@@ -411,8 +398,8 @@ ggplot(nontrop, aes(x = Omega3, y = Thiaminase, fill = Continent, label = ï..Co
                 size = 2, color = "#b2df8a") +
   scale_fill_viridis_d() + 
   theme_bw(base_size = 16) +
-  xlab("Omega3 concentration (g per 100 g)") +
-  geom_text_repel(force = 1.2, max.overlaps = 15, nudge.y = 0.4, direction = "y")
+  xlab("Omega3 concentration (g per 100 g)") 
+  #geom_text_repel(force = 1.2, max.overlaps = 15, nudge.y = 0.4, direction = "y")
 
 
 
@@ -446,11 +433,30 @@ allfit <- stan_glm(
   family = binomial(link = "logit"),
   prior = t_prior,
   prior_intercept = t_prior,
+  iter = 10000,
+  chains = 4,
   cores = 3,
   seed = 12345
 )
 
 summary(allfit)
+
+# get posteriors
+describe_posterior(
+  allfit,
+  effects = "all",
+  component = "all",
+  test = c("p_direction", "p_significance"),
+  centrality = "all"
+)
+
+# calculate probabilities for factors
+logit2prob <- function(logit){
+  odds <- exp(logit)
+  prob <- odds/(1+odds)
+  return(prob)
+}
+logit2prob(coef(allfit))
 
 # check fit
 loo(allfit) # good
@@ -467,11 +473,11 @@ plot_title <- ggtitle("Posterior distributions",
                       "with medians and 95% intervals")
 multreg_plot <- mcmc_areas(posterior,
            pars = c("TL_fooditems", "Omega3", "Marine1", 
-                    "Tropical1", "scale(MaxTL)", "Invasive", "Habitat2BP", "Habitat2PE"),
+                    "Tropical1", "scale(MaxTL)", "Invasive", "(Intercept)", "Habitat2BP", "Habitat2PE"),
            prob = 0.95) + 
   plot_title +
   theme_bw(base_size = 16) +
-  geom_vline(xintercept=0, linetype = "dashed", colour = "gray50")
+  geom_vline(xintercept=0, linetype = "dashed", colour = "red")
 
 
 # calculate probabilities
