@@ -5,6 +5,9 @@ dat2 <- read.csv("AllData.csv", header = TRUE)
 
 str(dat2)
 
+# remove one row with no data
+dat2 <- dat2[-290,]
+
 # record as factor
 dat2$Habitat2 <- as.factor(dat2$Habitat2)
 dat2$Continent <- as.factor(dat2$Continent)
@@ -16,6 +19,8 @@ dat2$Tropical <- as.factor(dat2$Tropical)
 fresh2 <- subset(dat2, Marine == 0)
 salt2 <- subset(dat2, Marine == 1)
 
+# make separate df for non-tropical
+nontrop <- subset(dat2, Tropical == 0)
 nontrop2 <- subset(nontrop, Marine == 0)
 saltnontrop2 <- subset(nontrop, Marine == 1)
 
@@ -34,23 +39,23 @@ library(shinystan)
 
 # get orders that are thiaminase positive
 plus <- subset(dat2, Thiaminase == 1)
+summary(dat2$Order)
 summary(plus$Order)
 
-# subset data for only non-tropical
-nontrop <- subset(dat2, Tropical == 0)
+
 
 # summarize data
 dat2 %>%
-  group_by(Climate)  %>%
+  #group_by(Climate)  %>%
   summarize(total = sum(Thiaminase == 1 | Thiaminase == 0, na.rm = TRUE),
             thiaminase_pos = sum(Thiaminase == 1, na.rm = TRUE),
             marine = sum(Marine == 1, na.rm = TRUE),
             fresh = sum(Marine == 0, na.rm = TRUE),
-            #marine_pos = sum(Marine == 1 & Thiaminase == 1, na.rm = TRUE),
+            marine_pos = sum(Marine == 1 & Thiaminase == 1, na.rm = TRUE),
             avg_size = mean(MaxTL, na.rm = TRUE),
-            #CV_size = sd(MaxTL, na.rm = TRUE)/mean(MaxTL, na.rm = TRUE)*100,
+            CV_size = sd(MaxTL, na.rm = TRUE)/mean(MaxTL, na.rm = TRUE)*100,
             avg_Omega3 = mean(Omega3, na.rm = TRUE),
-           # CV_Omega3 = sd(Omega3, na.rm = TRUE)/mean(Omega3, na.rm = TRUE)*100,
+            CV_Omega3 = sd(Omega3, na.rm = TRUE)/mean(Omega3, na.rm = TRUE)*100,
             benthic = sum(Habitat2 == "BE", na.rm = TRUE),
             benthopelagic = sum(Habitat2 == "BP", na.rm = TRUE),
             pelagic = sum(Habitat2 == "PE", na.rm = TRUE))
@@ -78,6 +83,15 @@ ggplot(data = dat2, aes(x = MaxTL, y = as.factor(Thiaminase), fill = 0.5 - abs(0
   theme_bw(base_size = 16) +
   ylab("Thiaminase") +
   xlab("Maximum total length (cm)")
+
+# log-transform size for easier viewing
+ggplot(data = dat2, aes(x = MaxTL, y = as.factor(Thiaminase), fill = 0.5 - abs(0.5 - stat(ecdf)))) +
+  stat_density_ridges(geom = "density_ridges_gradient", calc_ecdf = TRUE) +
+  scale_fill_viridis_c(name = "Tail probability", direction = -1) +
+  theme_bw(base_size = 16) +
+  ylab("Thiaminase") +
+  xlab("Maximum total length (cm)")
+
 
 # trophic level model 
 # trophic level is a significant predictor of thiaminase activity! ----
@@ -189,7 +203,7 @@ pr_thia <- function(x, ests) plogis(ests[1] + ests[2] * x)
 #dat2 %>%
   #data_grid(TL_fooditems = seq_range(TL_fooditems, n = 51)) %>%
   #add_predicted_draws(fit1) %>%
-  ggplot(nontrop, aes(x = TL_fooditems, y = Thiaminase, fill = Climate)) + #, label = ï..Common)) +
+  ggplot(dat2, aes(x = TL_fooditems, y = Thiaminase, fill = Climate)) + #, label = ï..Common)) +
   scale_y_continuous(breaks = c(0, 0.5, 1)) +
   geom_jitter(height = 0.04, width = 0.02, size = 4, pch = 21, alpha = 0.7) +
   #jitt(x="TrophicLevelEst") +
@@ -385,7 +399,7 @@ pr_thia <- function(x, ests) plogis(ests[1] + ests[2] * x)
 #   geom_point(aes_string(...), position = position_jitter(height = 0.05, width = 0.1),
 #              size = 2, shape = 21, stroke = 0.2)
 # }
-ggplot(nontrop, aes(x = Omega3, y = Thiaminase, fill = Climate)) +
+ggplot(dat2, aes(x = Omega3, y = Thiaminase, fill = Climate)) +
   scale_y_continuous(breaks = c(0, 0.5, 1)) +
   geom_jitter(height = 0.04, width = 0.02, size = 4, pch = 21, alpha = 0.7) +
   #geom_point(data = dat2, size = 3) +
@@ -499,14 +513,16 @@ ppc_dens_overlay(y = allfit$y,
 
 
 ## look at climate vs. PUFA ----
-ggplot(dat2, aes(x = Climate, y = Omega3, fill = Continent, label = ï..Common)) +
-  geom_jitter(width = 0.05, size = 4, pch = 21, alpha = 0.7) +
+common <- subset(dat2, Climate == "Tropical" | Climate == "Subtropical" | Climate == "Temperate")
+ggplot(dat2, aes(x = Climate, y = Omega3)) +
+  geom_boxplot() + 
+  geom_jitter(width = 0.06, size = 4, pch = 21, alpha = 0.7, fill = "gray30", alpha = 0.8) +
   scale_fill_viridis_d() + 
   theme_bw(base_size = 16) +
   xlab("Climate region") +
-  geom_label_repel(alpha = 0.5)
+  ylab("Omega3 (g/100 g)")
 
-pufa_mod <- aov(Omega3 ~ Tropical, data = dat2)
+pufa_mod <- aov(Omega3 ~ Climate, data = common)
 summary(pufa_mod)
 TukeyHSD(pufa_mod, conf.level= 0.95)
 
