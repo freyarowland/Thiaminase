@@ -46,7 +46,7 @@ summary(plus$Order)
 
 # summarize data
 dat2 %>%
-  #group_by(Climate)  %>%
+  group_by(Climate)  %>%
   summarize(total = sum(Thiaminase == 1 | Thiaminase == 0, na.rm = TRUE),
             thiaminase_pos = sum(Thiaminase == 1, na.rm = TRUE),
             marine = sum(Marine == 1, na.rm = TRUE),
@@ -442,7 +442,10 @@ allfit <- stan_glm(
     Marine +
     Tropical +
     Invasive +
-    Habitat2,
+    Benthic +
+    Benthopelagic +
+    Pelagic +
+    Cata_Anad,
   data = dat2,
   family = binomial(link = "logit"),
   prior = t_prior,
@@ -487,7 +490,7 @@ plot_title <- ggtitle("Posterior distributions",
                       "with medians and 95% intervals")
 multreg_plot <- mcmc_areas(posterior,
            pars = c("TL_fooditems", "Omega3", "Marine1", 
-                    "Tropical1", "scale(MaxTL)", "Invasive", "(Intercept)", "Habitat2BP", "Habitat2PE"),
+                    "Tropical1", "scale(MaxTL)", "Invasive", "Benthic", "Benthopelagic", "Pelagic", "Cata_Anad"),
            prob = 0.95) + 
   plot_title +
   theme_bw(base_size = 16) +
