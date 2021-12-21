@@ -494,7 +494,15 @@ multreg_plot <- mcmc_areas(posterior,
            prob = 0.95) + 
   plot_title +
   theme_bw(base_size = 16) +
-  geom_vline(xintercept=0, linetype = "dashed", colour = "red")
+  geom_vline(xintercept=0, linetype = "dashed", colour = "red") +
+  scale_y_discrete(labels = c('Trophic level','Omega3',
+                              'Marine', 'Tropical',
+                              'Max length',
+                              'Invasive',
+                              'Benthic',
+                              'Benthopelagic',
+                              'Pelagic',
+                              'Anadromous/Catadromous'))
 
 
 # calculate probabilities
