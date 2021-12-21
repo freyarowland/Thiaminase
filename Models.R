@@ -1,7 +1,7 @@
 # thiaminase
 
 # load data
-dat2 <- read.csv("AllData.csv", header = TRUE)
+dat2 <- read.csv("data/AllData.csv", header = TRUE)
 
 str(dat2)
 
