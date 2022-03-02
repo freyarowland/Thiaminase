@@ -14,13 +14,17 @@ dat2$Continent <- as.factor(dat2$Continent)
 dat2$Marine <- as.factor(dat2$Marine)
 dat2$Order <- as.factor(dat2$Order)
 dat2$Tropical <- as.factor(dat2$Tropical)
+dat2$Climate <- as.factor(dat2$Climate)
+
+# remove NA cases for thiaminase
+dat3 <- dat2[complete.cases(dat2$Thiaminase),]
 
 # separate marine and freshwater
-fresh2 <- subset(dat2, Marine == 0)
-salt2 <- subset(dat2, Marine == 1)
+fresh2 <- subset(dat3, Marine == 0)
+salt2 <- subset(dat3, Marine == 1)
 
 # make separate df for non-tropical
-nontrop <- subset(dat2, Tropical == 0)
+nontrop <- subset(dat3, Climate != "Tropical")
 nontrop2 <- subset(nontrop, Marine == 0)
 saltnontrop2 <- subset(nontrop, Marine == 1)
 
@@ -53,9 +57,9 @@ dat2 %>%
             fresh = sum(Marine == 0, na.rm = TRUE),
             marine_pos = sum(Marine == 1 & Thiaminase == 1, na.rm = TRUE),
             avg_size = mean(MaxTL, na.rm = TRUE),
-            CV_size = sd(MaxTL, na.rm = TRUE)/mean(MaxTL, na.rm = TRUE)*100,
+            #CV_size = sd(MaxTL, na.rm = TRUE)/mean(MaxTL, na.rm = TRUE)*100,
             avg_Omega3 = mean(Omega3, na.rm = TRUE),
-            CV_Omega3 = sd(Omega3, na.rm = TRUE)/mean(Omega3, na.rm = TRUE)*100,
+            #CV_Omega3 = sd(Omega3, na.rm = TRUE)/mean(Omega3, na.rm = TRUE)*100,
             benthic = sum(Habitat2 == "BE", na.rm = TRUE),
             benthopelagic = sum(Habitat2 == "BP", na.rm = TRUE),
             pelagic = sum(Habitat2 == "PE", na.rm = TRUE))
@@ -111,6 +115,8 @@ summary(age_mod)
 corr_mod <- lm(MaxAge ~ MaxTL, data = dat2)
 summary(corr_mod)
 
+
+# thiaminase depends upon trophic level
 t_prior <- student_t(df = 7, location = 0, scale = 2.5)
 fit1 <- stan_glm(Thiaminase ~ TL_fooditems, data = dat2,
                  family = binomial(link = "logit"),
@@ -203,7 +209,9 @@ pr_thia <- function(x, ests) plogis(ests[1] + ests[2] * x)
 #dat2 %>%
   #data_grid(TL_fooditems = seq_range(TL_fooditems, n = 51)) %>%
   #add_predicted_draws(fit1) %>%
-  ggplot(dat2, aes(x = TL_fooditems, y = Thiaminase, fill = Climate)) + #, label = ï..Common)) +
+
+TLmod_nontrop <-
+  ggplot(nontrop, aes(x = TL_fooditems, y = Thiaminase, fill = Climate)) + #, label = ï..Common)) +
   scale_y_continuous(breaks = c(0, 0.5, 1)) +
   geom_jitter(height = 0.04, width = 0.02, size = 4, pch = 21, alpha = 0.7) +
   #jitt(x="TrophicLevelEst") +
@@ -218,7 +226,7 @@ pr_thia <- function(x, ests) plogis(ests[1] + ests[2] * x)
   xlab("Trophic level estimate") 
   #geom_text_repel(force = 3, max.overlaps = 20)
 
-
+# ggsave(TLmod_nontrop, filename = "figures/TLmod_nontrop.png", dpi = 300, height = 5, width = 7)
 
 ## add in PUFA ----
   
@@ -231,11 +239,14 @@ grid <- expand.grid(TL_fooditems = seq(2, 5, length.out = 100),
                     Omega3 = seq(0, 3, length.out = 100))
 grid$prob <- with(grid, pr_thia2(TL_fooditems, Omega3, coef(fit2)))
 
+# probability space
+
+probplot <- 
 ggplot(grid, aes(x = TL_fooditems, y = Omega3)) +
   geom_tile(aes(fill = prob)) +
   #geom_point(data = salt2, aes(color = factor(Continent), label = ï..Common), size = 3) +
-  geom_point(data = dat2, aes(color = factor(Thiaminase), label = ï..Common), size = 3) +
-  #geom_point(data = dat2, aes(color = Tropical, label = ï..Common), size = 3) +
+  geom_point(data = dat3, aes(color = factor(Thiaminase), label = ï..Common), size = 3) +
+  #geom_point(data = dat3, aes(color = Tropical, label = ï..Common), size = 3) +
   scale_fill_gradient(low = "#e5f5e0", high = "#31a354") +
   theme_bw(base_size = 16) +
   scale_color_manual("Thiaminase", values = c("white", "black"), labels = c("No", "Yes")) +
@@ -244,7 +255,7 @@ ggplot(grid, aes(x = TL_fooditems, y = Omega3)) +
   ylab("PUFA concentration (g/100 g)") +
   geom_text_repel(aes(label = ï..Common), data = dat2)
 
-
+ggsave(probplot, filename = "figures/probabilityplot.png", dpi = 300, width = 7, height = 5)
 
 
 
@@ -308,7 +319,7 @@ lm <- lm(Omega3 ~ TL_fooditems, data = dat2)
 summary(lm)
 
 t_prior <- student_t(df = 7, location = 0, scale = 2.5)
-fit1 <- stan_glm(Thiaminase ~ Omega3, data = dat2,
+fit1 <- stan_glm(Thiaminase ~ Omega3, data = dat3,
                  family = binomial(link = "logit"),
                  prior = t_prior, prior_intercept = t_prior,
                  cores = 2, seed = 12345)
@@ -399,7 +410,7 @@ pr_thia <- function(x, ests) plogis(ests[1] + ests[2] * x)
 #   geom_point(aes_string(...), position = position_jitter(height = 0.05, width = 0.1),
 #              size = 2, shape = 21, stroke = 0.2)
 # }
-ggplot(dat2, aes(x = Omega3, y = Thiaminase, fill = Climate)) +
+Fatmod_nontrop <- ggplot(nontrop, aes(x = Omega3, y = Thiaminase, fill = Climate)) +
   scale_y_continuous(breaks = c(0, 0.5, 1)) +
   geom_jitter(height = 0.04, width = 0.02, size = 4, pch = 21, alpha = 0.7) +
   #geom_point(data = dat2, size = 3) +
@@ -415,7 +426,7 @@ ggplot(dat2, aes(x = Omega3, y = Thiaminase, fill = Climate)) +
   xlab("Omega3 concentration (g per 100 g)") 
   #geom_text_repel(force = 1.2, max.overlaps = 15, nudge.y = 0.4, direction = "y")
 
-
+# ggsave(Fatmod_nontrop, filename = "figures/Fatmod_nontrop.png", dpi = 300, width = 7, height = 5)
 
 # Max age vs. total length ----
 ggplot(aes(x = MaxAge, y = MaxTL, fill = Thiaminase), data = dat) +
@@ -444,9 +455,8 @@ allfit <- stan_glm(
     Invasive +
     Benthic +
     Benthopelagic +
-    Pelagic +
-    Cata_Anad,
-  data = dat2,
+    Pelagic,
+  data = dat3,
   family = binomial(link = "logit"),
   prior = t_prior,
   prior_intercept = t_prior,
@@ -490,7 +500,7 @@ plot_title <- ggtitle("Posterior distributions",
                       "with medians and 95% intervals")
 multreg_plot <- mcmc_areas(posterior,
            pars = c("TL_fooditems", "Omega3", "Marine1", 
-                    "Tropical1", "scale(MaxTL)", "Invasive", "Benthic", "Benthopelagic", "Pelagic", "Cata_Anad"),
+                    "Tropical1", "scale(MaxTL)", "Invasive", "Benthic", "Benthopelagic", "Pelagic"),
            prob = 0.95) + 
   plot_title +
   theme_bw(base_size = 16) +
@@ -503,6 +513,8 @@ multreg_plot <- mcmc_areas(posterior,
                               'Benthopelagic',
                               'Pelagic',
                               'Anadromous/Catadromous'))
+
+ggsave(multreg_plot, filename = "figures/multreg_plot.png", dpi = 300, width = 5, height = 7)
 
 
 # calculate probabilities
