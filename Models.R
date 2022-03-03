@@ -443,8 +443,9 @@ cor(x = dat$MaxAge, y = dat$MaxTL, use = "complete.obs")
 invdat <- subset(dat2, Invasive == 1)
 noninvdat <- subset(dat2, Invasive == 0)
 
-## multiple regression ----
+## multiple regression on all data ----
 
+## all variables
 t_prior <- student_t(df = 7, location = 0, scale = 2.5)
 allfit <- stan_glm(
   Thiaminase ~ TL_fooditems +
@@ -467,6 +468,11 @@ allfit <- stan_glm(
 )
 
 summary(allfit)
+
+# get a Bayesian R2 
+rsq <- bayes_R2(allfit)
+print(median(rsq)) #R2 = 0.36
+hist(rsq)
 
 # get posteriors
 describe_posterior(
@@ -530,13 +536,103 @@ logit2prob(coef(allfit))
 loo(allfit) # good
 
 # fits match y
-color_scheme_set("red")
+color_scheme_set("blue")
 ppc_dens_overlay(y = allfit$y,
                  yrep = posterior_predict(allfit, draws = 50))
 
 
+
+## multiple regression using only 'significant' variables ----
+
+## all variables
+t_prior <- student_t(df = 7, location = 0, scale = 2.5)
+allsigfit <- stan_glm(
+  Thiaminase ~ 
+    TL_fooditems +
+    Omega3 +
+    Marine +
+    Tropical,
+  data = dat3,
+  family = binomial(link = "logit"),
+  prior = t_prior,
+  prior_intercept = t_prior,
+  iter = 10000,
+  chains = 4,
+  cores = 3,
+  seed = 12345
+)
+
+summary(allsigfit)
+
+# get a Bayesian R2 
+rsq <- bayes_R2(allsigfit)
+print(median(rsq)) #R2 = 0.31
+hist(rsq)
+
+# get posteriors
+describe_posterior(
+  allsigfit,
+  effects = "all",
+  component = "all",
+  test = c("p_direction", "p_significance"),
+  centrality = "all"
+)
+
+# calculate probabilities for factors
+logit2prob <- function(logit){
+  odds <- exp(logit)
+  prob <- odds/(1+odds)
+  return(prob)
+}
+logit2prob(coef(allsigfit))
+
+# check fit
+loo(allfit) # good
+
+# look at model fit with shiny stan
+launch_shinystan(allsigfit)
+
+
+# plot of posteriors
+posterior <- as.matrix(allfit)
+
+# plot it
+plot_title <- ggtitle("Posterior distributions",
+                      "with medians and 95% intervals")
+multsigreg_plot <- mcmc_areas(posterior,
+                           pars = c("TL_fooditems", "Omega3", "Marine1", 
+                                    "Tropical1"),
+                           prob = 0.95) + 
+  plot_title +
+  theme_bw(base_size = 16) +
+  geom_vline(xintercept=0, linetype = "dashed", colour = "red") +
+  scale_y_discrete(labels = c('Trophic level','Omega3',
+                              'Marine', 'Tropical'))
+
+ggsave(multsigreg_plot, filename = "figures/multsigreg_plot.png", dpi = 300, width = 5, height = 7)
+
+
+# calculate probabilities
+logit2prob <- function(logit){
+  odds <- exp(logit)
+  prob <- odds/(1+odds)
+  return(prob)
+}
+
+logit2prob(coef(allfit))
+
+# checking fit
+loo(allfit) # good
+
+# fits match y
+color_scheme_set("blue")
+ppc_dens_overlay(y = allfit$y,
+                 yrep = posterior_predict(allfit, draws = 50))
+
+
+
 ## look at climate vs. PUFA ----
-common <- subset(dat2, Climate == "Tropical" | Climate == "Subtropical" | Climate == "Temperate")
+common <- subset(dat3, Climate == "Tropical" | Climate == "Subtropical" | Climate == "Temperate")
 ggplot(dat2, aes(x = Climate, y = Omega3)) +
   geom_boxplot() + 
   geom_jitter(width = 0.06, size = 4, pch = 21, alpha = 0.7, fill = "gray30", alpha = 0.8) +
