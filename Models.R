@@ -40,6 +40,7 @@ library(tidybayes)
 library(dplyr)
 library(modelr)
 library(shinystan)
+library(ggpubr)
 
 # get orders that are thiaminase positive
 plus <- subset(dat2, Thiaminase == 1)
@@ -97,7 +98,7 @@ ggplot(data = dat2, aes(x = MaxTL, y = as.factor(Thiaminase), fill = 0.5 - abs(0
   xlab("Maximum total length (cm)")
 
 
-# trophic level model 
+###########
 # trophic level is a significant predictor of thiaminase activity! ----
 troph_mod <- aov(TL_fooditems ~ Habitat2, data = dat2)
 summary(troph_mod)
@@ -116,48 +117,121 @@ corr_mod <- lm(MaxAge ~ MaxTL, data = dat2)
 summary(corr_mod)
 
 
+########
+# Plot marine vs. non-marine
+
+# function to calculate mean and stdev
+data_summary <- function(data, varname, groupnames){
+  require(plyr)
+  summary_func <- function(x, col){
+    c(mean = mean(x[[col]], na.rm=TRUE),
+      sd = sd(x[[col]], na.rm=TRUE))
+  }
+  data_sum<-ddply(data, groupnames, .fun=summary_func,
+                  varname)
+  data_sum <- rename(data_sum, c("mean" = varname))
+  return(data_sum)
+}
+
+# run our data through it
+df2 <- data_summary(dat3, varname="Thiaminase", 
+                    groupnames=c("Marine"))
+
+df2 <- dat3 %>%
+  group_by(Marine, Thiaminase) %>%
+  dplyr::summarize(count = n())
+
+marinelabels <- c("freshwater", "marine")
+
+marineplot <- ggplot(df2, aes(x = Marine, y = count, group = Marine, fill = as.factor(Thiaminase))) +
+  #scale_y_continuous(breaks = c(0, 0.5, 1)) +
+  #geom_jitter(height = 0.04, width = 0.25, size = 4, pch = 21, alpha = 0.7, aes(fill = Climate)) +
+  #geom_bar(stat = "identity", aes(fill = Thiaminase)) +
+  geom_col(position = "fill") +
+  ylab("Proportion") +
+  xlab("") +
+  theme_bw(base_size = 16) +
+  scale_fill_viridis_d(begin = 0.3, end = 0.8) +
+  #annotate("text", x = 1, y = 60, label = "59%", size = 6) +
+  #annotate("text", x = 2, y = 120, label = "22%", size = 6) + 
+  theme(
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor.y = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor.x = element_blank()
+  ) +
+  theme(
+    legend.position = "none") +
+  scale_x_discrete(labels = marinelabels)
+
+print(marineplot)
+
+ggsave("figures/marineplot.png", dpi = 300, height = 5, width = 7)
+
+
+
+########
+# Trophic level and thiaminase
 # thiaminase depends upon trophic level
 t_prior <- student_t(df = 7, location = 0, scale = 2.5)
-fit1 <- stan_glm(Thiaminase ~ TL_fooditems, data = dat2,
-                 family = binomial(link = "logit"),
-                 prior = t_prior, prior_intercept = t_prior,
-                 cores = 2, seed = 12345)
+TL <- stan_glm(
+  Thiaminase ~ TL_fooditems,
+  data = dat3,
+  family = binomial(link = "logit"),
+  iter = 10000,
+  prior = t_prior,
+  prior_intercept = t_prior,
+  cores = 2,
+  seed = 12345
+)
 
-fit1_fresh <- stan_glm(Thiaminase ~ TL_fooditems, data = fresh2,
-                       family = binomial(link = "logit"),
-                       prior = t_prior, prior_intercept = t_prior,
-                       cores = 2, seed = 12345)
+TL_fresh <- stan_glm(
+  Thiaminase ~ TL_fooditems,
+  data = fresh2,
+  family = binomial(link = "logit"),
+  iter = 10000,
+  prior = t_prior,
+  prior_intercept = t_prior,
+  cores = 2,
+  seed = 12345
+)
 
-fit1_salt <- stan_glm(Thiaminase ~ TL_fooditems, data = salt2,
-                      family = binomial(link = "logit"),
-                      prior = t_prior, prior_intercept = t_prior,
-                      cores = 2, seed = 12345)
+TL_salt <- stan_glm(
+  Thiaminase ~ TL_fooditems,
+  data = salt2,
+  family = binomial(link = "logit"),
+  iter = 10000,
+  prior = t_prior,
+  prior_intercept = t_prior,
+  cores = 2,
+  seed = 12345
+)
 
-# non tropical only
-t_prior <- student_t(df = 7, location = 0, scale = 2.5)
-fit1 <- stan_glm(Thiaminase ~ TL_fooditems, data = nontrop,
-                 family = binomial(link = "logit"),
-                 prior = t_prior, prior_intercept = t_prior,
-                 cores = 2, seed = 12345)
-
-fit1_fresh <- stan_glm(Thiaminase ~ TL_fooditems, data = nontrop2,
-                       family = binomial(link = "logit"),
-                       prior = t_prior, prior_intercept = t_prior,
-                       cores = 2, seed = 12345)
-
-fit1_salt <- stan_glm(Thiaminase ~ TL_fooditems, data = saltnontrop2,
-                      family = binomial(link = "logit"),
-                      prior = t_prior, prior_intercept = t_prior,
-                      cores = 2, seed = 12345)
+## non tropical only
+# t_prior <- student_t(df = 7, location = 0, scale = 2.5)
+# fit1 <- stan_glm(Thiaminase ~ TL_fooditems, data = nontrop,
+#                  family = binomial(link = "logit"),
+#                  prior = t_prior, prior_intercept = t_prior,
+#                  cores = 2, seed = 12345)
+# 
+# fit1_fresh <- stan_glm(Thiaminase ~ TL_fooditems, data = nontrop2,
+#                        family = binomial(link = "logit"),
+#                        prior = t_prior, prior_intercept = t_prior,
+#                        cores = 2, seed = 12345)
+# 
+# fit1_salt <- stan_glm(Thiaminase ~ TL_fooditems, data = saltnontrop2,
+#                       family = binomial(link = "logit"),
+#                       prior = t_prior, prior_intercept = t_prior,
+#                       cores = 2, seed = 12345)
 
 # explore fit
-fit1_loo <- loo(fit1)
-fit1_fresh_loo <- loo(fit1_fresh)
-fit1_salt_loo <- loo(fit1_salt)
+TL_loo <- loo(TL)
+TL_fresh_loo <- loo(TL_fresh)
+TL_salt_loo <- loo(TL_salt)
 
 # describe posteriors
 describe_posterior(
-  fit1,
+  TL,
   effects = "all",
   component = "all",
   test = c("p_direction", "p_significance"),
@@ -165,7 +239,7 @@ describe_posterior(
 )
 
 describe_posterior(
-  fit1_fresh,
+  TL_fresh,
   effects = "all",
   component = "all",
   test = c("p_direction", "p_significance"),
@@ -173,7 +247,7 @@ describe_posterior(
 )
 
 describe_posterior(
-  fit1_salt,
+  TL_salt,
   effects = "all",
   component = "all",
   test = c("p_direction", "p_significance"),
@@ -181,23 +255,23 @@ describe_posterior(
 )
 
 # probability of predictor variables
-summary(fit1, digits = 3)
-summary(fit1_fresh, digits = 3)
-summary(fit1_salt, digits = 3)
-round(posterior_interval(fit1, prob = 0.95), digits = 3)
-round(posterior_interval(fit1_fresh, prob = 0.95), digits = 3)
-round(posterior_interval(fit1_salt, prob = 0.95), digits = 3)
+summary(TL, digits = 3)
+summary(TL_fresh, digits = 3)
+summary(TL_salt, digits = 3)
+round(posterior_interval(TL, prob = 0.95), digits = 3)
+round(posterior_interval(TL_fresh, prob = 0.95), digits = 3)
+round(posterior_interval(TL_salt, prob = 0.95), digits = 3)
 
-# calculate probabilities
-logit2prob <- function(logit){
-  odds <- exp(logit)
-  prob <- odds/(1+odds)
-  return(prob)
-}
-
-logit2prob(coef(fit1))
-logit2prob(coef(fit1_fresh))
-logit2prob(coef(fit1_salt))
+# # calculate probabilities
+# logit2prob <- function(logit){
+#   odds <- exp(logit)
+#   prob <- odds/(1+odds)
+#   return(prob)
+# }
+# 
+# logit2prob(coef(fit1))
+# logit2prob(coef(fit1_fresh))
+# logit2prob(coef(fit1_salt))
 
 # Predicted probability as a function of x
 pr_thia <- function(x, ests) plogis(ests[1] + ests[2] * x)
@@ -206,27 +280,34 @@ pr_thia <- function(x, ests) plogis(ests[1] + ests[2] * x)
 #   geom_point(aes_string(...), position = position_jitter(height = 0.05, width = 0.1),
 #              size = 2, shape = 21, stroke = 0.2)
 # }
-#dat2 %>%
-  #data_grid(TL_fooditems = seq_range(TL_fooditems, n = 51)) %>%
-  #add_predicted_draws(fit1) %>%
 
-TLmod_nontrop <-
-  ggplot(nontrop, aes(x = TL_fooditems, y = Thiaminase, fill = Climate)) + #, label = ï..Common)) +
+
+TLmod <-
+  ggplot(dat3, aes(x = TL_fooditems, y = Thiaminase, fill = Climate)) +
   scale_y_continuous(breaks = c(0, 0.5, 1)) +
   geom_jitter(height = 0.04, width = 0.02, size = 4, pch = 21, alpha = 0.7) +
-  #jitt(x="TrophicLevelEst") +
-  stat_function(fun = pr_thia, args = list(ests = coef(fit1)),
-                size = 2, color = "#1f78b4") +
-  stat_function(fun = pr_thia, args = list(ests = coef(fit1_fresh)),
-                size = 2, color = "#a6cee3") +
-  stat_function(fun = pr_thia, args = list(ests = coef(fit1_salt)),
-                size = 2, color = "#b2df8a") +
   theme_bw(base_size = 16) +
   scale_fill_viridis_d() +
-  xlab("Trophic level estimate") 
-  #geom_text_repel(force = 3, max.overlaps = 20)
+  stat_function(fun = pr_thia, args = list(ests = coef(TL)),
+                size = 1, linetype = "solid") +
+  stat_function(fun = pr_thia, args = list(ests = coef(TL_fresh)),
+                size = 1, linetype = "dotted") +
+  stat_function(fun = pr_thia, args = list(ests = coef(TL_salt)),
+                size = 1, linetype = "dashed") +
+  annotate("text", x = 3, y = 0.75, label = "freshwater", size = 5) +
+  annotate("text", x = 2.75, y = 0.3, label = "marine", size = 5) + 
+  annotate("text", x = 3.5, y = 0.45, label = "all", size = 5) + 
+  xlab("Trophic level estimate") +
+  ylab("Thiaminase (presence/absence)") +
+  theme(
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor.y = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor.x = element_blank()
+  )
+print(TLmod)
 
-# ggsave(TLmod_nontrop, filename = "figures/TLmod_nontrop.png", dpi = 300, height = 5, width = 7)
+ggsave(TLmod, filename = "figures/TLmod_all.png", dpi = 300, height = 5, width = 7)
 
 ## add in PUFA ----
   
@@ -315,41 +396,49 @@ ggplot(grid, aes(x = TL_fooditems, y = Omega3)) +
 ## PUFAs and thiaminase ----
 
 # PUFA is not related to trophic level
-lm <- lm(Omega3 ~ TL_fooditems, data = dat2)
+lm <- lm(Omega3 ~ TL_fooditems, data = dat3)
 summary(lm)
 
+
+## Thiaminase vs. Omega3 models
 t_prior <- student_t(df = 7, location = 0, scale = 2.5)
 fit1 <- stan_glm(Thiaminase ~ Omega3, data = dat3,
                  family = binomial(link = "logit"),
+                 iter = 10000,
                  prior = t_prior, prior_intercept = t_prior,
                  cores = 2, seed = 12345)
 
 fit1_fresh <- stan_glm(Thiaminase ~ Omega3, data = fresh2,
                        family = binomial(link = "logit"),
+                       iter = 10000,
                        prior = t_prior, prior_intercept = t_prior,
                        cores = 2, seed = 12345)
 
 fit1_salt <- stan_glm(Thiaminase ~ Omega3, data = salt2,
                       family = binomial(link = "logit"),
+                      iter = 10000,
                       prior = t_prior, prior_intercept = t_prior,
                       cores = 2, seed = 12345)
 
 ## non tropical 
-t_prior <- student_t(df = 7, location = 0, scale = 2.5)
-fit1 <- stan_glm(Thiaminase ~ Omega3, data = nontrop,
-                 family = binomial(link = "logit"),
-                 prior = t_prior, prior_intercept = t_prior,
-                 cores = 2, seed = 12345)
-
-fit1_fresh <- stan_glm(Thiaminase ~ Omega3, data = nontrop2,
-                       family = binomial(link = "logit"),
-                       prior = t_prior, prior_intercept = t_prior,
-                       cores = 2, seed = 12345)
-
-fit1_salt <- stan_glm(Thiaminase ~ Omega3, data = saltnontrop2,
-                      family = binomial(link = "logit"),
-                      prior = t_prior, prior_intercept = t_prior,
-                      cores = 2, seed = 12345)
+# t_prior <- student_t(df = 7, location = 0, scale = 2.5)
+# fit1 <- stan_glm(Thiaminase ~ Omega3, data = nontrop,
+#                  family = binomial(link = "logit"),
+#                  iter = 10000,
+#                  prior = t_prior, prior_intercept = t_prior,
+#                  cores = 2, seed = 12345)
+# 
+# fit1_fresh <- stan_glm(Thiaminase ~ Omega3, data = nontrop2,
+#                        family = binomial(link = "logit"),
+#                        iter = 10000,
+#                        prior = t_prior, prior_intercept = t_prior,
+#                        cores = 2, seed = 12345)
+# 
+# fit1_salt <- stan_glm(Thiaminase ~ Omega3, data = saltnontrop2,
+#                       family = binomial(link = "logit"),
+#                       iter = 10000,
+#                       prior = t_prior, prior_intercept = t_prior,
+#                       cores = 2, seed = 12345)
 
 # explore fit
 fit1_loo <- loo(fit1)
@@ -358,7 +447,7 @@ fit1_salt_loo <- loo(fit1_salt)
 
 # describe posteriors
 describe_posterior(
-  fit1,
+  fat,
   effects = "all",
   component = "all",
   test = c("p_direction", "p_significance"),
@@ -366,7 +455,7 @@ describe_posterior(
 )
 
 describe_posterior(
-  fit1_fresh,
+  fat_fresh,
   effects = "all",
   component = "all",
   test = c("p_direction", "p_significance"),
@@ -374,7 +463,7 @@ describe_posterior(
 )
 
 describe_posterior(
-  fit1_salt,
+  fat_salt,
   effects = "all",
   component = "all",
   test = c("p_direction", "p_significance"),
@@ -383,12 +472,12 @@ describe_posterior(
 
 
 # probability of predictor variables
-summary(fit1, digits = 3)
-summary(fit1_fresh, digits = 3)
-summary(fit1_salt, digits = 3)
-round(posterior_interval(fit1, prob = 0.95), digits = 3)
-round(posterior_interval(fit1_fresh, prob = 0.95), digits = 3)
-round(posterior_interval(fit1_salt, prob = 0.95), digits = 3)
+summary(fat, digits = 3)
+summary(fat_fresh, digits = 3)
+summary(fat_salt, digits = 3)
+round(posterior_interval(fat, prob = 0.95), digits = 3)
+round(posterior_interval(fat_fresh, prob = 0.95), digits = 3)
+round(posterior_interval(fat_salt, prob = 0.95), digits = 3)
 
 # calculate probabilities
 logit2prob <- function(logit){
@@ -397,9 +486,9 @@ logit2prob <- function(logit){
   return(prob)
 }
 
-logit2prob(coef(fit1))
-logit2prob(coef(fit1_fresh))
-logit2prob(coef(fit1_salt))
+logit2prob(coef(fat))
+logit2prob(coef(fat_fresh))
+logit2prob(coef(fat_salt))
 
 
 
@@ -410,23 +499,36 @@ pr_thia <- function(x, ests) plogis(ests[1] + ests[2] * x)
 #   geom_point(aes_string(...), position = position_jitter(height = 0.05, width = 0.1),
 #              size = 2, shape = 21, stroke = 0.2)
 # }
-Fatmod_nontrop <- ggplot(nontrop, aes(x = Omega3, y = Thiaminase, fill = Climate)) +
+Fatmod_all <- ggplot(dat3, aes(x = Omega3, y = Thiaminase, fill = Climate)) +
   scale_y_continuous(breaks = c(0, 0.5, 1)) +
   geom_jitter(height = 0.04, width = 0.02, size = 4, pch = 21, alpha = 0.7) +
   #geom_point(data = dat2, size = 3) +
   #jitt(x="TrophicLevelEst") +
+  annotate("text", x = 1, y = 0.75, label = "freshwater", size = 5) +
+  annotate("text", x = 2, y = 0.3, label = "marine", size = 5) + 
+  annotate("text", x = 0.5, y = 0.35, label = "all", size = 5) + 
   stat_function(fun = pr_thia, args = list(ests = coef(fit1)),
-                size = 2, color = "#1f78b4") +
+                size = 1, linetype = "solid") +
   stat_function(fun = pr_thia, args = list(ests = coef(fit1_fresh)),
-                size = 2, color = "#a6cee3") +
+                size = 1, linetype = "dotted") +
   stat_function(fun = pr_thia, args = list(ests = coef(fit1_salt)),
-                size = 2, color = "#b2df8a") +
+                size = 1, linetype = "dashed") +
   scale_fill_viridis_d() + 
   theme_bw(base_size = 16) +
-  xlab("Omega3 concentration (g per 100 g)") 
-  #geom_text_repel(force = 1.2, max.overlaps = 15, nudge.y = 0.4, direction = "y")
+  xlab("Omega-3 concentration (g per 100 g)") +
+  ylab("Thiaminase (presence/absence)") +
+  theme(
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor.y = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor.x = element_blank()
+  )
 
+print(Fatmod_all)
 # ggsave(Fatmod_nontrop, filename = "figures/Fatmod_nontrop.png", dpi = 300, width = 7, height = 5)
+# ggsave(Fatmod_all, filename = "figures/Fatmod_all.png", dpi = 300, width = 7, height = 5)
+# ggsave(Fatmod_all, filename = "figures/Fatmod_all_nogrid.png", dpi = 300, width = 7, height = 5)
+
 
 # Max age vs. total length ----
 ggplot(aes(x = MaxAge, y = MaxTL, fill = Thiaminase), data = dat) +
@@ -645,3 +747,19 @@ pufa_mod <- aov(Omega3 ~ Climate, data = common)
 summary(pufa_mod)
 TukeyHSD(pufa_mod, conf.level= 0.95)
 
+
+#### make a 2 x 2 ggarrange
+
+bivariate_fig <-
+  ggarrange(
+    legend = "right",
+    common.legend = TRUE,
+    TLmod + theme(axis.title.y = element_text("Thiaminase")),
+    Fatmod_all + theme(axis.title.y = element_blank()),
+    nrow = 1, 
+    ncol = 2,
+    align = "hv",
+    labels = "auto"
+  )
+
+ggsave("figures/TLandOmega.png", dpi = 300, width = 11, height = 5)
