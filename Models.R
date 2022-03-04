@@ -134,6 +134,7 @@ data_summary <- function(data, varname, groupnames){
 }
 
 # run our data through it
+## Try tomorrow: make a grouped bar chart
 df2 <- data_summary(dat3, varname="Thiaminase", 
                     groupnames=c("Marine"))
 
@@ -151,9 +152,8 @@ marineplot <- ggplot(df2, aes(x = Marine, y = count, group = Marine, fill = as.f
   ylab("Proportion") +
   xlab("") +
   theme_bw(base_size = 16) +
-  scale_fill_viridis_d(begin = 0.3, end = 0.8) +
-  #annotate("text", x = 1, y = 60, label = "59%", size = 6) +
-  #annotate("text", x = 2, y = 120, label = "22%", size = 6) + 
+  scale_fill_brewer("blues") +
+  #scale_fill_viridis_d(begin = 0.3, end = 0.8) +
   theme(
     panel.grid.major.y = element_blank(),
     panel.grid.minor.y = element_blank(),
