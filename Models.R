@@ -156,7 +156,8 @@ marineplot <-
            show.legend = TRUE,
            alpha = .9) +
   theme_bw(base_size = 16) +
-  scale_fill_brewer("Greys", name = "Thiaminase") +
+  #scale_fill_brewer("Greys", name = "Thiaminase") +
+  scale_fill_manual(values = c("#f0f0f0", "#636363"), name = "Thiaminase") +
   #scale_fill_viridis_d(begin = 0.3, end = 0.8) +
   theme(
     panel.grid.major.y = element_blank(),
@@ -214,7 +215,11 @@ print(marineplot)
 
 ggsave("figures/marineplot.png", dpi = 300, height = 5, width = 7)
 
-
+## try a spline plot
+spineplot(table(df2$Thiaminase) ~ df2$Marine,
+          xlab = "Horsepower",
+          ylab = "Number of Gears",
+          main = "Spineplot: mtcars dataset")
 
 
 
@@ -239,7 +244,8 @@ tropicalplot <-
            alpha = .9) +
   theme_bw(base_size = 16) +
   #scale_fill_brewer("Greys", name = "Thiaminase") +
-  scale_fill_viridis_d(begin = 0.3, end = 0.8) +
+  scale_fill_manual(values = c("#f0f0f0", "#636363"), name = "Thiaminase") +
+  #scale_fill_viridis_d(begin = 0.3, end = 0.8) +
   theme(
     panel.grid.major.y = element_blank(),
     panel.grid.minor.y = element_blank(),
@@ -289,7 +295,7 @@ tropicalplot <-
     label = "yes",
     size = 5
   ) +
-  theme(legend.position = "none") +
+  theme(legend.position = "right") +
   scale_x_discrete(labels = troplabels)
 
 print(tropicalplot)
