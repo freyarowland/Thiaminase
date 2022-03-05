@@ -144,15 +144,19 @@ df2 <- dat3 %>%
 
 marinelabels <- c("freshwater", "marine")
 
-marineplot <- ggplot(df2, aes(x = Marine, y = count, group = Marine, fill = as.factor(Thiaminase))) +
-  #scale_y_continuous(breaks = c(0, 0.5, 1)) +
-  #geom_jitter(height = 0.04, width = 0.25, size = 4, pch = 21, alpha = 0.7, aes(fill = Climate)) +
-  #geom_bar(stat = "identity", aes(fill = Thiaminase)) +
-  geom_col(position = "fill") +
-  ylab("Proportion") +
+marineplot <-
+  ggplot(df2, aes(
+    x = Marine,
+    y = count,
+    group = Marine,
+    fill = as.factor(Thiaminase)
+  )) +
   xlab("") +
+  geom_col(position = "dodge2",
+           show.legend = TRUE,
+           alpha = .9) +
   theme_bw(base_size = 16) +
-  scale_fill_brewer("blues") +
+  scale_fill_brewer("Greys", name = "Thiaminase") +
   #scale_fill_viridis_d(begin = 0.3, end = 0.8) +
   theme(
     panel.grid.major.y = element_blank(),
@@ -160,13 +164,137 @@ marineplot <- ggplot(df2, aes(x = Marine, y = count, group = Marine, fill = as.f
     panel.grid.major.x = element_blank(),
     panel.grid.minor.x = element_blank()
   ) +
-  theme(
-    legend.position = "none") +
+  annotate(
+    "text",
+    x = 1.25,
+    y = 100,
+    label = "59.5%",
+    size = 5
+  ) +
+  annotate(
+    "text",
+    x = 2.25,
+    y = 37,
+    label = "21.8%",
+    size = 5
+  ) +
+  annotate(
+    "text",
+    x = 0.775,
+    y = 10,
+    label = "no",
+    size = 5
+  ) +
+  annotate(
+    "text",
+    x = 1.225,
+    y = 10,
+    label = "yes",
+    size = 5
+  ) +
+  ylab("count") +
+  annotate(
+    "text",
+    x = 1.775,
+    y = 10,
+    label = "no",
+    size = 5
+  ) +
+  annotate(
+    "text",
+    x = 2.225,
+    y = 10,
+    label = "yes",
+    size = 5
+  ) +
+  theme(legend.position = "right") +
   scale_x_discrete(labels = marinelabels)
 
 print(marineplot)
 
 ggsave("figures/marineplot.png", dpi = 300, height = 5, width = 7)
+
+
+
+
+
+
+##### Tropical vs. not plot ----
+df3 <- dat3 %>%
+  group_by(Tropical, Thiaminase) %>%
+  dplyr::summarize(count = n())
+
+troplabels <- c("non-tropical", "tropical")
+
+tropicalplot <-
+  ggplot(df3, aes(
+    x = Tropical,
+    y = count,
+    group = Tropical,
+    fill = as.factor(Thiaminase)
+  )) +
+  xlab("") +
+  geom_col(position = "dodge2",
+           show.legend = TRUE,
+           alpha = .9) +
+  theme_bw(base_size = 16) +
+  #scale_fill_brewer("Greys", name = "Thiaminase") +
+  scale_fill_viridis_d(begin = 0.3, end = 0.8) +
+  theme(
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor.y = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor.x = element_blank()
+  ) +
+  annotate(
+    "text",
+    x = 1.25,
+    y = 100,
+    label = "42.5%",
+    size = 5
+  ) +
+  annotate(
+    "text",
+    x = 2.25,
+    y = 37,
+    label = "39.5%",
+    size = 5
+  ) +
+  annotate(
+    "text",
+    x = 0.775,
+    y = 10,
+    label = "no",
+    size = 5
+  ) +
+  annotate(
+    "text",
+    x = 1.225,
+    y = 10,
+    label = "yes",
+    size = 5
+  ) +
+  ylab("count") +
+  annotate(
+    "text",
+    x = 1.775,
+    y = 10,
+    label = "no",
+    size = 5
+  ) +
+  annotate(
+    "text",
+    x = 2.225,
+    y = 10,
+    label = "yes",
+    size = 5
+  ) +
+  theme(legend.position = "none") +
+  scale_x_discrete(labels = troplabels)
+
+print(tropicalplot)
+
+#ggsave("figures/marineplot.png", dpi = 300, height = 5, width = 7)
 
 
 
@@ -756,10 +884,12 @@ bivariate_fig <-
     common.legend = TRUE,
     TLmod + theme(axis.title.y = element_text("Thiaminase")),
     Fatmod_all + theme(axis.title.y = element_blank()),
-    nrow = 1, 
+    marineplot,
+    tropicalplot,
+    nrow = 2, 
     ncol = 2,
     align = "hv",
     labels = "auto"
   )
 
-ggsave("figures/TLandOmega.png", dpi = 300, width = 11, height = 5)
+ggsave("figures/allsigplots.png", dpi = 300, width = 11, height = 9)
