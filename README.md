@@ -1,6 +1,6 @@
 # Thiaminase
 
-#### Authors
+## Authors
 - Freya Rowland
 - Rachel Munds
 - Cathy Richter
@@ -20,4 +20,10 @@ A repository for exploring the evolutionary and ecological factors driving thiam
 
 ## R Scripts
 
--
+- [Models.R](<code/Models.R>) includes Bayesian models for predicting thiaminase based on ecological characteristics
+- [PhylogenyCode.R](<code/PhylogenyCode.R>) has Freya's attempts at building a phylogeny and seeing if node distance can predict thiaminase presence/absence
+- [Becantur2017Code.R](<code/Becantur2017Code.R>) is old code of Freya trying to figure out how to go from species level to order level in the phylogeny I want to use. Needs help.
+
+## Figures
+
+Potential figures for publication.
