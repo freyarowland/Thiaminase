@@ -50,17 +50,17 @@ summary(plus$Order)
 
 
 # summarize data
-dat2 %>%
-  group_by(Climate)  %>%
+dat3 %>%
+  #group_by(Climate)  %>%
   summarize(total = sum(Thiaminase == 1 | Thiaminase == 0, na.rm = TRUE),
             thiaminase_pos = sum(Thiaminase == 1, na.rm = TRUE),
             marine = sum(Marine == 1, na.rm = TRUE),
             fresh = sum(Marine == 0, na.rm = TRUE),
             marine_pos = sum(Marine == 1 & Thiaminase == 1, na.rm = TRUE),
             avg_size = mean(MaxTL, na.rm = TRUE),
-            #CV_size = sd(MaxTL, na.rm = TRUE)/mean(MaxTL, na.rm = TRUE)*100,
+            CV_size = sd(MaxTL, na.rm = TRUE)/mean(MaxTL, na.rm = TRUE)*100,
             avg_Omega3 = mean(Omega3, na.rm = TRUE),
-            #CV_Omega3 = sd(Omega3, na.rm = TRUE)/mean(Omega3, na.rm = TRUE)*100,
+            CV_Omega3 = sd(Omega3, na.rm = TRUE)/mean(Omega3, na.rm = TRUE)*100,
             benthic = sum(Habitat2 == "BE", na.rm = TRUE),
             benthopelagic = sum(Habitat2 == "BP", na.rm = TRUE),
             pelagic = sum(Habitat2 == "PE", na.rm = TRUE))
