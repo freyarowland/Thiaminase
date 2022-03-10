@@ -2,7 +2,7 @@
 
 ## Authors
 - Freya Rowland
-- Rachel Munds
+- Rachel A Munds
 - Cathy Richter
 - Don Tillitt
 - David Walters
