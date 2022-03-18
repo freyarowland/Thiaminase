@@ -18,3 +18,8 @@ library(phytools)
 # read in Betancur data
 my.tree <- read.tree('data/Betancur2017.tre')
 
+# get tip labels
+tips <- my.tree$tip.label
+
+# # export just the tips for eliminating all one entry per family
+# write.csv(tips, "data/tips.csv")
