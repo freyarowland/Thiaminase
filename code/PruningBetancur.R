@@ -14,6 +14,7 @@
 # libraries
 library(ape)
 library(phytools)
+library(dplyr)
 
 # read in Betancur data
 my.tree <- read.tree('data/Betancur2017.tre')
@@ -48,22 +49,22 @@ summary(pruned_tree)
 # rename tip labels
 fish.data$Name<-sapply(strsplit(fish.data$Name,"_"),function(x) x[1])
 
-fish.data <- keep2[, c(2, 4)]
+# fish.data <- keep2[, c(2, 4)]
 row.names(fish.data) <- fish.data$Name
 fmode <- as.factor(setNames(fish.data[, 2], rownames(fish.data)))
 
-## basic plot
-dotTree(pruned_tree,
-        fmode,
-        colors=setNames(c("white","red"),
-                        c("absent","present")),
-        legend = FALSE,
-        data.type = "discrete",
-        edge.width = 1,
-        ftype="i",
-        fsize=0.55,
-        mar = c(5.1, 4.1, 1.1, 1.1), cex = 0.55)
-axis(1)
+# ## basic plot
+# dotTree(pruned_tree,
+#         fmode,
+#         colors=setNames(c("white","red"),
+#                         c("absent","present")),
+#         legend = FALSE,
+#         data.type = "discrete",
+#         edge.width = 1,
+#         ftype="i",
+#         fsize=0.55,
+#         mar = c(5.1, 4.1, 1.1, 1.1), cex = 0.55)
+# axis(1)
 
 # stochastic mapping ----
 
@@ -76,7 +77,7 @@ summary(smap.trees)
 
 png('figures/family_phylogeny.png', height = 1200, width = 600)
 cols <- setNames(c("red", "black"), c("present", "absent"))
-plot(summary(smap.trees), spread.labels = TRUE, size = 1, lwd = 1.5, cex = 0.8, pt.cex = 0.3)
+plot(summary(smap.trees), spread.labels = TRUE, size = 1, lwd = 1.5, cex = 0.8, cex.pt = 0.3)
 legend("topleft", c("present", "absent"), pch = 21, pt.bg = cols, pt.cex = 1)
 dev.off()
 
