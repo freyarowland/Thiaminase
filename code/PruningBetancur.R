@@ -17,6 +17,17 @@ library(phytools)
 
 # read in Betancur data
 my.tree <- read.tree('data/Betancur2017.tre')
+keep <- read.csv("data/tips.csv")
+
+# # get the tip labels for Betancur
+# tips <- my.tree$tip.label
+# # export just the tips for eliminating all one entry per family
+# # write.csv(tips, "data/tips.csv")
+
+# eliminate entries that are not in database
+# 108 families overlap between Betancur and my data
+keep2 <- filter(keep, InData == 1)
+names <- keep2[,2]
 
 # get tip labels
 tips <- my.tree$tip.label
