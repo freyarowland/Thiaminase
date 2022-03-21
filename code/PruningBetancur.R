@@ -77,9 +77,20 @@ summary(smap.trees)
 
 png('figures/family_phylogeny.png', height = 1200, width = 600)
 cols <- setNames(c("red", "black"), c("present", "absent"))
-plot(summary(smap.trees), spread.labels = TRUE, size = 1, lwd = 1.5, cex = 0.8, cex.pt = 0.3)
+plot(summary(smap.trees), spread.labels = TRUE, size = 0.2, lwd = 1.5, cex = 0.3, pt.cex = 0.3)
 legend("topleft", c("present", "absent"), pch = 21, pt.bg = cols, pt.cex = 1)
 dev.off()
+
+
+## another way
+library(ggtree)
+prettytree <- ggplot(smap.trees), right = TRUE) + geom_tree() + theme_tree()
+
+ggtree(smap.trees) + theme_tree2() + geom_tiplab(align = TRUE, linesize = 0.5, offset = 0.1, size = 2) +
+  geom_tippoint()
+
+
+
 
 
 
