@@ -22,8 +22,15 @@ A repository for exploring the evolutionary and ecological factors driving thiam
 
 - [Models.R](<code/Models.R>) includes Bayesian models for predicting thiaminase based on ecological characteristics
 - [PhylogenyCode.R](<code/PhylogenyCode.R>) has Freya's attempts at building a phylogeny and seeing if node distance can predict thiaminase presence/absence
-- [Becantur2017Code.R](<code/Becantur2017Code.R>) is old code of Freya trying to figure out how to go from species level to order level in the phylogeny I want to use. Needs help.
+- [Becantur2017Code.R](<code/Becantur2017Code.R>) is old code of Freya trying to figure out how to go from species level to order level in the phylogeny I want to use. Obsolete.
+- [code/PruningBetancur.R](<code/PruningBetancur.R>) is the family-level code for pruning the Betancur data to family-level and plotting the character simulations at each node.
 
 ## Figures
 
 Potential figures for publication.
+
+### Family-level phylogeny. No evolutionary relationship between probability of thiaminase expression within a family.
+![Family_phylogeny](figures/family_phylogeny.png)
+
+### all significant plots
+![Allsig](figures/allsigplots.png)
