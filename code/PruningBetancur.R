@@ -75,10 +75,17 @@ smap.trees <- make.simmap(pruned_tree, fmode,
                           model = "ER", nsim = 500)
 summary(smap.trees)
 
+# # code chunk for rescaling size of fonts on trees
+# # this isn't working for some reason
+# foo<-function(tree,...){
+#   fsize<-36*par()$pin[2]/par()$pin[1]/Ntip(tree)
+#   plotTree(tree,fsize=fsize,lwd=1,...)
+# }
+
 png('figures/family_phylogeny.png', height = 1200, width = 600)
-cols <- setNames(c("red", "black"), c("present", "absent"))
-plot(summary(smap.trees), spread.labels = TRUE, size = 0.2, lwd = 1.5, cex = 0.3, pt.cex = 0.3)
-legend("topleft", c("present", "absent"), pch = 21, pt.bg = cols, pt.cex = 1)
+cols <- setNames(c("black", "white"), c("present", "absent"))
+plot(summary(smap.trees), colors = cols, spread.labels = TRUE)
+legend("topleft", c("present", "absent"), pch = 21, pt.bg = cols)
 dev.off()
 
 
