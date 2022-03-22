@@ -82,7 +82,7 @@ summary(smap.trees)
 #   plotTree(tree,fsize=fsize,lwd=1,...)
 # }
 
-png('figures/family_phylogeny.png', height = 1200, width = 600)
+pdf('figures/family_phylogeny.pdf', height = 15, width = 8)
 cols <- setNames(c("black", "white"), c("present", "absent"))
 plot(summary(smap.trees), colors = cols, spread.labels = TRUE)
 legend("topleft", c("present", "absent"), pch = 21, pt.bg = cols)
