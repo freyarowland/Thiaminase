@@ -48,7 +48,6 @@ summary(dat2$Order)
 summary(plus$Order)
 
 
-
 # summarize data
 dat3 %>%
   #group_by(Climate)  %>%
@@ -744,9 +743,9 @@ multreg_plot <- mcmc_areas(posterior,
            pars = c("TL_fooditems", "Omega3", "Marine1", 
                     "Tropical1", "scale(MaxTL)", "Invasive", "Benthic", "Benthopelagic", "Pelagic"),
            prob = 0.95) + 
-  plot_title +
+  #plot_title +
   theme_bw(base_size = 16) +
-  geom_vline(xintercept=0, linetype = "dashed", colour = "red") +
+  geom_vline(xintercept=0, linetype = "dashed", colour = "blue", size = 1.2) +
   scale_y_discrete(labels = c('Trophic level','Omega3',
                               'Marine', 'Tropical',
                               'Max length',
@@ -754,7 +753,16 @@ multreg_plot <- mcmc_areas(posterior,
                               'Benthic',
                               'Benthopelagic',
                               'Pelagic',
-                              'Anadromous/Catadromous'))
+                              'Anadromous/Catadromous')) +
+  xlab("Posterior distribution of parameter") +
+  ylab("Parameters") +
+  theme(
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor.y = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor.x = element_blank()
+  )
+  
 
 ggsave(multreg_plot, filename = "figures/multreg_plot.png", dpi = 300, width = 5, height = 7)
 
@@ -772,7 +780,7 @@ logit2prob(coef(allfit))
 loo(allfit) # good
 
 # fits match y
-color_scheme_set("blue")
+color_scheme_set("gray")
 ppc_dens_overlay(y = allfit$y,
                  yrep = posterior_predict(allfit, draws = 50))
 

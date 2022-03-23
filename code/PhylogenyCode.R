@@ -21,7 +21,7 @@ plot(my.tree, edge.width = 1)
 plot(my.tree, font = 1, cex = 0.45)
 
 # generate sampling points
-interval <- 30 # every 30 million years
+interval <- 50 # every 30 million years
 dd <- seq(h,0, by =-interval)
 
 # plot with millions of years
