@@ -745,7 +745,7 @@ multreg_plot <- mcmc_areas(posterior,
            prob = 0.95) + 
   #plot_title +
   theme_bw(base_size = 16) +
-  geom_vline(xintercept=0, linetype = "dashed", colour = "blue", size = 1.2) +
+  geom_vline(xintercept=0, linetype = "dotted", colour = "black", size = 1) +
   scale_y_discrete(labels = c('Trophic level','Omega3',
                               'Marine', 'Tropical',
                               'Max length',
@@ -755,14 +755,14 @@ multreg_plot <- mcmc_areas(posterior,
                               'Pelagic',
                               'Anadromous/Catadromous')) +
   xlab("Posterior distribution of parameter") +
-  ylab("Parameters") +
+  ylab("Ecological variable") +
   theme(
     panel.grid.major.y = element_blank(),
     panel.grid.minor.y = element_blank(),
     panel.grid.major.x = element_blank(),
     panel.grid.minor.x = element_blank()
   )
-  
+print(multreg_plot)
 
 ggsave(multreg_plot, filename = "figures/multreg_plot.png", dpi = 300, width = 5, height = 7)
 
