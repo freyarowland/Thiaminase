@@ -35,5 +35,8 @@ Potential figures for publication.
 ### Order-level phylogeny has same pattern. No evoluationary relationship
 ![order_phylogeny](figures/order_phylogeny.png)
 
+### Multiple regression
+![multreg](figures/multreg_plot.png)
+
 ### all significant plots
 ![Allsig](figures/allsigplots.png)
