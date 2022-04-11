@@ -155,7 +155,7 @@ marineplot <-
   geom_col(position = "dodge2",
            show.legend = TRUE,
            alpha = .9, 
-           color = "black") +
+           color = "grey50") +
   theme_bw(base_size = 16) +
   scale_fill_manual(values = c("#f0f0f0", "#636363"), name = "Thiaminase") +
   theme(
@@ -236,7 +236,7 @@ tropicalplot <-
   geom_col(position = "dodge2",
            show.legend = TRUE,
            alpha = .9,
-           color = "black") +
+           color = "grey50") +
   ylim(0, 130) +
   theme_bw(base_size = 16) +
   #scale_fill_brewer("Greys", name = "Thiaminase") +
