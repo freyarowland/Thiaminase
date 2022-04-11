@@ -64,24 +64,24 @@ dat3 %>%
             benthopelagic = sum(Habitat2 == "BP", na.rm = TRUE),
             pelagic = sum(Habitat2 == "PE", na.rm = TRUE))
 
-# habitat and relationship to trophic level?
-ggplot(data = dat2) +
-  #geom_jitter(height = 0.05, width = 0.05) +
-  geom_density_ridges(aes(x = TL_fooditems, y = Habitat2)) +
-  theme_bw(base_size = 16) +
-  scale_fill_viridis_d() +
-  ylab("Count") +
-  xlab("Trophic level")
+# # habitat and relationship to trophic level?
+# ggplot(data = dat2) +
+#   #geom_jitter(height = 0.05, width = 0.05) +
+#   geom_density_ridges(aes(x = TL_fooditems, y = Habitat2)) +
+#   theme_bw(base_size = 16) +
+#   scale_fill_viridis_d() +
+#   ylab("Count") +
+#   xlab("Trophic level")
 
 # age and max length
-ggplot(data = dat2, aes(x = MaxAge, y = as.factor(Thiaminase), fill = 0.5 - abs(0.5 - stat(ecdf)))) +
+ggplot(data = dat3, aes(x = MaxAge, y = as.factor(Thiaminase), fill = 0.5 - abs(0.5 - stat(ecdf)))) +
   stat_density_ridges(geom = "density_ridges_gradient", calc_ecdf = TRUE) +
   scale_fill_viridis_c(name = "Tail probability", direction = -1) +
   theme_bw(base_size = 16) +
   ylab("Thiaminase") +
   xlab("Maximum age")
 
-ggplot(data = dat2, aes(x = MaxTL, y = as.factor(Thiaminase), fill = 0.5 - abs(0.5 - stat(ecdf)))) +
+ggplot(data = dat3, aes(x = MaxTL, y = as.factor(Thiaminase), fill = 0.5 - abs(0.5 - stat(ecdf)))) +
   stat_density_ridges(geom = "density_ridges_gradient", calc_ecdf = TRUE) +
   scale_fill_viridis_c(name = "Tail probability", direction = -1) +
   theme_bw(base_size = 16) +
@@ -151,13 +151,13 @@ marineplot <-
     fill = as.factor(Thiaminase)
   )) +
   xlab("") +
+  ylim(0, 130) +
   geom_col(position = "dodge2",
            show.legend = TRUE,
-           alpha = .9) +
+           alpha = .9, 
+           color = "black") +
   theme_bw(base_size = 16) +
-  #scale_fill_brewer("Greys", name = "Thiaminase") +
   scale_fill_manual(values = c("#f0f0f0", "#636363"), name = "Thiaminase") +
-  #scale_fill_viridis_d(begin = 0.3, end = 0.8) +
   theme(
     panel.grid.major.y = element_blank(),
     panel.grid.minor.y = element_blank(),
@@ -240,7 +240,9 @@ tropicalplot <-
   xlab("") +
   geom_col(position = "dodge2",
            show.legend = TRUE,
-           alpha = .9) +
+           alpha = .9,
+           color = "black") +
+  ylim(0, 130) +
   theme_bw(base_size = 16) +
   #scale_fill_brewer("Greys", name = "Thiaminase") +
   scale_fill_manual(values = c("#f0f0f0", "#636363"), name = "Thiaminase") +
@@ -279,7 +281,7 @@ tropicalplot <-
     label = "yes",
     size = 5
   ) +
-  ylab("count") +
+  ylab("") +
   annotate(
     "text",
     x = 1.775,
@@ -299,7 +301,7 @@ tropicalplot <-
 
 print(tropicalplot)
 
-#ggsave("figures/marineplot.png", dpi = 300, height = 5, width = 7)
+# ggsave("figures/marineplot.png", dpi = 300, height = 5, width = 7)
 
 
 
