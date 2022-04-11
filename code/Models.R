@@ -141,7 +141,7 @@ df2 <- dat3 %>%
   group_by(Marine, Thiaminase) %>%
   dplyr::summarize(count = n())
 
-marinelabels <- c("freshwater", "marine")
+marinelabels <- c("Freshwater", "Marine")
 
 marineplot <-
   ggplot(df2, aes(
@@ -156,7 +156,7 @@ marineplot <-
            show.legend = TRUE,
            alpha = .9, 
            color = "grey50") +
-  theme_bw(base_size = 16) +
+  theme_bw(base_size = 18) +
   scale_fill_manual(values = c("#f0f0f0", "#636363"), name = "Thiaminase") +
   theme(
     panel.grid.major.y = element_blank(),
@@ -192,7 +192,7 @@ marineplot <-
     label = "yes",
     size = 5
   ) +
-  ylab("count") +
+  ylab("Count") +
   annotate(
     "text",
     x = 1.775,
@@ -223,7 +223,7 @@ df3 <- dat3 %>%
   group_by(Tropical, Thiaminase) %>%
   dplyr::summarize(count = n())
 
-troplabels <- c("non-tropical", "tropical")
+troplabels <- c("Non-tropical", "Tropical")
 
 tropicalplot <-
   ggplot(df3, aes(
@@ -238,7 +238,7 @@ tropicalplot <-
            alpha = .9,
            color = "grey50") +
   ylim(0, 130) +
-  theme_bw(base_size = 16) +
+  theme_bw(base_size = 18) +
   #scale_fill_brewer("Greys", name = "Thiaminase") +
   scale_fill_manual(values = c("#f0f0f0", "#636363"), name = "Thiaminase") +
   #scale_fill_viridis_d(begin = 0.3, end = 0.8) +
@@ -276,7 +276,6 @@ tropicalplot <-
     label = "yes",
     size = 5
   ) +
-  ylab("") +
   annotate(
     "text",
     x = 1.775,
@@ -291,6 +290,8 @@ tropicalplot <-
     label = "yes",
     size = 5
   ) +
+  # ylab("Count") + 
+  ylab("") +
   theme(legend.position = "none") +
   scale_x_discrete(labels = troplabels)
 
@@ -416,7 +417,7 @@ TLmod <-
   ggplot(dat3, aes(x = TL_fooditems, y = Thiaminase, fill = Climate)) +
   scale_y_continuous(breaks = c(0, 0.5, 1)) +
   geom_jitter(height = 0.04, width = 0.02, size = 4, pch = 21, alpha = 0.7) +
-  theme_bw(base_size = 16) +
+  theme_bw(base_size = 18) +
   scale_fill_viridis_d() +
   stat_function(fun = pr_thia, args = list(ests = coef(TL)),
                 size = 1, linetype = "solid") +
@@ -644,7 +645,7 @@ Fatmod_all <- ggplot(dat3, aes(x = Omega3, y = Thiaminase, fill = Climate)) +
   stat_function(fun = pr_thia, args = list(ests = coef(fit1_salt)),
                 size = 1, linetype = "dashed") +
   scale_fill_viridis_d() + 
-  theme_bw(base_size = 16) +
+  theme_bw(base_size = 18) +
   xlab("Omega-3 concentration (g per 100 g)") +
   ylab("Thiaminase (presence/absence)") +
   theme(
@@ -902,4 +903,4 @@ bivariate_fig <-
     labels = "auto"
   )
 
-ggsave("figures/allsigplots.png", dpi = 300, width = 11, height = 9)
+ggsave("figures/allsigplots.png", dpi = 300, width = 12, height = 10)
