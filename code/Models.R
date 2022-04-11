@@ -33,9 +33,9 @@ library(lme4)
 library(rstanarm)
 library(ggplot2)
 library(bayesplot)
-library(ggrepel)
+# library(ggrepel)
 library(bayestestR)
-library(ggridges)
+# library(ggridges)
 library(tidybayes)
 library(dplyr)
 library(modelr)
@@ -73,47 +73,47 @@ dat3 %>%
 #   ylab("Count") +
 #   xlab("Trophic level")
 
-# age and max length
-ggplot(data = dat3, aes(x = MaxAge, y = as.factor(Thiaminase), fill = 0.5 - abs(0.5 - stat(ecdf)))) +
-  stat_density_ridges(geom = "density_ridges_gradient", calc_ecdf = TRUE) +
-  scale_fill_viridis_c(name = "Tail probability", direction = -1) +
-  theme_bw(base_size = 16) +
-  ylab("Thiaminase") +
-  xlab("Maximum age")
+# # age and max length
+# ggplot(data = dat3, aes(x = MaxAge, y = as.factor(Thiaminase), fill = 0.5 - abs(0.5 - stat(ecdf)))) +
+#   stat_density_ridges(geom = "density_ridges_gradient", calc_ecdf = TRUE) +
+#   scale_fill_viridis_c(name = "Tail probability", direction = -1) +
+#   theme_bw(base_size = 16) +
+#   ylab("Thiaminase") +
+#   xlab("Maximum age")
+# 
+# ggplot(data = dat3, aes(x = MaxTL, y = as.factor(Thiaminase), fill = 0.5 - abs(0.5 - stat(ecdf)))) +
+#   stat_density_ridges(geom = "density_ridges_gradient", calc_ecdf = TRUE) +
+#   scale_fill_viridis_c(name = "Tail probability", direction = -1) +
+#   theme_bw(base_size = 16) +
+#   ylab("Thiaminase") +
+#   xlab("Maximum total length (cm)")
+# 
+# # log-transform size for easier viewing
+# ggplot(data = dat2, aes(x = MaxTL, y = as.factor(Thiaminase), fill = 0.5 - abs(0.5 - stat(ecdf)))) +
+#   stat_density_ridges(geom = "density_ridges_gradient", calc_ecdf = TRUE) +
+#   scale_fill_viridis_c(name = "Tail probability", direction = -1) +
+#   theme_bw(base_size = 16) +
+#   ylab("Thiaminase") +
+#   xlab("Maximum total length (cm)")
 
-ggplot(data = dat3, aes(x = MaxTL, y = as.factor(Thiaminase), fill = 0.5 - abs(0.5 - stat(ecdf)))) +
-  stat_density_ridges(geom = "density_ridges_gradient", calc_ecdf = TRUE) +
-  scale_fill_viridis_c(name = "Tail probability", direction = -1) +
-  theme_bw(base_size = 16) +
-  ylab("Thiaminase") +
-  xlab("Maximum total length (cm)")
 
-# log-transform size for easier viewing
-ggplot(data = dat2, aes(x = MaxTL, y = as.factor(Thiaminase), fill = 0.5 - abs(0.5 - stat(ecdf)))) +
-  stat_density_ridges(geom = "density_ridges_gradient", calc_ecdf = TRUE) +
-  scale_fill_viridis_c(name = "Tail probability", direction = -1) +
-  theme_bw(base_size = 16) +
-  ylab("Thiaminase") +
-  xlab("Maximum total length (cm)")
-
-
-###########
-# trophic level is a significant predictor of thiaminase activity! ----
-troph_mod <- aov(TL_fooditems ~ Habitat2, data = dat2)
-summary(troph_mod)
-TukeyHSD(troph_mod, conf.level=.95)
-
-# total length is related to thiaminase activity! ----
-size_mod <- lm(MaxTL ~ Thiaminase, data = dat2)
-summary(size_mod)
-
-# age is related to thiaminase activity! ----
-age_mod <- lm(MaxAge ~ Thiaminase, data = dat2)
-summary(age_mod)
-
-# age and length ----
-corr_mod <- lm(MaxAge ~ MaxTL, data = dat2)
-summary(corr_mod)
+# ###########
+# # trophic level is a significant predictor of thiaminase activity! ----
+# troph_mod <- aov(TL_fooditems ~ Habitat2, data = dat2)
+# summary(troph_mod)
+# TukeyHSD(troph_mod, conf.level=.95)
+# 
+# # total length is related to thiaminase activity! ----
+# size_mod <- lm(MaxTL ~ Thiaminase, data = dat2)
+# summary(size_mod)
+# 
+# # age is related to thiaminase activity! ----
+# age_mod <- lm(MaxAge ~ Thiaminase, data = dat2)
+# summary(age_mod)
+# 
+# # age and length ----
+# corr_mod <- lm(MaxAge ~ MaxTL, data = dat2)
+# summary(corr_mod)
 
 
 ########
@@ -207,18 +207,13 @@ marineplot <-
     label = "yes",
     size = 5
   ) +
-  theme(legend.position = "right") +
+  theme(legend.position = "none") +
   scale_x_discrete(labels = marinelabels)
 
 print(marineplot)
 
 ggsave("figures/marineplot.png", dpi = 300, height = 5, width = 7)
 
-## try a spline plot
-spineplot(table(df2$Thiaminase) ~ df2$Marine,
-          xlab = "Horsepower",
-          ylab = "Number of Gears",
-          main = "Spineplot: mtcars dataset")
 
 
 
@@ -296,12 +291,12 @@ tropicalplot <-
     label = "yes",
     size = 5
   ) +
-  theme(legend.position = "right") +
+  theme(legend.position = "none") +
   scale_x_discrete(labels = troplabels)
 
 print(tropicalplot)
 
-# ggsave("figures/marineplot.png", dpi = 300, height = 5, width = 7)
+ggsave("figures/tropicalplot.png", dpi = 300, height = 5, width = 7)
 
 
 
@@ -445,57 +440,57 @@ print(TLmod)
 ggsave(TLmod, filename = "figures/TLmod_all.png", dpi = 300, height = 5, width = 7)
 
 ## add in PUFA ----
-  
-# make separate salty figure
-fit2 <- update(fit1, formula = Thiaminase ~ TL_fooditems + Omega3)
-(coef_fit2 <- round(coef(fit2), 3))
-
-pr_thia2 <- function(x, y, ests) plogis(ests[1] + ests[2] * x + ests[3] * y)
-grid <- expand.grid(TL_fooditems = seq(2, 5, length.out = 100),
-                    Omega3 = seq(0, 3, length.out = 100))
-grid$prob <- with(grid, pr_thia2(TL_fooditems, Omega3, coef(fit2)))
-
-# probability space
-
-probplot <- 
-ggplot(grid, aes(x = TL_fooditems, y = Omega3)) +
-  geom_tile(aes(fill = prob)) +
-  #geom_point(data = salt2, aes(color = factor(Continent), label = ï..Common), size = 3) +
-  geom_point(data = dat3, aes(color = factor(Thiaminase), label = ï..Common), size = 3) +
-  #geom_point(data = dat3, aes(color = Tropical, label = ï..Common), size = 3) +
-  scale_fill_gradient(low = "#e5f5e0", high = "#31a354") +
-  theme_bw(base_size = 16) +
-  scale_color_manual("Thiaminase", values = c("white", "black"), labels = c("No", "Yes")) +
-  xlab("Trophic level estimate") +
-  #scale_color_viridis_d() +
-  ylab("PUFA concentration (g/100 g)") +
-  geom_text_repel(aes(label = ï..Common), data = dat2)
-
-ggsave(probplot, filename = "figures/probabilityplot.png", dpi = 300, width = 7, height = 5)
-
-
-
-# make separate freshwater figure
-fit2_fresh <- update(fit1_fresh, formula = Thiaminase ~ TL_fooditems + Omega3)
-(coef_fit2 <- round(coef(fit2_fresh), 3))
-
-pr_thia2 <- function(x, y, ests) plogis(ests[1] + ests[2] * x + ests[3] * y)
-grid <- expand.grid(TL_fooditems = seq(2, 5, length.out = 100),
-                    Omega3 = seq(0, 3, length.out = 100))
-grid$prob <- with(grid, pr_thia2(TL_fooditems, Omega3, coef(fit2_fresh)))
-
-ggplot(grid, aes(x = TL_fooditems, y = Omega3)) +
-  geom_tile(aes(fill = prob)) +
-  #geom_point(data = salt2, aes(color = factor(Continent), label = ï..Common), size = 3) +
-  geom_point(data = fresh2, aes(color = factor(Thiaminase), label = ï..Common), size = 3) +
-  #geom_point(data = dat2, aes(color = Tropical, label = ï..Common), size = 3) +
-  scale_fill_gradient(low = "#deebf7", high = "#3182bd") +
-  theme_bw(base_size = 16) +
-  scale_color_manual("Thiaminase", values = c("white", "black"), labels = c("No", "Yes")) +
-  xlab("Trophic level estimate") +
-  #scale_color_viridis_d() +
-  ylab("PUFA concentration (g/100 g)") +
-  geom_text_repel(aes(label = ï..Common), data = fresh2)
+#   
+# # make separate salty figure
+# fit2 <- update(fit1, formula = Thiaminase ~ TL_fooditems + Omega3)
+# (coef_fit2 <- round(coef(fit2), 3))
+# 
+# pr_thia2 <- function(x, y, ests) plogis(ests[1] + ests[2] * x + ests[3] * y)
+# grid <- expand.grid(TL_fooditems = seq(2, 5, length.out = 100),
+#                     Omega3 = seq(0, 3, length.out = 100))
+# grid$prob <- with(grid, pr_thia2(TL_fooditems, Omega3, coef(fit2)))
+# 
+# # probability space
+# 
+# probplot <- 
+# ggplot(grid, aes(x = TL_fooditems, y = Omega3)) +
+#   geom_tile(aes(fill = prob)) +
+#   #geom_point(data = salt2, aes(color = factor(Continent), label = ï..Common), size = 3) +
+#   geom_point(data = dat3, aes(color = factor(Thiaminase), label = ï..Common), size = 3) +
+#   #geom_point(data = dat3, aes(color = Tropical, label = ï..Common), size = 3) +
+#   scale_fill_gradient(low = "#e5f5e0", high = "#31a354") +
+#   theme_bw(base_size = 16) +
+#   scale_color_manual("Thiaminase", values = c("white", "black"), labels = c("No", "Yes")) +
+#   xlab("Trophic level estimate") +
+#   #scale_color_viridis_d() +
+#   ylab("PUFA concentration (g/100 g)") +
+#   geom_text_repel(aes(label = ï..Common), data = dat2)
+# 
+# ggsave(probplot, filename = "figures/probabilityplot.png", dpi = 300, width = 7, height = 5)
+# 
+# 
+# 
+# # make separate freshwater figure
+# fit2_fresh <- update(fit1_fresh, formula = Thiaminase ~ TL_fooditems + Omega3)
+# (coef_fit2 <- round(coef(fit2_fresh), 3))
+# 
+# pr_thia2 <- function(x, y, ests) plogis(ests[1] + ests[2] * x + ests[3] * y)
+# grid <- expand.grid(TL_fooditems = seq(2, 5, length.out = 100),
+#                     Omega3 = seq(0, 3, length.out = 100))
+# grid$prob <- with(grid, pr_thia2(TL_fooditems, Omega3, coef(fit2_fresh)))
+# 
+# ggplot(grid, aes(x = TL_fooditems, y = Omega3)) +
+#   geom_tile(aes(fill = prob)) +
+#   #geom_point(data = salt2, aes(color = factor(Continent), label = ï..Common), size = 3) +
+#   geom_point(data = fresh2, aes(color = factor(Thiaminase), label = ï..Common), size = 3) +
+#   #geom_point(data = dat2, aes(color = Tropical, label = ï..Common), size = 3) +
+#   scale_fill_gradient(low = "#deebf7", high = "#3182bd") +
+#   theme_bw(base_size = 16) +
+#   scale_color_manual("Thiaminase", values = c("white", "black"), labels = c("No", "Yes")) +
+#   xlab("Trophic level estimate") +
+#   #scale_color_viridis_d() +
+#   ylab("PUFA concentration (g/100 g)") +
+#   geom_text_repel(aes(label = ï..Common), data = fresh2)
 
 
 
@@ -582,7 +577,7 @@ fit1_salt_loo <- loo(fit1_salt)
 
 # describe posteriors
 describe_posterior(
-  fat,
+  fit1,
   effects = "all",
   component = "all",
   test = c("p_direction", "p_significance"),
@@ -590,7 +585,7 @@ describe_posterior(
 )
 
 describe_posterior(
-  fat_fresh,
+  fit1_fresh,
   effects = "all",
   component = "all",
   test = c("p_direction", "p_significance"),
@@ -598,7 +593,7 @@ describe_posterior(
 )
 
 describe_posterior(
-  fat_salt,
+  fit1_salt,
   effects = "all",
   component = "all",
   test = c("p_direction", "p_significance"),
@@ -607,9 +602,9 @@ describe_posterior(
 
 
 # probability of predictor variables
-summary(fat, digits = 3)
-summary(fat_fresh, digits = 3)
-summary(fat_salt, digits = 3)
+summary(fit1, digits = 3)
+summary(fit1_fresh, digits = 3)
+summary(fit1_salt, digits = 3)
 round(posterior_interval(fat, prob = 0.95), digits = 3)
 round(posterior_interval(fat_fresh, prob = 0.95), digits = 3)
 round(posterior_interval(fat_salt, prob = 0.95), digits = 3)
@@ -661,7 +656,7 @@ Fatmod_all <- ggplot(dat3, aes(x = Omega3, y = Thiaminase, fill = Climate)) +
 
 print(Fatmod_all)
 # ggsave(Fatmod_nontrop, filename = "figures/Fatmod_nontrop.png", dpi = 300, width = 7, height = 5)
-# ggsave(Fatmod_all, filename = "figures/Fatmod_all.png", dpi = 300, width = 7, height = 5)
+ggsave(Fatmod_all, filename = "figures/Fatmod_all.png", dpi = 300, width = 7, height = 5)
 # ggsave(Fatmod_all, filename = "figures/Fatmod_all_nogrid.png", dpi = 300, width = 7, height = 5)
 
 
@@ -739,8 +734,7 @@ launch_shinystan(allfit)
 posterior <- as.matrix(allfit)
 
 # plot it
-plot_title <- ggtitle("Posterior distributions",
-                      "with medians and 95% intervals")
+
 multreg_plot <- mcmc_areas(posterior,
            pars = c("TL_fooditems", "Omega3", "Marine1", 
                     "Tropical1", "scale(MaxTL)", "Invasive", "Benthic", "Benthopelagic", "Pelagic"),
@@ -748,7 +742,7 @@ multreg_plot <- mcmc_areas(posterior,
   #plot_title +
   theme_bw(base_size = 16) +
   geom_vline(xintercept=0, linetype = "dotted", colour = "black", size = 1) +
-  scale_y_discrete(labels = c('Trophic level','Omega3',
+  scale_y_discrete(labels = c('Trophic level','Omega-3',
                               'Marine', 'Tropical',
                               'Max length',
                               'Invasive',
@@ -790,72 +784,72 @@ ppc_dens_overlay(y = allfit$y,
 
 ## multiple regression using only 'significant' variables ----
 
-## all variables
-t_prior <- student_t(df = 7, location = 0, scale = 2.5)
-allsigfit <- stan_glm(
-  Thiaminase ~ 
-    TL_fooditems +
-    Omega3 +
-    Marine +
-    Tropical,
-  data = dat3,
-  family = binomial(link = "logit"),
-  prior = t_prior,
-  prior_intercept = t_prior,
-  iter = 10000,
-  chains = 4,
-  cores = 3,
-  seed = 12345
-)
-
-summary(allsigfit)
-
-# get a Bayesian R2 
-rsq <- bayes_R2(allsigfit)
-print(median(rsq)) #R2 = 0.31
-hist(rsq)
-
-# get posteriors
-describe_posterior(
-  allsigfit,
-  effects = "all",
-  component = "all",
-  test = c("p_direction", "p_significance"),
-  centrality = "all"
-)
-
-# calculate probabilities for factors
-logit2prob <- function(logit){
-  odds <- exp(logit)
-  prob <- odds/(1+odds)
-  return(prob)
-}
-logit2prob(coef(allsigfit))
-
-# check fit
-loo(allfit) # good
-
-# look at model fit with shiny stan
-launch_shinystan(allsigfit)
-
-
-# plot of posteriors
-posterior <- as.matrix(allfit)
-
-# plot it
-plot_title <- ggtitle("Posterior distributions",
-                      "with medians and 95% intervals")
-multsigreg_plot <- mcmc_areas(posterior,
-                           pars = c("TL_fooditems", "Omega3", "Marine1", 
-                                    "Tropical1"),
-                           prob = 0.95) + 
-  plot_title +
-  theme_bw(base_size = 16) +
-  geom_vline(xintercept=0, linetype = "dashed", colour = "red") +
-  scale_y_discrete(labels = c('Trophic level','Omega3',
-                              'Marine', 'Tropical'))
-
-ggsave(multsigreg_plot, filename = "figures/multsigreg_plot.png", dpi = 300, width = 5, height = 7)
+# ## all variables
+# t_prior <- student_t(df = 7, location = 0, scale = 2.5)
+# allsigfit <- stan_glm(
+#   Thiaminase ~ 
+#     TL_fooditems +
+#     Omega3 +
+#     Marine +
+#     Tropical,
+#   data = dat3,
+#   family = binomial(link = "logit"),
+#   prior = t_prior,
+#   prior_intercept = t_prior,
+#   iter = 10000,
+#   chains = 4,
+#   cores = 3,
+#   seed = 12345
+# )
+# 
+# summary(allsigfit)
+# 
+# # get a Bayesian R2 
+# rsq <- bayes_R2(allsigfit)
+# print(median(rsq)) #R2 = 0.31
+# hist(rsq)
+# 
+# # get posteriors
+# describe_posterior(
+#   allsigfit,
+#   effects = "all",
+#   component = "all",
+#   test = c("p_direction", "p_significance"),
+#   centrality = "all"
+# )
+# 
+# # calculate probabilities for factors
+# logit2prob <- function(logit){
+#   odds <- exp(logit)
+#   prob <- odds/(1+odds)
+#   return(prob)
+# }
+# logit2prob(coef(allsigfit))
+# 
+# # check fit
+# loo(allfit) # good
+# 
+# # look at model fit with shiny stan
+# launch_shinystan(allsigfit)
+# 
+# 
+# # plot of posteriors
+# posterior <- as.matrix(allfit)
+# 
+# # plot it
+# plot_title <- ggtitle("Posterior distributions",
+#                       "with medians and 95% intervals")
+# multsigreg_plot <- mcmc_areas(posterior,
+#                            pars = c("TL_fooditems", "Omega3", "Marine1", 
+#                                     "Tropical1"),
+#                            prob = 0.95) + 
+#   plot_title +
+#   theme_bw(base_size = 16) +
+#   geom_vline(xintercept=0, linetype = "dashed", colour = "red") +
+#   scale_y_discrete(labels = c('Trophic level','Omega3',
+#                               'Marine', 'Tropical'))
+# 
+# ggsave(multsigreg_plot, filename = "figures/multsigreg_plot.png", dpi = 300, width = 5, height = 7)
 
 
 # calculate probabilities
