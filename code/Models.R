@@ -297,7 +297,7 @@ tropicalplot <-
 
 print(tropicalplot)
 
-ggsave("figures/tropicalplot.png", dpi = 300, height = 5, width = 7)
+# ggsave("figures/tropicalplot.png", dpi = 300, height = 5, width = 7)
 
 
 
@@ -418,7 +418,8 @@ TLmod <-
   scale_y_continuous(breaks = c(0, 0.5, 1)) +
   geom_jitter(height = 0.04, width = 0.02, size = 4, pch = 21, alpha = 0.7) +
   theme_bw(base_size = 18) +
-  scale_fill_viridis_d() +
+  # scale_fill_viridis_d() +
+  scale_fill_viridis_d(option = "viridis") +
   stat_function(fun = pr_thia, args = list(ests = coef(TL)),
                 size = 1, linetype = "solid") +
   stat_function(fun = pr_thia, args = list(ests = coef(TL_fresh)),
