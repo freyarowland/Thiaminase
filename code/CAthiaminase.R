@@ -126,7 +126,7 @@ fit1 <- stan_glmer(
 summary(fit1)
 
 fit1 <- stan_glmer(
-  thiaminase ~ 0 + area + (1|common),
+  thiaminase ~ 1 + area + (1|common),
   data = prey,
   family = gaussian(link = "identity"),
   # prior = t_prior,
