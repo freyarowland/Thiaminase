@@ -1,15 +1,4 @@
-## Trimming the Betancur tree to family only
-
-## Helpful advice from Ricardo Betancur
-# You’d need to prune the tree yourself to keep only one sp. per order. 
-# There are plenty of packages in R for that (e.g., drop.tip in APE) and also many tutuorials.
-# Just export the tip labels from the tree file (e.g., convert the tree to nexus format,
-# that way you’ll see one tip species per line) to create two lists using a text editor:
-# one list will have all the tip labels from my tree, the second list will have all 
-# the tips you want to drop to retain only one per order. 
-# 
-# For the second list, the easiest is to choose the spp. you want to retain, add 
-# them to the complete list, and remove all duplicate lines in BBEdit or some other text editor.
+## Betancur et al. order-level fish phylogeny 
 
 # libraries
 library(ape)
@@ -55,7 +44,7 @@ fish.data$Name<-sapply(strsplit(fish.data$Name,"_"),function(x) x[1])
 row.names(fish.data) <- fish.data$Name
 fmode <- as.factor(setNames(fish.data[, 4], rownames(fish.data)))
 
-# ## basic plot
+## basic plot
 # dotTree(pruned_tree,
 #         fmode,
 #         colors=setNames(c("white","red"),
@@ -77,36 +66,11 @@ smap.trees <- make.simmap(pruned_tree, fmode,
                           model = "ER", nsim = 500)
 summary(smap.trees)
 
-# # code chunk for rescaling size of fonts on trees
-# # this isn't working for some reason
-# foo<-function(tree,...){
-#   fsize<-36*par()$pin[2]/par()$pin[1]/Ntip(tree)
-#   plotTree(tree,fsize=fsize,lwd=1,...)
-# }
 
-# fsize = fontsize
-
-
+# save tree as PDF
 pdf('figures/family_phylogeny.pdf', height = 15, width = 8)
 cols <- setNames(c("black", "white"), c("present", "absent"))
 plot(summary(smap.trees), direction = "rightwards", colors = cols, spread.labels = TRUE)
 legend("topleft", c("present", "absent"), pch = 21, pt.bg = cols)
 dev.off()
 
-
-# ## another way
-# this way is much prettier but I can't figure out how to get my simulations in here. Bah.
-# library(ggtree)
-# prettytree <- ggplot(smap.trees, right = TRUE) + geom_tree() + theme_tree()
-# 
-# ggtree(smap.trees) + theme_tree2() + geom_tiplab(align = TRUE, linesize = 0.5, offset = 0.1, size = 2) +
-#   geom_tippoint(colors = cols)
-#ggsave(filename = "family_phylogeny.png", dpi = 300, height = 10, width = 4)
-
-# # make simulation of probability of thiaminase ----
-# ## equal probability across the whole tree? LOL
-# thia.trees<-make.simmap(pruned_tree,
-#                         fmode,
-#                         nsim=200)
-# obj<-densityMap(smap.trees,states=c("present","absent"),plot=FALSE)
-# plot(cols = c("black", "white"), obj,lwd=2,outline=TRUE,fsize=c(0.7,0.9),legend=50)

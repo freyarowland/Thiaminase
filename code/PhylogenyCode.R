@@ -123,10 +123,3 @@ plot(summary(smap.trees), colors = cols)
 legend("topleft", c("present", "absent"),
        pch = 21, pt.bg = cols, pt.cex = 2)
 dev.off()
-
-
-# visualize MCC using function plotTree.wBars in the R package phytools
-# this is if have continuous something
-
-# phylogenetic ANOVA to test for difference in body size using
-# phy.anova in geiger package
