@@ -33,9 +33,7 @@ library(lme4)
 library(rstanarm)
 library(ggplot2)
 library(bayesplot)
-# library(ggrepel)
 library(bayestestR)
-# library(ggridges)
 library(tidybayes)
 library(dplyr)
 library(modelr)
@@ -64,56 +62,6 @@ dat3 %>%
             benthopelagic = sum(Habitat2 == "BP", na.rm = TRUE),
             pelagic = sum(Habitat2 == "PE", na.rm = TRUE))
 
-# # habitat and relationship to trophic level?
-# ggplot(data = dat2) +
-#   #geom_jitter(height = 0.05, width = 0.05) +
-#   geom_density_ridges(aes(x = TL_fooditems, y = Habitat2)) +
-#   theme_bw(base_size = 16) +
-#   scale_fill_viridis_d() +
-#   ylab("Count") +
-#   xlab("Trophic level")
-
-# # age and max length
-# ggplot(data = dat3, aes(x = MaxAge, y = as.factor(Thiaminase), fill = 0.5 - abs(0.5 - stat(ecdf)))) +
-#   stat_density_ridges(geom = "density_ridges_gradient", calc_ecdf = TRUE) +
-#   scale_fill_viridis_c(name = "Tail probability", direction = -1) +
-#   theme_bw(base_size = 16) +
-#   ylab("Thiaminase") +
-#   xlab("Maximum age")
-# 
-# ggplot(data = dat3, aes(x = MaxTL, y = as.factor(Thiaminase), fill = 0.5 - abs(0.5 - stat(ecdf)))) +
-#   stat_density_ridges(geom = "density_ridges_gradient", calc_ecdf = TRUE) +
-#   scale_fill_viridis_c(name = "Tail probability", direction = -1) +
-#   theme_bw(base_size = 16) +
-#   ylab("Thiaminase") +
-#   xlab("Maximum total length (cm)")
-# 
-# # log-transform size for easier viewing
-# ggplot(data = dat2, aes(x = MaxTL, y = as.factor(Thiaminase), fill = 0.5 - abs(0.5 - stat(ecdf)))) +
-#   stat_density_ridges(geom = "density_ridges_gradient", calc_ecdf = TRUE) +
-#   scale_fill_viridis_c(name = "Tail probability", direction = -1) +
-#   theme_bw(base_size = 16) +
-#   ylab("Thiaminase") +
-#   xlab("Maximum total length (cm)")
-
-
-# ###########
-# # trophic level is a significant predictor of thiaminase activity! ----
-# troph_mod <- aov(TL_fooditems ~ Habitat2, data = dat2)
-# summary(troph_mod)
-# TukeyHSD(troph_mod, conf.level=.95)
-# 
-# # total length is related to thiaminase activity! ----
-# size_mod <- lm(MaxTL ~ Thiaminase, data = dat2)
-# summary(size_mod)
-# 
-# # age is related to thiaminase activity! ----
-# age_mod <- lm(MaxAge ~ Thiaminase, data = dat2)
-# summary(age_mod)
-# 
-# # age and length ----
-# corr_mod <- lm(MaxAge ~ MaxTL, data = dat2)
-# summary(corr_mod)
 
 
 ########
@@ -393,16 +341,6 @@ round(posterior_interval(TL, prob = 0.95), digits = 3)
 round(posterior_interval(TL_fresh, prob = 0.95), digits = 3)
 round(posterior_interval(TL_salt, prob = 0.95), digits = 3)
 
-# # calculate probabilities
-# logit2prob <- function(logit){
-#   odds <- exp(logit)
-#   prob <- odds/(1+odds)
-#   return(prob)
-# }
-# 
-# logit2prob(coef(fit1))
-# logit2prob(coef(fit1_fresh))
-# logit2prob(coef(fit1_salt))
 
 # Predicted probability as a function of x
 pr_thia <- function(x, ests) plogis(ests[1] + ests[2] * x)
@@ -496,33 +434,6 @@ ggsave(TLmod, filename = "figures/TLmod_all.png", dpi = 300, height = 5, width =
 
 
 
-
-
-
-
-# # only plot max length
-# # Predicted probability as a function of x
-# pr_thia <- function(x, ests) plogis(ests[1] + ests[2] * x)
-# 
-# ggplot(dat, aes(x = MaxTL, y = Thiaminase, fill = Thiaminase)) +
-#   scale_y_continuous(breaks = c(0, 0.5, 1)) +
-#   geom_point(size = 4, pch = 21) +
-#   #jitt(x="TrophicLevelEst") +
-#   stat_function(fun = pr_thia, args = list(ests = coef(fit2)),
-#                 size = 2, color = "gray35") +
-#   theme_bw(base_size = 16)
-# 
-# # plot max length and trophic level together
-# pr_thia2 <- function(x, y, ests) plogis(ests[1] + ests[2] * x + ests[3] * y)
-# grid <- expand.grid(TrophicLevelEst = seq(2, 5, length.out = 100),
-#                     MaxTL = seq(0, 155, length.out = 100))
-# grid$prob <- with(grid, pr_thia2(TrophicLevelEst, MaxTL, coef(fit2)))
-# ggplot(grid, aes(x = TrophicLevelEst, y = MaxTL)) +
-#   geom_tile(aes(fill = prob)) +
-#   theme_bw(base_size = 16) +
-#   geom_point(data = dat, aes(color = factor(Thiaminase)), size = 4, alpha = 0.85) +
-#   scale_fill_gradient(low = "#fee6ce", high = "#e6550d") +
-#   scale_color_manual("Thiaminase", values = c("white", "black"), labels = c("No", "Yes"))
 
 
 ## PUFAs and thiaminase ----
@@ -658,15 +569,12 @@ Fatmod_all <- ggplot(dat3, aes(x = Omega3, y = Thiaminase, fill = Climate)) +
 
 print(Fatmod_all)
 # ggsave(Fatmod_nontrop, filename = "figures/Fatmod_nontrop.png", dpi = 300, width = 7, height = 5)
-ggsave(Fatmod_all, filename = "figures/Fatmod_all.png", dpi = 300, width = 7, height = 5)
-# ggsave(Fatmod_all, filename = "figures/Fatmod_all_nogrid.png", dpi = 300, width = 7, height = 5)
+# ggsave(Fatmod_all, filename = "figures/Fatmod_all.png", dpi = 300, width = 7, height = 5)
 
 
-# Max age vs. total length ----
+# Max age and total length strongly related ----
 ggplot(aes(x = MaxAge, y = MaxTL, fill = Thiaminase), data = dat) +
   geom_point(size = 4, pch = 21) +
-  # stat_function(fun = pr_thia, args = list(ests = coef(fit1)),
-  #               size = 2, color = "gray35") +
   theme_bw(base_size = 16)
 
 cor(x = dat$MaxAge, y = dat$MaxTL, use = "complete.obs")  
