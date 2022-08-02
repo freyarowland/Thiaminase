@@ -1,7 +1,7 @@
 # thiaminase
 
 # load data
-dat2 <- read.csv("data/AllData.csv", header = TRUE)
+dat2 <- read.csv("data/AllData.csv", header = TRUE, fileEncoding="UTF-8-BOM")
 
 str(dat2)
 
@@ -48,7 +48,7 @@ summary(plus$Order)
 
 # summarize data
 dat3 %>%
-  #group_by(Climate)  %>%
+  group_by(Climate)  %>%
   summarize(total = sum(Thiaminase == 1 | Thiaminase == 0, na.rm = TRUE),
             thiaminase_pos = sum(Thiaminase == 1, na.rm = TRUE),
             marine = sum(Marine == 1, na.rm = TRUE),
@@ -645,10 +645,11 @@ posterior <- as.matrix(allfit)
 
 # plot it
 
-multreg_plot <- mcmc_areas(posterior,
+color_scheme_set("darkgray")
+multreg_plot <- mcmc_intervals(posterior,
            pars = c("TL_fooditems", "Omega3", "Marine1", 
                     "Tropical1", "scale(MaxTL)", "Invasive", "Benthic", "Benthopelagic", "Pelagic"),
-           prob = 0.95) + 
+           prob_outer = 0.95) + 
   #plot_title +
   theme_bw(base_size = 16) +
   geom_vline(xintercept=0, linetype = "dotted", colour = "black", size = 1) +
@@ -670,7 +671,7 @@ multreg_plot <- mcmc_areas(posterior,
   )
 print(multreg_plot)
 
-ggsave(multreg_plot, filename = "figures/multreg_plot.png", dpi = 300, width = 5, height = 7)
+ggsave(multreg_plot, filename = "figures/multreg_intervalplot.png", dpi = 300, width = 5, height = 7)
 
 
 # calculate probabilities
