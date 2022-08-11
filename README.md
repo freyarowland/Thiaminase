@@ -1,4 +1,4 @@
-# Thiaminase
+# Evolutionary and ecological correlates of thiaminase in fishes
 
 ## Authors
 - Freya Rowland
