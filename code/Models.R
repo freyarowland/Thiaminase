@@ -160,7 +160,7 @@ marineplot <-
 
 print(marineplot)
 
-ggsave("figures/marineplot.png", dpi = 300, height = 5, width = 7)
+ggsave(marineplot, filename = "figures/marineplot.png", dpi = 600, height = 5, width = 7)
 
 
 
@@ -245,7 +245,7 @@ tropicalplot <-
 
 print(tropicalplot)
 
-# ggsave("figures/tropicalplot.png", dpi = 300, height = 5, width = 7)
+ggsave(tropicalplot, filename = "figures/tropicalplot.png", dpi = 600, height = 5, width = 7)
 
 
 
@@ -813,4 +813,4 @@ bivariate_fig <-
     labels = "auto"
   )
 
-ggsave("figures/allsigplots.png", dpi = 300, width = 12, height = 10)
+ggsave(bivariate_fig, filename = "figures/allsigplots.png", dpi = 600, width = 12, height = 10)
