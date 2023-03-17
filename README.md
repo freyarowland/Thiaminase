@@ -1,4 +1,4 @@
-# Thiaminase
+# Evolutionary and ecological correlates of thiaminase in fishes
 
 ## Authors
 - Freya Rowland
@@ -30,7 +30,7 @@ Figures for publication.
 ![Family_phylogeny](figures/family_phylogeny_v2.png)
 
 ### Order-level phylogeny has same pattern. No evolutionary relationship
-![order_phylogeny](figures/order_phylogeny.png)
+![order_phylogeny](figures/order_phylogeny_v2.png)
 
 ### Multiple regression
 ![multreg](figures/multreg_plot.png)
