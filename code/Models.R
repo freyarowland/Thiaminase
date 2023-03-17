@@ -48,7 +48,7 @@ summary(plus$Order)
 
 # summarize data
 dat3 %>%
-  group_by(Climate)  %>%
+  dplyr::group_by(Climate)  %>%
   summarize(total = sum(Thiaminase == 1 | Thiaminase == 0, na.rm = TRUE),
             thiaminase_pos = sum(Thiaminase == 1, na.rm = TRUE),
             marine = sum(Marine == 1, na.rm = TRUE),
@@ -529,9 +529,9 @@ logit2prob <- function(logit){
   return(prob)
 }
 
-logit2prob(coef(fat))
-logit2prob(coef(fat_fresh))
-logit2prob(coef(fat_salt))
+logit2prob(coef(fit1))
+logit2prob(coef(fit1_fresh))
+logit2prob(coef(fit1_salt))
 
 
 
@@ -569,7 +569,7 @@ Fatmod_all <- ggplot(dat3, aes(x = Omega3, y = Thiaminase, fill = Climate)) +
 
 print(Fatmod_all)
 # ggsave(Fatmod_nontrop, filename = "figures/Fatmod_nontrop.png", dpi = 300, width = 7, height = 5)
-# ggsave(Fatmod_all, filename = "figures/Fatmod_all.png", dpi = 300, width = 7, height = 5)
+ggsave(Fatmod_all, filename = "figures/Fatmod_all.png", dpi = 300, width = 7, height = 5)
 
 
 # Max age and total length strongly related ----
