@@ -1,10 +1,12 @@
 # Evolutionary and ecological correlates of thiaminase in fishes
 
 ## Authors
-- Freya Rowland
-- Cathy Richter
-- Don Tillitt
-- David Walters
+- Freya Rowland<sup>1</sup>
+- Cathy Richter<sup>1</sup>
+- Don Tillitt<sup>1</sup>
+- David Walters<sup>1</sup>
+
+<sup>1</sup>U.S. Geological Survey, Columbia Environmental Research Center, Columbia MO USA
 
 A repository related to the manuscript exploring the evolutionary and ecological factors driving thiaminase production in fishes
 
