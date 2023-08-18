@@ -8,7 +8,7 @@
 
 <sup>1</sup>U.S. Geological Survey, Columbia Environmental Research Center, Columbia MO USA
 
-A repository related to the manuscript exploring the evolutionary and ecological factors driving thiaminase production in fishes
+A repository related to the manuscript exploring the evolutionary and ecological factors driving thiaminase production in fishes. Archived on Zenodo [![DOI](https://zenodo.org/badge/428418093.svg)](https://zenodo.org/badge/latestdoi/428418093)
 
 ## data
 ### Includes all data files used in the study
