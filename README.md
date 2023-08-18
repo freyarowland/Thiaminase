@@ -6,16 +6,19 @@
 - Don Tillitt
 - David Walters
 
-A repository for exploring the evolutionary and ecological factors driving thiaminase production in fishes
+A repository related to the manuscript exploring the evolutionary and ecological factors driving thiaminase production in fishes
 
 ## data
 ### Includes all data files (as .csv or .tre) used in the study
 
+#### .csv files
 - [AllData.csv](<data/AllData.csv>) includes all ecological fish data from https://www.fishbase.de/ paired with thiaminase presence/absence
-- [fishorder_skeletal.tre](<data/fishorder_skeletal.tre>) is the evolutionary phylogeny from [Rabosky et al. 2018](<https://www.nature.com/articles/s41586-018-0273-1>) downloaded from <https://fishtreeoflife.org/>
-- [BecanturTree.tre](<data/BecanturTree.tre>) family-level phylogeny from [Betancur et al. 2017](<https://bmcecolevol.biomedcentral.com/articles/10.1186/s12862-017-0958-3>) who also has a GitHub repository https://github.com/projectdigest/betancur_r-fish-tree/
 - [OrderPresAbs.csv](<data/OrderPresAbs.csv>) is a csv file with presence of absence of thiaminase within each fish order in the Rabosky phylogeny
 - [OrderPresAbsNA.csv](<OrderPresAbsNA.csv>) includes NA for orders not present in our dataset but are in the Rabosky phylogeny
+
+#### .tre files
+- [fishorder_skeletal.tre](<data/fishorder_skeletal.tre>) is the evolutionary phylogeny from [Rabosky et al. 2018](<https://www.nature.com/articles/s41586-018-0273-1>) downloaded from <https://fishtreeoflife.org/>
+- [BecanturTree.tre](<data/BecanturTree.tre>) family-level phylogeny from [Betancur et al. 2017](<https://bmcecolevol.biomedcentral.com/articles/10.1186/s12862-017-0958-3>) who also has a GitHub repository https://github.com/projectdigest/betancur_r-fish-tree/
 
 ## code
 ### R scripts fpr analysis and figures
