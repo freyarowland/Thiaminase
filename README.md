@@ -24,16 +24,4 @@ A repository for exploring the evolutionary and ecological factors driving thiam
 
 ## Figures
 
-Figures for publication.
-
-### Family-level phylogeny. No evolutionary relationship between probability of thiaminase expression within a family.
-![Family_phylogeny](figures/family_phylogeny_v2.png)
-
-### Order-level phylogeny has same pattern. No evolutionary relationship
-![order_phylogeny](figures/order_phylogeny_v2.png)
-
-### Multiple regression
-![multreg](figures/multreg_plot.png)
-
-### all significant plots
-![Allsig](figures/allsigplots.png)
+All figures generated for the study.
