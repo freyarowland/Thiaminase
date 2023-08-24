@@ -20,7 +20,7 @@ A repository related to the manuscript exploring the evolutionary and ecological
 
 #### .tre files
 - [fishorder_skeletal.tre](<data/fishorder_skeletal.tre>) is the evolutionary phylogeny from [Rabosky et al. 2018](<https://www.nature.com/articles/s41586-018-0273-1>) downloaded from <https://fishtreeoflife.org/>
-- [BetancurTree.tre](<data/Betancur2017.tre>) family-level phylogeny from [Betancur et al. 2017](<https://bmcecolevol.biomedcentral.com/articles/10.1186/s12862-017-0958-3>) who also has a GitHub repository https://github.com/projectdigest/betancur_r-fish-tree/
+- [BetancurTree.tre](<data/Betancur2017.tre>) family-level phylogeny from [Betancur-R et al. 2017](<https://bmcecolevol.biomedcentral.com/articles/10.1186/s12862-017-0958-3>) who also has a GitHub repository https://github.com/projectdigest/betancur_r-fish-tree/
 
 #### .xlsx file of all data plus metadata
 - [Appendix_ThiaminaseManuscript.xlsx](<data/Appendix_ThiaminaseManuscript.xlsx>) is the full dataset including all references for thiaminase presence/absence, metadata for each column, and verified names
