@@ -1,304 +1,304 @@
-﻿Common,Scientific,Order,Class,Migratory,Cata_Anad,catadromous,anadromous,potamodromous,oceanodromous,amphidromous,Tropical,Trop_Subtrop,Climate,Continent,Lit_confirmed,BLAST,Thiaminase,Confirmed,Thiamine,Thiaminase_activity,Marine,Habitat1,Habitat2,Benthic,Benthopelagic,Pelagic,Invasive,Salt,TL_fooditems,MaxTL,MaxAge,Omega3
-Alewife,Alosa pseudoharengus,Clupeiformes,Actinopteri,1,1,0,1,0,0,0,0,0,Temperate,North America,1,NA,1,0,15.5,4280,0,OS,PE,0,0,1,1,TL,3.4,40,9,2.67
-American Eel,Anguilla rostrata,Aguilliformes,Actinopteri,1,1,1,0,0,0,0,0,1,Subtropical,Worldwide,1,NA,0,0,191,0.666666667,1,NS,BE,1,0,0,0,TL,3.8,152,43,0.777
-Black Crappie,Pomoxis nigromaculatus,Centrarchiformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,North America,1,NA,0,0,,,0,NS,BP,0,1,0,0,IN,3.8,49,15,0.397
-Bloater,Coregonus hoyi,Salmoniformes,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,NA,0,0,14.2,35,0,OS,PE,0,0,1,0,IN,3.3,37,11,NA
-Bluegill,Lepomis macrochirus,Centrarchiformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,North America,1,NA,0,0,,,0,NS,BP,0,1,0,1,IN,3.2,41,10,0.372
-Brown Trout,Salmo trutta,Salmoniformes,Actinopteri,1,1,0,1,0,0,0,0,1,Temperate,Worldwide,1,1,0,1,,,1,NS,PE,0,0,1,1,TL,3.4,140,38,1.09
-Black Bullhead,Ameiurus melas,Siluriformes,Actinopteri,1,0,0,0,0,0,1,0,0,Temperate,North America,1,1,1,1,,,0,NS,BE,1,0,0,0,IN,3.8,66,10,0.747
-Burbot,Lota lota,Gadiformes,Actinopteri,1,0,0,0,1,0,0,0,0,Temperate,Worldwide,1,NA,1,0,388,,0,OS,BE,1,0,0,0,TL,3.8,152,20,0.666
-Central Mudminnow,Umbra limi,Esociformes,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,NA,1,0,,,0,NS,BE,1,0,0,0,IN,3.7,14,4,NA
-Central Stoneroller,Campostoma anomalum,Cypriniformes ,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,North America,1,NA,1,0,,,0,NS,BP,0,1,0,0,IN,2,22,NA,NA
-Channel Catfish,Ictalurus punctatus,Siluriformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,North America,1,1,1,1,0,,0,NS,BE,1,0,0,1,IN,4.2,132,24,0.403
-Cisco,Coregonus artedi,Salmoniformes,Actinopteri,1,1,0,1,0,0,0,0,0,Temperate,North America,1,NA,0,0,,,1,OS,PE,0,0,1,0,TL,3.4,57,11,NA
-Coho Salmon,Oncorhynchus kisutch,Salmoniformes,Actinopteri,1,1,0,1,0,0,0,0,1,Temperate,Worldwide,1,1,0,1,,,1,OS,PE,0,0,1,1,TL,4.2,108,5,1.88
-Common Carp,Cyprinus carpio,Cypriniformes ,Actinopteri,1,0,0,0,1,0,0,0,1,Subtropical,Worldwide,1,1,1,1,114,,0,NS,BP,0,1,0,1,TL,3.1,120,38,0.709
-Deepwater Sculpin,Myoxocephalus thompsonii,Perciformes,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,NA,1,0,16.5,172,0,OS,BE,1,0,0,0,IN,3.2,23,NA,NA
-Emerald Shiner,Notropis atherinoides,Cypriniformes ,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,NA,1,0,,,0,NS,PE,0,0,1,0,IN,2.8,13,4,NA
-Fathead Minnow,Pimephales promelas,Cypriniformes ,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,North America,1,1,1,1,,,0,NS,BE,1,0,0,0,IN,2.4,10.1,5,NA
-Freshwater Drum,Aplodinotus grunniens,Eupercaria,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,North America,1,NA,0,0,,,0,NS,BP,0,1,0,0,TL,3.4,95,13,NA
-Longnose Gar,Lepisosteus osseus oxyurus,Lepisosteiformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,North America,1,NA,0,0,,,0,NS,BE,1,0,0,0,TL,4.2,200,36,0.532
-Gizzard Shad,Dorosoma cepedianum,Clupeiformes,Actinopteri,1,1,0,1,0,0,0,0,1,Subtropical,North America,1,NA,1,0,,31800,0,NS,BP,0,1,0,1,TL,2.4,57,10,1.06
-Goldfish,Carassius auratus,Cypriniformes ,Actinopteri,1,0,0,0,1,0,0,0,1,Subtropical,Worldwide,1,1,1,1,,,0,NS,BP,0,1,0,1,TL,2,48,41,NA
-Lake Trout,Salvelinus namaycush,Salmoniformes,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,1,0,1,,,0,OS,BP,0,1,0,0,TL,4.3,150,50,1.07
-Lake Whitefish,Coregonus clupeaformis,Salmoniformes,Actinopteri,1,1,0,1,0,0,0,0,0,Temperate,North America,1,1,0,0,,,0,OS,BP,0,1,0,0,TL,3.2,100,50,1.55
-Lamprey,Petromyzon marinus,Petromyzontiformes,Petromyzonti,1,1,0,1,0,0,0,0,0,Temperate,Worldwide,1,1,0,1,,,1,NS,BE,1,0,0,1,TL,4.4,120,11,0.957
-Largemouth Bass,Micropterus salmoides,Centrarchiformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,Worldwide,1,1,0,1,1.1,,0,NS,BP,0,1,0,1,IN,3.8,97,23,0.397
-Ninespine Stickleback,Pungitius pungitius,Perciformes,Actinopteri,1,1,0,1,0,0,0,0,0,Boreal,Worldwide,1,1,0,1,25.7,85,0,OS,BP,0,1,0,0,TL,3.3,9,5,NA
-Northern Pike,Esox lucius,Esociformes,Actinopteri,1,0,0,0,1,0,0,0,1,Subtropical,North America,1,1,0,1,,,0,NS,BP,0,1,0,1,TL,4.1,137,30,0.632
-Pumpkinseed,Lepomis gibbosus,Centrarchiformes,Actinopteri,1,0,0,0,1,0,0,0,1,Subtropical,North America,1,NA,0,0,,,0,NS,BP,0,1,0,1,IN,3.3,40,12,NA
-Rainbow Smelt,Osmerus mordax,Osmeriformes,Actinopteri,1,1,0,1,0,0,0,0,0,Temperate,Worldwide,1,NA,1,0,8.8,2640,0,OS,BE,1,0,0,1,TL,3,35.6,7,1.57
-Rainbow Trout,Oncorhynchus mykiss,Salmoniformes,Actinopteri,1,1,0,1,0,0,0,0,1,Temperate,Worldwide,1,1,0,1,,,0,OS,PE,0,0,1,1,TL,4.1,122,11,1.44
-Rock Bass,Ambloplites rupestris,Centrarchiformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,North America,1,NA,0,0,,,0,NS,BP,0,1,0,0,IN,3.4,43,18,NA
-Round Goby,Neogobius melanostomus,Gobiiformes,Actinopteri,1,0,0,0,0,0,1,0,0,Temperate,Eurasia,1,NA,0,0,14.6,18,0,NS,BE,1,0,0,1,TL,3.3,30,6,NA
-Round Whitefish,Prosopium cylindraceum,Salmoniformes,Actinopteri,1,0,0,0,1,0,0,0,0,Temperate,Worldwide,1,NA,1,0,,,0,NS,BE,1,0,0,0,TL,3.3,59,16,NA
-Sauger,Sander canadensis,Perciformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,North America,1,NA,1,0,,,0,NS,BP,0,1,0,0,IN,4.1,76,18,NA
-Fourhorn Sculpin,Myoxocephalus quadricornis,Perciformes,Actinopteri,0,0,0,0,0,0,0,0,0,Polar,North America,1,NA,1,0,,,1,NS,BE,1,0,0,0,TL,3.9,60,14,0.903
-Smallmouth Bass,Micropterus dolomieu,Centrarchiformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,North America,1,NA,0,0,,,0,NS,BP,0,1,0,1,IN,3.6,69,26,NA
-Spottail Shiner,Notropis hudsonius,Cypriniformes ,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,NA,1,0,16.3,32700,0,NS,BE,1,0,0,0,IN,2.1,15,5,NA
-Walleye,Sander vitreus,Perciformes,Actinopteri,1,0,0,0,1,0,0,0,1,Subtropical,North America,1,NA,0,0,0.4,,0,NS,BP,0,1,0,0,TL,4.5,107,29,0.429
-White Bass,Morone chrysops,Eupercaria,Actinopteri,1,0,0,0,1,0,0,0,0,Temperate,North America,1,NA,1,0,,,0,NS,BP,0,1,0,0,TL,4,45,9,NA
-White Perch,Morone americana,Eupercaria,Actinopteri,1,1,0,1,0,0,0,0,0,Temperate,North America,1,NA,0,0,,0,0,NS,BP,0,1,0,1,TL,3.1,58,16,0.68
-White Sucker,Catostomus commersonii,Cypriniformes ,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,NA,1,0,,13,0,NS,BP,0,1,0,0,IN,2.8,65,12,1.28
-Yellow Perch,Perca flavescens,Perciformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,North America,1,1,0,1,26.4,12,0,NS,BP,0,1,0,0,TL,3.7,50,11,0.305
-Broad-Striped Anchovy,Anchoa hepsetus,Clupeiformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,Worldwide,1,NA,1,0,,,1,NS,PE,0,0,1,0,TL,3.3,15.3,NA,1.11
-Californian Anchovy,Engraulis mordax,Clupeiformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,North America,1,NA,1,0,19,,1,NS,PE,0,0,1,0,TL,3.1,24.8,7,0.989
-Cusk,Brosme brosme,Gadiformes,Actinopteri,1,0,0,0,0,1,0,0,0,Temperate,Worldwide,1,NA,0,0,38,2.666666667,1,OS,BE,1,0,0,0,TL,3.9,120,20,0.371
-Atlantic Croaker,Micropogonias undulatus,Eupercaria,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,Worldwide,1,NA,0,0,85,,1,NS,BE,1,0,0,0,TL,4,55,5,0.607
-Winter Flounder,Pseudopleuronectes americanus,Pleuronectiformes,Actinopteri,1,0,0,0,0,1,0,0,0,Temperate,North America,1,NA,0,0,,1.666666667,1,NS,BE,1,0,0,0,TL,3.6,64,14,0.359
-Atlantic Butterfish,Poronotus triacanthus,Scombriformes ,Actinopteri,1,0,0,0,0,1,0,0,1,Subtropical,North America,1,NA,1,0,163,,1,OS,BP,0,1,0,0,TL,3.9,30,NA,0.781
-Cunner,Tautogolabrus adspersus,Eupercaria,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,NA,0,0,,,1,NS,BE,1,0,0,0,TL,3.7,38,6,0.35
-Largehead Hairtail,Trichiurus lepturus,Scombriformes ,Actinopteri,1,0,0,0,0,0,1,0,1,Subtropical,Worldwide,1,NA,0,0,,,1,NS,BP,0,1,0,0,TL,4.4,234,15,0.447
-Picked Dogfish,Squalus acanthias,Squaliformes,Elasmobranchii,1,0,0,0,0,1,0,0,0,Temperate,Worldwide,1,NA,0,0,52,1,1,NS,BP,0,1,0,0,TL,4.4,160,75,1.48
-Ocean Pout,Zoarces anguillaris,Perciformes,Actinopteri,1,0,0,0,0,1,0,0,0,Temperate,North America,1,NA,0,0,,0.666666667,1,NS,BE,1,0,0,0,TL,4.2,110,18,0.8
-Angler,Lophius piscatorius,Lophiiformes,Actinopteri,0,0,0,0,0,0,0,0,0,Deep-water,Europe,1,NA,0,0,,0.333333333,1,OS,BE,1,0,0,0,TL,4.5,200,24,0.22
-Haddock,Melanogrammus aeglefinus,Gadiformes,Actinopteri,1,0,0,0,0,1,0,0,0,Temperate,Worldwide,1,NA,0,0,39,1,1,NS,BE,1,0,0,0,TL,4,112,20,0.55
-Hake,Urophycis cirrata,Gadiformes,Actinopteri,0,0,0,0,0,0,0,0,0,Deep-water,Worldwide,1,NA,0,0,89,1.666666667,1,OS,BE,1,0,0,0,TL,4,66,14,NA
-Atlantic Halibut,Hippoglossus hippoglossus,Pleuronectiformes,Actinopteri,1,0,0,0,0,1,0,0,0,Temperate,Worldwide,1,1,0,1,,0.666666667,1,OS,BE,1,0,0,0,TL,4,470,50,0.321
-Baltic Herring,Clupea harengus,Clupeiformes,Actinopteri,1,0,0,0,0,1,0,0,0,Temperate,Worldwide,1,1,1,1,46,115,1,OS,BP,0,1,0,0,TL,3.4,45,25,1.83
-Southern Kingcroaker,Menticirrhus americanus,Eupercaria,Actinopteri,1,0,0,0,0,1,0,0,1,Subtropical,Worldwide,1,NA,0,0,,,1,NS,BE,1,0,0,0,TL,3.5,50,NA,0.679
-Winter Flounder,Pseudopleuronectes americanus dignabilis,Pleuronectiformes,Actinopteri,1,0,0,0,0,1,0,0,0,Temperate,North America,1,NA,0,0,,,1,NS,BE,1,0,0,0,TL,3.6,64,14,0.359
-Inshore Lizardfish,Synodus foetens,Aulopiformes ,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Worldwide,1,NA,0,0,92,,1,NS,BE,1,0,0,0,TL,4.5,53.8,NA,0.17
-Lumpfish,Cyclopterus lumpus,Perciformes,Actinopteri,1,0,0,0,0,1,0,0,0,Polar,Worldwide,1,1,0,1,,3,1,OS,BP,0,1,0,0,TL,3.9,61,13,0.408
-Club Mackerel,Scomber japonicus,Scombriformes ,Actinopteri,1,0,0,0,0,1,0,0,1,Subtropical,Indo-Pacific,1,NA,1,0,139,,1,NS,PE,0,0,1,0,TL,3.4,64,18,0.397
-Atlantic Mackerel,Scomber scombrus,Scombriformes ,Actinopteri,1,0,0,0,0,1,0,0,0,Temperate,Worldwide,1,NA,0,0,139,1,1,NS,PE,0,0,1,0,TL,3.6,60,17,1.34
-Atlantic Menhaden,Brevoortia tyrannus,Clupeiformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,North America,1,NA,1,0,,,1,NS,PE,0,0,1,0,TL,3.2,50,NA,1.22
-Gulf Menhaden,Brevoortia patronus,Clupeiformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,North America,1,NA,1,0,,,1,NS,PE,0,0,1,0,TL,2.2,35,NA,0.552
-Ocellated Moray,Gymnothorax ocellatus,Anguilliformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Worldwide,1,NA,1,0,,,1,NS,BE,1,0,0,0,TL,4.1,90,NA,0.25
-Flathead Grey Mullet,Mugil cephalus,Mugiliformes,Actinopteri,1,1,1,0,0,0,0,0,1,Subtropical,Worldwide,1,NA,0,0,,,1,NS,BP,0,1,0,0,TL,2.5,100,16,0.761
-American Plaice,Hippoglossoides platessoides,Pleuronectiformes,Actinopteri,1,0,0,0,0,1,0,0,0,Temperate,Worldwide,1,NA,0,0,,4,1,NS,BE,1,0,0,0,TL,4.1,82.6,30,0.366
-Saithe,Pollachius virens,Gadiformes,Actinopteri,1,0,0,0,0,1,0,0,0,Temperate,Worldwide,1,NA,0,0,,0,1,NS/OS,BE,1,0,0,0,TL,4.3,130,25,0.584
-Scup,Stenotomus chrysops,Eupercaria,Actinopteri,1,0,0,0,0,1,0,0,1,Subtropical,North America,1,NA,0,0,,,1,NS/OS,BE,1,0,0,0,TL,3.8,46,NA,0.37
-Scaled Herring,Harengula pensacolae,Clupeiformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,North America,1,NA,1,0,,,1,NS,BE,1,0,0,0,TL,3.4,21.2,3,0.499
-Golden Redfish,Sebastes marinus,Perciformes,Actinopteri,1,0,0,0,0,1,0,0,0,Temperate,Worldwide,1,NA,0,0,,,1,OS,PE,0,0,1,0,TL,4,100,60,1.29
-Black Seabass,Centropristis striata,Perciformes,Actinopteri,1,0,0,0,0,1,0,0,0,Temperate,North America,1,NA,0,0,,,1,NS,BE,1,0,0,0,TL,3.9,66,20,0.354
-Hardhead Sea Catfish,Galeichthys felis,Siluriformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,North America,1,NA,0,0,,,1,NS,BE,1,0,0,0,TL,3.2,70,NA,0.259
-Sea Raven,Hemitripterus americanus,Perciformes,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,NA,0,0,,1.333333333,1,NS,BE,1,0,0,0,TL,4.5,64,NA,0.645
-Bighead Searobin,Prionotus tribulus,Perciformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,North America,1,NA,0,0,90,,1,NS,BE,1,0,0,0,TL,3.7,35,NA,0.387
-Longhorn Sculpin,Myoxocephalus octodecemspinosus,Perciformes,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,NA,0,0,,0.333333333,1,NS,BE,1,0,0,0,TL,3.6,46,11,1.18
-Smooth Skate,Malacoraja senta,Rajiformes,Actinopteri,1,0,0,0,0,1,0,0,0,Deep-water,North America,1,NA,0,0,1.666666667,,1,OS,BE,1,0,0,0,TL,3.5,61,NA,0.911
-Spot Croaker,Leiostomus xanthurus,Eupercaria,Actinopteri,1,0,0,0,0,1,0,0,1,Subtropical,North America,1,NA,0,0,85,,1,NS,BE,1,0,0,0,TL,3.2,36,4,0.684
-Tautog,Tautoga onitis,Eupercaria,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,North America,1,NA,0,0,,,1,NS,BE,1,0,0,0,TL,3.3,91,34,0.342
-Sand Weakfish,Cynoscion arenarius,Eupercaria,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,North America,1,NA,0,0,,,1,NS,BE,1,0,0,0,TL,4.2,63.5,5,0.75
-Silver Hake,Merluccius bilinearis,Gadiformes,Actinopteri,1,0,0,0,0,1,0,0,0,Temperate,North America,1,NA,0,0,4.666666667,,1,NS,BE,1,0,0,0,TL,4.5,76,12,0.277
-Witch Flounder,Glyptocephalus cynoglossus,Pleuronectiformes,Actinopteri,1,0,0,0,0,1,0,0,0,Temperate,Worldwide,1,NA,0,0,,0.666666667,1,NS,BE,1,0,0,0,TL,3.2,60,25,0.335
-Yellowtail Flouder,Limanda ferruginea,Pleuronectiformes,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,NA,0,0,,1.333333333,1,NS,BE,1,0,0,0,TL,3.3,64,12,0.343
-Zebra Fish,Danio rerio,Cypriniformes ,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Asia,1,1,1,1,,,0,NS,BP,0,1,0,0,IN,3.1,3.8,5.5,NA
-NA,Sinocyclocheilus rhinocerous,Cypriniformes ,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,Asia,0,1,1,0,,,0,NA,BP,0,1,0,0,IN,2.9,9.7,NA,NA
-NA,Onychostoma macrolepis,Cypriniformes ,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,Asia,0,1,1,0,,,0,NA,BP,0,1,0,0,IN,NA,26.5,NA,NA
-NA,Triplophysa tibetana,Cypriniformes ,Actinopteri,0,0,0,0,0,0,0,0,0,High-altitude,Asia,0,1,1,0,,,0,NA,BP,0,1,0,0,IN,NA,13.3,NA,NA
-Roho Labeo,Labeo rohita,Cypriniformes ,Actinopteri,1,0,0,0,1,0,0,1,1,Tropical,Asia,0,1,1,0,,,0,NS,BP,0,1,0,0,TL,2.2,200,10,0.351
-NA,Sinocyclocheilus anshuiensis,Cypriniformes ,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,Asia,0,1,1,0,,,0,NS,BP,0,1,0,0,IN,2.9,10,NA,NA
-Sumatra Barb,Puntigrus tetrazona,Cypriniformes ,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Asia,0,1,1,0,,,0,NS,BP,0,1,0,0,IN,2.9,7,NA,NA
-Kanglang Fish,Anabarilius grahami,Cypriniformes ,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,Asia,0,1,1,0,,,1,NS,BP,0,1,0,0,IN,3.2,15.6,NA,NA
-Striped Catfish,Pangasianodon hypophthalmus,Siluriformes,Actinopteri,1,0,0,0,1,0,0,1,1,Tropical,Asia,0,1,1,0,,,0,NS,BP,0,1,0,0,IN,3.1,130,NA,0.16
-Yellow Catfish,Tachysurus fulvidraco,Siluriformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,Asia,0,1,1,0,,,0,NS,BE,1,0,0,0,IN,3.5,34.5,NA,NA
-Cachama,Colossoma macropomum,Characiformes,Actinopteri,1,0,0,0,1,0,0,1,1,Tropical,South America,0,1,1,0,,,0,NS,BP,0,1,0,0,IN,2,108,NA,0.204
-Asian Redtail Catfish,Hemibagrus wyckioides,Siluriformes,Actinopteri,1,0,0,0,1,0,0,0,1,Subtropical,Asia,0,1,1,0,,,0,NS,BE,1,0,0,0,IN,3.7,130,NA,0.238
-Red Pirahna,Pygocentrus nattereri,Characiformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,South America,0,1,1,0,,,0,NS,PE,0,0,1,0,IN,3.7,50,NA,0.572
-Mexican Tetra,Astyanax mexicanus,Characiformes,Actinopteri,1,0,0,0,1,0,0,0,1,Subtropical,North America,0,1,1,0,,,0,NS,BP,0,1,0,0,IN,3.2,12,NA,NA
-Milkfish,Chanos chanos,Gonorynchiformes,Actinopteri,1,0,0,0,0,0,1,1,1,Tropical,Indo-Pacific,0,1,1,0,,,1,NS,BP,0,1,0,0,TL,2.4,180,15,0.248
-Chinese Large-Mouth Catfish,Silurus meridionalis,Siluriformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,Asia,0,1,1,0,,,0,NS,BE,1,0,0,0,IN,4.2,114,NA,NA
-American Shad,Alosa sapidissima,Clupeiformes,Actinopteri,1,1,0,1,0,0,0,0,1,Subtropical,North America,1,1,1,1,,,1,NS,PE,0,0,1,0,TL,3.5,76,13,1.52
-Electric Eel,Electrophorus electricus,Gymnotiformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,South America,0,1,1,0,,,0,NS,BP,0,1,0,0,IN,3.9,250,NA,NA
-Giant Devil Catfish,Bagarius yarrelli,Siluriformes,Actinopteri,1,0,0,0,1,0,0,1,1,Tropical,Asia,0,1,1,0,,,0,NS,BE,1,0,0,0,IN,3.7,200,NA,0.171
-Allis Shad,Alosa alosa,Clupeiformes,Actinopteri,1,1,0,1,0,0,0,0,0,Temperate,Europe,0,1,1,0,,,1,NS,PE,0,0,1,0,TL,3,69,10,2.4
-Mummichog,Fundulus heteroclitus,Cyprinodontiformes,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,1,1,1,,51,1,NS,BP,0,1,0,1,TL,3.6,15,4,1.55
-White Sands Pupfish,Cyprinodon tularosa,Cyprinodontiformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,North America,0,1,1,0,,,0,NS,BP,0,1,0,0,TL,2.7,5,5,NA
-Fairy Cichlid,Neolamprologus brichardi,Cichliformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Africa,0,1,1,0,,,0,NS,BP,0,1,0,0,IN,3.4,9,NA,NA
-Nile Tilapia,Oreochromis niloticus,Cichliformes,Actinopteri,1,0,0,0,1,0,0,1,1,Tropical,Africa,0,1,1,0,,,0,NS,BP,0,1,0,1,TL,2,60,9,0.407
-Blue Tilapia,Oreochromis aureus,Cichliformes,Actinopteri,1,0,0,0,1,0,0,1,1,Tropical,Worldwide,0,1,1,0,,,0,NS,BP,0,1,0,1,TL,2.1,45.7,NA,0.428
-Green Swordtail,Xiphophorus hellerii,Cyprinodontiformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Worldwide,0,1,1,0,,,0,NS,BP,0,1,0,1,TL,3.2,14,NA,NA
-Atlantic Silverside,Menidia menidia,Atheriniformes,Actinopteri,1,0,0,0,0,1,0,0,0,Temperate,North America,0,1,1,0,,,0,NS,PE,0,0,1,0,TL,3.2,15,2,1.21
-Denticle Herring,Denticeps clupeoides,Clupeiformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Africa,0,1,1,0,,,0,NS,PE,0,0,1,0,IN,3.3,15,NA,NA
-Sailfin Molly,Poecilia latipinna,Cyprinodontiformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,North America,0,1,1,0,,,1,NS,BP,0,1,0,1,TL,2,15,NA,NA
-Southern Platyfish,Xiphophorus maculatus,Cyprinodontiformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Central America,0,1,1,0,,,0,NS,BP,0,1,0,1,IN,3.2,4,NA,NA
-Amazon Molly,Poecilia formosa,Cyprinodontiformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,North America,0,1,1,0,,,0,NS,BP,0,1,0,0,TL,2.5,9.6,NA,NA
-Shortfin Molly,Poecilia mexicana,Cyprinodontiformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Central America,0,1,1,0,,,0,NS,BP,0,1,0,1,TL,2,11,NA,NA
-Burton'S Mouthbrooder,Astatotilapia burtoni,Cichliformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Africa,0,1,1,0,,,0,NS,BP,0,1,0,0,IN,3.1,15,NA,NA
-Mosquitofish,Gambusia affinis,Cyprinodontiformes,Actinopteri,1,0,0,0,1,0,0,0,1,Subtropical,Worldwide,0,1,1,0,,,0,NS,BP,0,1,0,1,TL,3.1,5.1,3,NA
-Indian Glassy Fish,Parambassis ranga,Ovalentaria,Actinopteri,1,0,0,0,1,0,0,1,1,Tropical,Asia,0,1,1,0,,,0,NS,BE,1,0,0,0,TL,3.5,8.2,NA,0.589
-Wagur,Clarias magur,Siluriformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Asia,0,1,1,0,,,0,NS,BE,1,0,0,1,TL,3.4,35,NA,NA
-Japenese Rice Fish,Oryzias latipes,Beloniformes,Actinopteri,1,0,0,0,0,0,1,0,1,Subtropical,Asia,0,1,1,0,,,0,NE,BP,0,1,0,0,TL,3.4,4,NA,NA
-Indo-Pacific Tarpon,Megalops cyprinoides,Elopiformes,Actinopteri,1,0,0,0,0,0,1,1,1,Tropical,Indo-Pacific,0,1,1,0,,,1,NS,BP,0,1,0,0,TL,3.5,150,44,0.434
-NA,Paramormyrops kingsleyae,Osteoglossiformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Africa,0,1,1,0,,,0,NS,BP,0,1,0,0,IN,3.2,13.5,NA,NA
-Tarpon,Megalops atlanticus,Elopiformes,Actinopteri,1,0,0,0,0,0,1,0,1,Subtropical,Worldwide,0,1,1,0,,,1,NS,BE,1,0,0,0,TL,4.5,250,55,0.433
-Asian Bonytongue,Scleropages formosus,Osteoglossiformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Asia,0,1,1,0,,,0,NS,BP,0,1,0,0,IN,3.9,90,NA,NA
-Red Cornet Fish,Fistularia petimba,Syngnathiformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Worldwide,1,NA,1,0,,,1,NS,BE,1,0,0,0,TL,4.4,200,NA,0.211
-Crucian Carp,Carassius carassius,Cypriniformes ,Actinopteri,1,0,0,0,1,0,0,0,0,Temperate,Asia,1,NA,1,0,,,0,NS,BE,1,0,0,1,TL,3.1,64,10,1.45
-Slimy Sculpin,Cottus cognatus,Perciformes,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,Worldwide,1,NA,1,0,,,0,NS,BE,1,0,0,0,TL,3.4,12.1,7,NA
-European Sprat,Sprattus sprattus,Clupeiformes,Actinopteri,1,0,0,0,0,1,0,0,0,Temperate,Europe,1,NA,1,0,,,1,NS,PE,0,0,1,0,TL,3,16,6,1.16
-Three-Spined Stickleback,Gasterosteus aculeatus,Perciformes,Actinopteri,1,1,0,1,0,0,0,0,1,Subtropical,Worldwide,1,1,0,1,,,1,NS,BP,0,1,0,0,TL,3.3,11,8,0.997
-Atlantic Salmon,Salmo salar,Salmoniformes,Actinopteri,1,1,0,1,0,0,0,0,0,Temperate,Worldwide,1,1,0,1,,4.666666667,1,NS,BP,0,1,0,0,TL,4.5,150,13,1.81
-Banded Killifish,Fundulus diaphanus,Cyprinodontiformes,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,NA,1,0,,52.33333333,0,NS,BP,0,1,0,0,TL,3.3,13,NA,NA
-Brown Bullhead,Ameiurus nebulosus,Siluriformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,North America,1,NA,1,0,,21.66666667,0,NS,BE,1,0,0,1,IN,3.7,55,9,NA
-Cod,Gadus morhua,Gadiformes,Actinopteri,1,0,0,0,0,1,0,0,0,Temperate,Worldwide,1,1,0,1,,2,1,NS,BP,0,1,0,0,TL,4.1,200,25,0.953
-Vendace,Coregonus albula,Salmoniformes,Actinopteri,1,1,0,1,0,0,0,0,0,Temperate,Europe,1,NA,0,0,,30,1,NS,BP,0,1,0,0,TL,3.1,48,10,1.74
-Redbelly Tilapia,Coptodon zillii,Cichliformes,Actinopteri,1,0,0,0,1,0,0,1,1,Tropical,Africa,1,NA,1,0,,,0,NS,BP,0,1,0,1,TL,2.5,40,7,0.462
-White Bream,Blicca bjoerkna,Cypriniformes ,Actinopteri,1,0,0,0,1,0,0,0,0,Temperate,Europe,1,NA,1,0,,,0,NS,BE,1,0,0,0,TL,3.2,45.5,NA,NA
-Freshwater Bream,Abramis brama,Cypriniformes ,Actinopteri,1,0,0,0,1,0,0,0,0,Temperate,Eurasia,1,NA,1,0,,,0,NS,BP,0,1,0,0,TL,3.1,82,23,1.24
-Vimba Bream,Vimba vimba,Cypriniformes ,Actinopteri,1,1,0,1,0,0,0,0,1,Subtropical,Eurasia,1,NA,1,0,,,0,NS,BP,0,1,0,0,TL,3.3,50,15,NA
-Asp,Leuciscus aspius,Cypriniformes ,Actinopteri,1,0,0,0,1,0,0,0,0,Temperate,Eurasia,1,NA,1,0,,,0,NS,BP,0,1,0,0,TL,4.5,120,11,1.51
-Mississippi Silvery Minnow,Hybognathus nuchalis,Cypriniformes ,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,North America,1,NA,1,0,,,0,NS,BP,0,1,0,0,IN,NA,18,2,NA
-Rudd,Scardinius erythrophthalmus,Cypriniformes ,Actinopteri,1,0,0,0,1,0,0,0,0,Temperate,Eurasia,1,NA,1,0,,,0,NS,BP,0,1,0,1,TL,2.9,61.7,19,1.25
-Ide,Leuciscus idus,Cypriniformes ,Actinopteri,1,0,0,0,1,0,0,0,0,Temperate,Eurasia,1,NA,1,0,,,0,NS,BP,0,1,0,0,TL,3.8,85,18,1.37
-Roach,Rutilus rutilus,Cypriniformes ,Actinopteri,1,0,0,0,1,0,0,0,1,Subtropical,Europe,1,NA,1,0,,,0,NS,BP,0,1,0,1,TL,3,50.2,14,0.8
-Fallfish,Semotilus corporalis,Cypriniformes ,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,NA,1,0,,,0,NS,BE,1,0,0,0,IN,3.4,51,6,NA
-Bridle Shiner,Notropis bifrenatus,Cypriniformes ,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,NA,1,0,,,0,NS,BP,0,1,0,0,IN,2.8,6.5,NA,NA
-Common Shiner,Luxilus cornutus,Cypriniformes ,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,NA,1,0,,,0,NS,BE,1,0,0,0,IN,2.8,18,6,NA
-Mimic Shiner,Notropis volucellus,Cypriniformes ,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,NA,1,0,,,0,NS,BP,0,1,0,0,IN,3,7.6,2,NA
-Blacknose Dace,Rhinichthys atratulus,Cypriniformes ,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,NA,1,0,,,0,NS,BE,1,0,0,0,IN,3.1,12.4,3,NA
-Tench,Tinca tinca,Cypriniformes ,Actinopteri,1,0,0,0,1,0,0,0,0,Temperate,Eurasia,1,NA,1,0,,,0,NS,BE,1,0,0,0,TL,3.7,70,NA,1.49
-Redbreast Sunfish,Lepomis auritus,Centrarchiformes,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,NA,0,0,,,0,NS,BE,1,0,0,1,IN,3.2,30.5,NA,NA
-Spiny Chromis,Acanthochromis polyacanthus,Ovalentaria,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Indo-Pacific,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,2.7,14,NA,0.135
-Yellowfin Seabream,Acanthopagrus latus,Eupercaria,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,Indo-Pacific,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,3.8,40,NA,0.747
-Sterlet Sturgeon,Acipenser ruthenus,Acipenseriformes,Actinopteri,1,0,0,0,1,0,0,0,0,Temperate,Eurasia,0,1,0,0,,,0,NS,BE,1,0,0,0,TL,3.6,125,20,0.808
-Roundjaw Bonefish,Albula glossodonta,Albuliformes,Actinopteri,1,0,0,0,0,1,0,1,1,Tropical,Indo-Pacific,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,3.3,90,NA,0.0927
-Starry Ray,Amblyraja radiata,Rajiformes,Actinopteri,1,0,0,0,0,1,0,0,0,Boreal,Worldwide,0,1,0,0,,,1,OS,BE,1,0,0,0,TL,4.2,105,28,0.927
-Clown Anemonefish,Amphiprion ocellaris,Ovalentaria,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Indo-Pacific,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,3.1,11,NA,0.173
-Climbing Perch,Anabas testudineus,Anabantiformes,Actinopteri,1,0,0,0,1,0,0,1,1,Tropical,Asia,0,1,0,0,,,0,NS,BE,1,0,0,0,TL,3,25,NA,0.388
-Wolf-eel,Anarrhichthys ocellatus,Perciformes,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,Worldwide,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,3.5,240,NA,0.32
-European Eel,Anguilla anguilla,Anguilliformes,Actinopteri,1,1,1,0,0,0,0,0,0,Temperate,Worldwide,0,1,0,0,,,0,NS,BE,1,0,0,1,TL,3.6,122,88,1.27
-Flier Cichlid,Archocentrus centrarchus,Cichliformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Central America,0,1,0,0,,,0,NS,BP,0,1,0,0,IN,2.6,11,NA,NA
-Eastern Happy,Astatotilapia calliptera,Cichliformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Africa,0,1,0,0,,,0,NS,BP,0,1,0,0,IN,3,15,NA,NA
-NA,Austrofundulus limnaeus,Cyprinodontiformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,South America,0,1,0,0,,,0,NS,BP,0,1,0,0,IN,3.3,8,NA,NA
-Siamese Fighting Fish,Betta splendens,Anabantiformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Asia,0,1,0,0,,,0,NS,BP,0,1,0,0,IN,3.3,6.5,2,NA
-Great Blue Spotted Mudskipper,Boleophthalmus pectinirostris,Gobiiformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Asia,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,2,20,4,NA
-Ghost Shark,Callorhinchus milii,Chimaeriformes,Holocephali,1,0,0,0,0,1,0,0,1,Subtropical,Indo-Pacific,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,3.6,125,NA,0.489
-Bluefin Trevally,Caranx melampygus,Carangiformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Indo-Pacific,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,4.5,117,NA,0.291
-Great White Shark,Carcharodon carcharias ,Lamniformes,Elasmobranchii,1,0,0,0,0,1,0,0,1,Subtropical,Worldwide,0,1,0,0,,,1,OS,PE,0,0,1,0,TL,4.5,640,36,NA
-Snakehead,Channa argus,Anabantiformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,Asia,0,1,0,0,,,0,NS,BP,0,1,0,1,IN,4.4,100,NA,NA
-Humphead Wrasse,Cheilinus undulatus,Eupercaria,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Indo-Pacific,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,4,229,32,0.0774
-Copperband Butterflyfish,Chelmon rostratus,Acanthuriformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Indo-Pacific,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,3.5,20,10,0.318
-Whitespotted Bambooshark,Chiloscyllium plagiosum,Orectolobiformes,Elasmobranchii,0,0,0,0,0,0,0,1,1,Tropical,Indo-Pacific,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,4,83,25,0.106
-Big Head Croaker,Collichthys lucidus,Eupercaria,Actinopteri,1,0,0,0,0,1,0,0,1,Subtropical,Indo-Pacific,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,3.6,19.8,NA,0.413
-Roundnose Grenadier,Coryphaenoides rupestris,Gadiformes,Actinopteri,0,0,0,0,0,0,0,0,0,Deep-water,Worldwide,0,1,0,0,,,1,OS,BP,0,1,0,0,TL,3.7,110,54,0.228
-Channel Bull Blenny,Cottoperca gobio,Perciformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,South America,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,4.3,80,NA,0.399
-Tongue Sole,Cynoglossus semilaevis,Pleuronectiformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,Asia,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,3.7,61.1,NA,NA
-Sheepshead Minnow,Cyprinodon variegatus,Cyprinodontiformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,Worldwide,0,1,0,0,,,1,NS,BP,0,1,0,0,TL,2.4,9,NA,0.731
-Antarctic Toothfish,Dissostichus mawsoni,Perciformes,Actinopteri,0,0,0,0,0,0,0,0,0,Polar,Antarctica,0,1,0,0,,,1,NS,PE,0,0,1,0,TL,3.9,200,39,0.339
-Live Sharksucker,Echeneis naucrates,Carangiformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,Worldwide,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,3.7,110,NA,0.27
-Giant Grouper,Epinephelus lanceolatus,Perciformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Indo-Pacific,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,4,270,NA,0.2
-Reedfish,Erpetoichthys calabaricus,Polypteriformes,Cladistii,0,0,0,0,0,0,0,1,1,Tropical,Africa,0,1,0,0,,,0,NS,BE,1,0,0,0,TL,3.3,37,NA,NA
-Arkansas Darter,Etheostoma cragini,Perciformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,North America,0,1,0,0,,,0,NS,BP,0,1,0,0,IN,3.2,6,3,NA
-Orangethroat Darter,Etheostoma spectabile,Perciformes,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,0,1,0,0,,,0,NS,BP,0,1,0,0,IN,3.3,7.2,NA,NA
-Blunt-Nosed Clingfish,Gouania willdenowi,Gobiesociformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,Europe,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,3.1,4.6,NA,NA
-Ploughfish,Gymnodraco acuticeps,Perciformes,Actinopteri,0,0,0,0,0,0,0,0,0,Polar,Antarctica,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,4.2,38.5,NA,NA
-Tiger Tail Seahorse,Hippocampus comes,Syngnathiformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Indo-Pacific,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,3.4,18.7,NA,0.13
-Pacific Halibut,Hippoglossus stenolepis,Pleuronectiformes,Actinopteri,1,0,0,0,0,1,0,0,0,Temperate,Worldwide,0,1,0,0,,,1,OS,BE,1,0,0,0,TL,4.1,258,55,0.36
-NA,Aphyosemion striatum,Cyprinodontiformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Africa,0,1,0,0,,,0,NS,BP,0,1,0,0,IN,3.2,6,NA,NA
-Mangrove Rivulus,Kryptolebias marmoratus,Cyprinodontiformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Worldwide,0,1,0,0,,,1,NS,BP,0,1,0,0,TL,3.2,4.5,NA,NA
-Ballan Wrasse,Labrus bergylta,Eupercaria,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,Europe,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,3.2,65.9,29,0.295
-Large Yellow Croaker,Larimichthys crocea,Eupercaria,Actinopteri,1,0,0,0,0,1,0,0,0,Temperate,Asia,0,1,0,0,,,1,NS,BP,0,1,0,0,TL,3.7,80,NA,0.996
-Barramundi,Lates calcarifer,Carangaria,Actinopteri,1,1,1,0,0,0,0,1,1,Tropical,Indo-Pacific,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,3.8,200,NA,0.407
-Coelacanth,Latimeria chalumnae,Coelacanthiformes,Coelacanthi,0,0,0,0,0,0,0,0,0,Deep-water,Africa,0,1,0,0,,,1,OS,BE,1,0,0,0,TL,4.4,168,48,NA
-Spotted Gar,Lepisosteus oculatus,Lepisosteiformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,North America,0,1,1,0,,,0,NS,BE,1,0,0,0,TL,4,150,18,0.518
-Tanaka's Snailfish,Liparis tanakae,Perciformes,Actinopteri,1,0,0,0,0,1,0,0,0,Temperate,Asia,0,1,0,0,,,1,OS,BE,1,0,0,0,TL,4.3,56.3,NA,0.611
-Toothed Cuban Cusk-Eel,Lucifuga dentata,Ophidiiformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Central America,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,3.3,15.2,NA,NA
-Zig-Zag Eel,Mastacembelus armatus,Synbranchiformes,Actinopteri,1,0,0,0,1,0,0,1,1,Tropical,Asia,0,1,0,0,,,0,NS,BE,1,0,0,0,TL,2.8,90,NA,0.314
-Zebra Mbuna,Maylandia zebra,Cichliformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Africa,0,1,0,0,,,0,NS,BE,1,0,0,0,IN,2.3,11.3,NA,NA
-Boeseman's Rainbowfish,Melanotaenia boesemani,Atheriniformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Asia,0,1,0,0,,,0,NS,BP,0,1,0,0,IN,2.9,9,NA,NA
-Asian Swamp Eel,Monopterus albus,Synbranchiformes,Actinopteri,1,0,0,0,1,0,0,1,1,Tropical,Asia,0,1,0,0,,,0,NS,BE,1,0,0,0,TL,2.9,100,NA,0.313
-Striped Bass,Morone saxatilis,Eupercaria,Actinopteri,1,1,0,1,0,0,0,0,0,Temperate,North America,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,4.7,200,30,1.17
-Pinecone Soldierfish,Myripristis murdjan,Holocentriformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Indo-Pacific,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,3.4,60,NA,0.136
-Rio Pearlfish,Nematolebias whitei,Cyprinodontiformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,South America,0,1,0,0,,,0,NS,BP,0,1,0,0,IN,3.3,8,NA,NA
-Yellow Drum,Nibea albiflora,Eupercaria,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,Asia,0,1,0,0,,,1,NS,BP,0,1,0,0,TL,4,43.5,4,0.585
-Turquoise Killifish,Nothobranchius furzeri,Cyprinodontiformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Africa,0,1,0,0,,,0,NS,BP,0,1,0,0,IN,3.2,6.5,NA,0
-Chum Salmon,Oncorhynchus keta,Salmoniformes,Actinopteri,1,1,0,1,0,0,0,0,0,Temperate,Worldwide,0,1,0,0,,,1,NS,BP,0,1,0,0,TL,3.7,100,7,2.35
-Sockeye Salmon,Oncorhynchus nerka,Salmoniformes,Actinopteri,1,1,0,1,0,0,0,0,0,Temperate,Worldwide,0,1,0,0,,,1,OS,PE,0,0,1,0,TL,3.5,84,8,2.88
-Chinook Salmon,Oncorhynchus tshawytscha,Salmoniformes,Actinopteri,1,1,0,1,0,0,0,0,0,Temperate,Worldwide,0,1,0,0,,,1,NS,BP,0,1,0,1,TL,4.4,150,9,1.5
-Javenese Ricefish,Oryzias javanicus,Beloniformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Asia,0,1,0,0,,,0,NS,BP,0,1,0,0,IN,3.4,4.5,NA,NA
-Indian Medaka,Oryzias melastigma,Beloniformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Asia,0,1,0,0,,,0,NS,BP,0,1,0,0,TL,3.3,4,NA,NA
-NA,Nothobranchius kadleci,Cyprinodontiformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Africa,0,1,0,0,,,0,NS,PE,0,0,1,0,IN,3.2,3.9,NA,NA
-Korthausae Killifish,Nothobranchius korthausae,Cyprinodontiformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Africa,0,1,0,0,,,0,NS,BP,0,1,0,0,IN,3.2,5,NA,NA
-Spotted Killifish,Nothobranchius kuhntae,Cyprinodontiformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Africa,0,1,0,0,,,0,NS,BP,0,1,0,0,IN,3.3,10,NA,NA
-NA,Nothobranchius pienaari,Cyprinodontiformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Africa,0,1,0,0,,,0,NS,BP,0,1,0,0,IN,3.2,3.9,NA,NA
-Bluefin Notho,Nothobranchius rachovii,Cyprinodontiformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Africa,0,1,0,0,,,0,NS,BP,0,1,0,0,IN,3.2,6,NA,NA
-Spotty,Notolabrus celidotus,Eupercaria,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,Indo-Pacific,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,3.4,23.9,7,0.714
-Black Rockcod,Notothenia coriiceps,Perciformes,Actinopteri,0,0,0,0,0,0,0,0,0,Polar,Antarctica,0,1,0,0,,,1,OS,BE,1,0,0,0,TL,2.8,62,NA,0.289
-Bastard Halibut,Paralichthys olivaceus,Pleuronectiformes,Actinopteri,1,0,0,0,0,1,0,0,1,Subtropical,Indo-Pacific,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,4.5,103,NA,0.284
-European Perch,Perca fluviatilis,Perciformes,Actinopteri,1,1,0,1,0,0,0,0,0,Temperate,Eurasia,0,1,0,0,,,0,NS,BE,1,0,0,1,TL,4.4,60,22,0.56
-Mudskipper,Periophthalmus magnuspinnatus,Gobiiformes,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,Asia,0,1,0,0,,,0,NS,BE,1,0,0,0,IN,3.2,10.3,NA,NA
-Leopard Coralgrouper,Plectropomus leopardus,Perciformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Indo-Pacific,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,4.4,120,26,0.143
-Guppy,Poecilia reticulata,Cyprinodontiformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,South America,0,1,0,0,,,0,NS,BP,0,1,0,1,TL,3.2,6,NA,NA
-Blackstripe Livebearer,Poeciliopsis prolifica,Cyprinodontiformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,Central America,0,1,0,0,,,0,NS,BP,0,1,0,0,TL,NA,3,NA,NA
-Mississippi Paddlefish,Polyodon spathula,Acipenseriformes,Actinopteri,1,0,0,0,1,0,0,0,1,Subtropical,North America,0,1,1,0,,,0,NS,BE,1,0,0,1,IN,3.4,221,55,0.285
-Gray Bichir,Polypterus senegalus,Polypteriformes,Actinopteri,1,0,0,0,1,0,0,1,1,Tropical,Africa,0,1,1,0,,,0,NS,BE,1,0,0,0,IN,3.5,70,NA,0.227
-West African Lungfish,Protopterus annectens,Ceratodontiformes,Actinopteri,1,0,0,0,1,0,0,1,1,Tropical,Africa,0,1,0,0,,,0,NS,BE,1,0,0,0,IN,3.8,100,NA,NA
-South Georgia Icefish,Pseudochaenichthys georgianus,Perciformes,Actinopteri,0,0,0,0,0,0,0,0,0,Polar,Antarctica,0,1,0,0,,,1,OS,BE,1,0,0,0,TL,3.4,60,NA,0.335
-NA,Pundamilia nyererei,Cichliformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Africa,0,1,0,0,,,0,NS,BP,0,1,0,0,IN,2.6,7.7,NA,NA
-Whale Shark,Rhincodon typus,Orectolobiformes,Elasmobranchii,1,0,0,0,0,1,0,0,1,Subtropical,Worldwide,0,1,0,0,,,1,OS,PE,0,0,1,0,TL,3.6,1700,80,NA
-Jewelled Blenny,Salarias fasciatus,Blenniiformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Indo-Pacific,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,2,14,NA,0.186
-Arctic Char,Salvelinus alpinus,Salmoniformes,Actinopteri,1,1,0,1,0,0,0,0,0,Temperate,Worldwide,0,1,0,0,,,1,NS,BP,0,1,0,0,TL,4.4,107,40,1.82
-Pike-Perch,Sander lucioperca,Perciformes,Actinopteri,1,0,0,0,1,0,0,0,0,Temperate,Eurasia,0,1,0,0,,,0,NS,PE,0,0,1,1,TL,4,100,17,1.15
-Turbot,Scophthalmus maximus,Pleuronectiformes,Actinopteri,1,0,0,0,0,1,0,0,0,Temperate,Europe,0,1,0,0,,,1,OS,BE,1,0,0,0,TL,4.4,100,25,0.592
-Lesser Spotted Dogfish,Scyliorhinus canicula,Carcharhiniformes,Elasmobranchii,0,0,0,0,0,0,0,0,1,Subtropical,Europe,0,1,0,0,,,1,OS,BE,1,0,0,0,TL,3.8,100,12,0.202
-Honeycomb Rockfish,Sebastes umbrosus,Perciformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,North America,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,3.6,29.8,NA,NA
-Greater Amberjack,Seriola dumerili,Carangiformes,Actinopteri,1,0,0,0,0,1,0,0,1,Subtropical,Worldwide,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,4.5,190,15,0.224
-Yellowtail Amberjack,Seriola lalandi,Carangiformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,Worldwide,0,1,0,0,,,1,NS,BP,0,1,0,0,TL,4.2,250,12,0.679
-NA,Simochromis diagramma,Cichliformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Africa,0,1,0,0,,,0,NS,BP,0,1,0,0,IN,2,19.5,NA,NA
-Mandarin Fish,Siniperca chuatsi,Centrarchiformes,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,Asia,0,1,0,0,,,0,NS,BP,0,1,0,0,IN,4.5,70,9,NA
-Golden-Line Barbel,Sinocyclocheilus grahami,Cypriniformes ,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,Asia,0,1,1,0,,,0,NS,BP,0,1,0,0,IN,2.9,23,NA,NA
-Sengalese Sole,Solea senegalensis,Pleuronectiformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Africa,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,3.3,60,NA,0.158
-Gilthead Seabream,Sparus aurata,Eupercaria,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,Europe,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,3.7,70,11,1.29
-Orbiculate Cardinalfish,Sphaeramia orbicularis,Kurtiformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Indo-Pacific,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,3.6,10,NA,0.163
-Bicolor Damselfish,Stegastes partitus,Ovalentaria,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Worldwide,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,2,10,NA,0.141
-Greater Pipefish,Syngnathus acus,Syngnathiformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,Worldwide,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,3.3,50,NA,NA
-NA,Takifugu bimaculatus,Tetraodontiformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,Asia,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,3.4,30,NA,NA
-Yellowbelly Pufferfish,Takifugu flavidus,Tetraodontiformes,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,Asia,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,3.4,35,NA,NA
-Japenese Pufferfish,Takifugu rubripes,Tetraodontiformes,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,Asia,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,3.6,80,NA,1.09
-Spotted Green Pufferfish,Tetraodon nigroviridis,Tetraodontiformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Asia,0,1,0,0,,,0,NS,BE,1,0,0,0,IN,3.4,17,NA,NA
-NA,Thalassophryne amazonica,Batrachoidiformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,South America,0,1,0,0,,,0,NS,BE,1,0,0,0,IN,3.4,9.3,NA,NA
-Yellowfin Tuna,Thunnus albacares,Scombriformes ,Actinopteri,1,0,0,0,0,1,0,1,1,Tropical,Worldwide,0,1,0,0,,,1,OS,PE,0,0,1,0,TL,4.4,239,9,0.573
-Southern Bluefin Tuna,Thunnus maccoyii,Scombriformes ,Actinopteri,1,0,0,0,0,1,0,0,0,Temperate,Worldwide,0,1,0,0,,,1,OS,PE,0,0,1,0,TL,3.9,245,20,0.639
-Banded Archerfish,Toxotes jaculatrix,Carangaria,Actinopteri,1,0,0,0,0,0,1,1,1,Tropical,Worldwide,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,2.6,30,NA,NA
-Emerald Rockcod,Trematomus bernacchii,Perciformes,Actinopteri,0,0,0,0,0,0,0,0,0,Polar,Antarctica,0,1,0,0,,,1,NS,BE,1,0,0,0,TL,3.4,28,10,0.359
-Swordfish,Xiphias gladius,Carangiformes,Actinopteri,1,0,0,0,0,1,0,0,0,Temperate,Worldwide,0,1,0,0,,,1,OS,PE,0,0,1,0,TL,4.5,455,NA,0.322
-Monterrey Platyfish,Xiphophorus couchianus,Cyprinodontiformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,North America,0,1,0,0,,,0,NS,BP,0,1,0,0,IN,3.1,6,NA,NA
-Bluntnose Minnow,Pimephales notatus,Cypriniformes ,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,NA,1,0,,,0,NS,BE,1,0,0,0,IN,2.7,11,5,NA
-Golden Shiner,Notemigonus crysoleucas,Cypriniformes ,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,North America,1,NA,1,0,,,0,NS,BE,1,0,0,0,TL,2.7,32,9,NA
-Swallowtail Shiner,Notropis procne,Cypriniformes ,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,NA,1,0,,,0,NS,BP,0,1,0,0,IN,2.8,7.2,3,NA
-Cutlip Minnow,Exoglossum maxillingua,Cypriniformes ,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,NA,1,0,,,0,NS,BE,1,0,0,0,IN,3,16,2,NA
-Streamline Chub,Erimystax dissimilis,Cypriniformes ,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,NA,1,0,,,0,NS,BE,1,0,0,0,IN,2.9,14,NA,NA
-Rosyface Shiner,Notropis rubellus,Cypriniformes ,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,NA,1,0,,,0,NS,BP,0,1,0,0,IN,3.1,11,3,NA
-Longnose Dace,Rhinichthys cataractae,Cypriniformes ,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,North America,1,NA,1,0,,,0,NS,BE,1,0,0,0,IN,3.2,22.5,5,NA
-River Chub,Nocomis micropogon,Cypriniformes ,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,NA,1,0,,,0,NS,BE,1,0,0,0,IN,3.2,33,5,NA
-Shorthead Redhorse,Moxostoma macrolepidotum,Cypriniformes ,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,NA,1,0,,,0,NS,BE,1,0,0,0,TL,3.1,75,9,NA
-Logperch,Percina caprodes,Perciformes,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,NA,0,0,,,0,NS,BP,0,1,0,0,IN,3.4,18,3,NA
-Fallfish,Semotilus corporalis,Cypriniformes ,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,NA,1,0,,,0,NS,BE,1,0,0,0,IN,3.4,51,6,NA
-Tessellated Darter,Etheostoma olmstedi,Perciformes,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,NA,0,0,,,0,NS,BP,0,1,0,0,IN,2.9,11,4,NA
-Banded Darter,Etheostoma zonale,Perciformes,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,NA,0,0,,,0,NS,BP,0,1,0,0,IN,3.3,7.8,4,NA
-Greenside Darter,Etheostoma blennioides,Perciformes,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,NA,0,0,,,0,NS,BP,0,1,0,0,IN,3.4,17,5,NA
-Longhead Darter,Percina macrocephala,Perciformes,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,NA,0,0,,,0,NS,BP,0,1,0,0,IN,3.4,12,4,NA
-Ohio Lamprey,Ichthyomyzon bdellium,Petromyzontiformes,Petromyzonti,0,0,0,0,0,0,0,0,0,Temperate,North America,1,NA,0,0,,,0,NS,BE,1,0,0,0,IN,4.4,30,1,NA
-Margined Madtom,Noturus insignis,Siluriformes,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,NA,0,0,,,0,NS,BE,1,0,0,0,IN,3.3,15,NA,NA
-Bowfin,Amia calva,Amiiformes,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,North America,1,NA,NA,0,,,0,NS,BE,1,0,0,0,IN,3.8,109,30,NA
-Spotfin Shiner,Cyprinella spiloptera,Cypriniformes ,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,North America,1,NA,1,0,,,0,NS,BP,0,1,0,0,IN,2.8,12,5,NA
-Creek Chub,Semotilus atromaculatus,Cypriniformes ,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,NA,1,0,,,0,NS,BE,1,0,0,0,IN,4,30.3,8,NA
-Fantail Darter,Etheostoma flabellare,Perciformes,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,North America,1,NA,0,0,,,0,NS,BP,0,1,0,0,IN,3.2,8.4,4,NA
-Hickory Shad,Alosa mediocris,Clupeiformes,Actinopteri,1,1,0,1,0,0,0,0,0,Temperate,North America,1,NA,1,0,,,1,NS,PE,0,0,1,0,TL,4.1,60,NA,2.9
-Atlantic Wolffish,Anarchichas lupus,Perciformes,Actinopteri,1,0,0,0,0,1,0,0,0,Temperate,Worldwide,1,NA,0,0,,,1,OS,BE,1,0,0,0,TL,3.6,150,NA,0.352
-European Smelt,Osmerus eperlanus,Osmeriformes,Actinopteri,1,1,0,1,0,0,0,0,0,Temperate,Europe,1,NA,0,0,,25,1,NS,PE,0,0,1,0,TL,3.5,45,10,1.7
-Common Dace,Leuciscus leuciscus,Cypriniformes ,Actinopteri,1,0,0,0,1,0,0,0,0,Temperate,Eurasia,1,NA,1,0,,11500,0,NS,BP,0,1,0,1,TL,2.9,40,16,NA
-Amur Catfish,Silurus asotus,Siluriformes,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,Asia,1,NA,1,0,,,0,NS,BE,1,0,0,0,IN,4.4,130,NA,NA
-Pond Loach,Misgurnus anguillicaudatus,Cypriniformes ,Actinopteri,0,0,0,0,0,0,0,0,1,Subtropical,Worldwide,1,NA,1,0,,,0,NS,BE,1,0,0,1,TL,3.2,28,NA,NA
-NA,Eleotris oxycephala,Gobiiformes,Actinopteri,1,0,0,0,0,0,1,0,1,Subtropical,Asia,1,NA,1,0,,,1,NS,BE,1,0,0,0,TL,3.7,19,NA,NA
-Frigate Tuna,Auxis thazard,Scombriformes ,Actinopteri,1,0,0,0,0,1,0,1,1,Tropical,Worldwide,1,NA,1,0,,,1,OS,PE,0,0,1,0,TL,4.4,65,5,0.358
-Japanese Eel,Anguilla japonica,Anguilliformes,Actinopteri,1,1,1,0,0,0,0,0,1,Subtropical,Asia,1,NA,1,0,,,1,NS,BE,1,0,0,0,TL,3.6,150,NA,0.757
-Yellowfin Goby,Acanthogobius flavimanus,Gobiiformes,Actinopteri,1,0,0,0,0,0,1,0,0,Temperate,Asia,1,NA,1,0,,,1,NS,BE,1,0,0,0,TL,3.4,30,NA,NA
-NA,Ischikauia steenackeri,Cypriniformes ,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,Asia,1,NA,1,0,,,0,NS,BE,1,0,0,0,IN,3.2,30,NA,NA
-NA,Odontobutis obscurus,Gobiiformes,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,Asia,1,NA,1,0,,,0,NS,BP,0,1,0,0,IN,3.2,17.5,NA,NA
-NA,Gnathopogon mayedae,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,Asia,1,NA,1,0,,,NA,NA,NA,0,0,0,NA,NA,NA,NA,NA,NA
-NA,Rhinogobius similis,Gobiiformes,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,Asia,1,NA,1,0,,,0,NS,BP,0,1,0,1,IN,3.3,10,NA,NA
-Pond Smelt,Hypomessus olidus,Osmeriformes,Actinopteri,1,1,0,1,0,0,0,0,0,Boreal,Worldwide,1,NA,1,0,,,1,NS,PE,0,0,1,0,TL,3.2,20,10,
-Sand-Table Dwarfgoby,Eviota abox,Gobiiformes,Actinopteri,0,0,0,0,0,0,0,0,0,Temperate,Asia,1,NA,1,0,,,1,NS,BE,1,0,0,0,TL,3.2,4,NA,NA
-Ice Goby,Leucopsarion petersi,Gobiiformes,Actinopteri,1,0,0,0,0,0,1,0,1,Subtropical,Asia,1,NA,0,0,,,1,NS,BE,1,0,0,0,TL,3.3,5.8,NA,NA
-Whitespotted Conger,Conger myriaster,Anguilliformes,Actinopteri,1,0,0,0,0,1,0,0,0,Temperate,Asia,1,NA,0,0,,,1,OS,BE,1,0,0,0,TL,4,100,8,0.523
-Ayu Sweetfish,Plecoglossus altivelis,Osmeriformes,Actinopteri,1,0,0,0,0,0,1,0,1,Subtropical,Asia,1,NA,0,0,,,1,NS,BE,1,0,0,0,TL,2.8,70,3,0.657
-Eulachon,Thaleichthys pacificus,Osmeriformes,Actinopteri,1,1,0,1,0,0,0,0,0,Temperate,North America,1,NA,1,0,,,1,NS,PE,0,0,1,0,TL,3.3,34,5,2.49
-Olive Barb,Systomus sarana,Cypriniformes ,Actinopteri,1,0,0,0,1,0,0,1,1,Tropical,Asia,1,NA,1,0,,,0,NS,BP,0,1,0,0,TL,2.9,42,NA,0.553
-Boggut Labeo,Labeo bagut,Cypriniformes ,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Asia,1,NA,1,0,,,0,NS,BP,0,1,0,0,IN,NA,29,NA,NA
-Red-Tipped Halfbeak,Hemirhamphus xanthopterus,Beloniformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Indo-Pacific,1,NA,1,0,,,1,NS,PE,0,0,1,0,TL,3,15,NA,NA
-Goldspotted Grenadier Anchovy,Coilia dussumieri,Clupeiformes,Actinopteri,1,0,0,0,0,0,1,1,1,Tropical,Indo-Pacific,1,NA,1,0,,,1,NS,PE,0,0,1,0,TL,3.3,20,NA,0.746
-Fringescale Sardinella,Sardinella fimbriata,Clupeiformes,Actinopteri,0,0,0,0,0,0,0,1,1,Tropical,Indo-Pacific,1,NA,1,0,,,1,NS,PE,0,0,1,0,TL,2.7,19,NA,0.765
+﻿Common,Scientific,Source,Family,Order,Class,Tropical,Climate,Continent,Lit_confirmed,BLAST,Thiaminase,Marine,Habitat,Benthic,Benthopelagic,Pelagic,Invasive,Salt,TL_fooditems,MaxTL,MaxAge,Omega3,Habitat2,Benthic,Benthopelagic,Pelagic,Invasive,Salt,TL_fooditems,MaxTL,MaxAge,Omega3
+Freshwater Bream,Abramis brama,"Chaet and Bishop 1952, Arsan 1970",Leuciscidae,Cypriniformes ,Actinopteri,0,Temperate,Eurasia,1,NA,1,0,BP,0,1,0,0,TL,3.1,82,23,1.24,PE,0,0,1,1,TL,3.4,40,9,2.67
+Spiny Chromis,Acanthochromis polyacanthus,BLAST,Pomacentridae,Ovalentaria,Actinopteri,1,Tropical,Indo-Pacific,0,1,0,1,BE,1,0,0,0,TL,2.7,14,NA,0.135,BE,1,0,0,0,TL,3.8,152,43,0.777
+Yellowfin Goby,Acanthogobius flavimanus,Fujita 1954,Gobiidae,Gobiiformes,Actinopteri,0,Temperate,Asia,1,NA,1,1,BE,1,0,0,0,TL,3.4,30,NA,NA,BP,0,1,0,0,IN,3.8,49,15,0.397
+Yellowfin Seabream,Acanthopagrus latus,BLAST,Sparidae,Eupercaria,Actinopteri,0,Subtropical,Indo-Pacific,0,1,0,1,BE,1,0,0,0,TL,3.8,40,NA,0.747,PE,0,0,1,0,IN,3.3,37,11,NA
+Sterlet Sturgeon,Acipenser ruthenus,BLAST,Acipenseridae,Acipenseriformes,Actinopteri,0,Temperate,Eurasia,0,1,0,0,BE,1,0,0,0,TL,3.6,125,20,0.808,BP,0,1,0,1,IN,3.2,41,10,0.372
+Roundjaw Bonefish,Albula glossodonta,BLAST,Albulidae,Albuliformes,Actinopteri,1,Tropical,Indo-Pacific,0,1,0,1,BE,1,0,0,0,TL,3.3,90,NA,0.0927,PE,0,0,1,1,TL,3.4,140,38,1.09
+Allis Shad,Alosa alosa,BLAST,Clupeidae,Clupeiformes,Actinopteri,0,Temperate,Europe,0,1,1,1,PE,0,0,1,0,TL,3,69,10,2.4,BE,1,0,0,0,IN,3.8,66,10,0.747
+Hickory Shad,Alosa mediocris,Kraft et al. 2014,Clupeidae,Clupeiformes,Actinopteri,0,Temperate,North America,1,NA,1,1,PE,0,0,1,0,TL,4.1,60,NA,2.9,BE,1,0,0,0,TL,3.8,152,20,0.666
+Alewife,Alosa pseudoharengus,"Tillitt et al. 2005, Greig and Gnaedinger 1971, Boggs et al. 2019, Fitzsimons et al. 2005, Kraft et al. 2014, Zajicek et al. 2005, Lepack et al. 2013, Honeyfield et al. 2010, Nielands 1947, Gnaedinger and Krzeczkowski 1966",Clupeidae,Clupeiformes,Actinopteri,0,Temperate,North America,1,NA,1,0,PE,0,0,1,1,TL,3.4,40,9,2.67,BE,1,0,0,0,IN,3.7,14,4,NA
+American Shad,Alosa sapidissima,"BLAST, Wetzel et al. 2011",Clupeidae,Clupeiformes,Actinopteri,0,Subtropical,North America,1,1,1,1,PE,0,0,1,0,TL,3.5,76,13,1.52,BP,0,1,0,0,IN,2,22,NA,NA
+Rock Bass,Ambloplites rupestris,"Greig and Gnaedinger 1971, Chaet and Bishop 1952",Centrarchidae,Centrarchiformes,Actinopteri,0,Subtropical,North America,1,NA,0,0,BP,0,1,0,0,IN,3.4,43,18,NA,BE,1,0,0,1,IN,4.2,132,24,0.403
+Starry Ray,Amblyraja radiata,BLAST,Rajidae,Rajiformes,Actinopteri,0,Boreal,Worldwide,0,1,0,1,BE,1,0,0,0,TL,4.2,105,28,0.927,PE,0,0,1,0,TL,3.4,57,11,NA
+Black Bullhead,Ameiurus melas,"BLAST, Greig and Gnaedinger 1971",Ictaluridae,Siluriformes,Actinopteri,0,Temperate,North America,1,1,1,0,BE,1,0,0,0,IN,3.8,66,10,0.747,PE,0,0,1,1,TL,4.2,108,5,1.88
+Brown Bullhead,Ameiurus nebulosus,Nielands 1947,Ictaluridae,Siluriformes,Actinopteri,0,Subtropical,North America,1,NA,1,0,BE,1,0,0,1,IN,3.7,55,9,NA,BP,0,1,0,1,TL,3.1,120,38,0.709
+Bowfin,Amia calva,"Greig and Gnaedinger 1971, Gnaedinger and Krzeczkowski 1966",Amiidae,Amiiformes,Actinopteri,0,Subtropical,North America,1,NA,NA,0,BE,1,0,0,0,IN,3.8,109,30,NA,BE,1,0,0,0,IN,3.2,23,NA,NA
+Clown Anemonefish,Amphiprion ocellaris,BLAST,Pomacentridae,Ovalentaria,Actinopteri,1,Tropical,Indo-Pacific,0,1,0,1,BE,1,0,0,0,TL,3.1,11,NA,0.173,PE,0,0,1,0,IN,2.8,13,4,NA
+Kanglang Fish,Anabarilius grahami,BLAST,Xenocyprididae,Cypriniformes ,Actinopteri,0,Subtropical,Asia,0,1,1,1,BP,0,1,0,0,IN,3.2,15.6,NA,NA,BE,1,0,0,0,IN,2.4,10.1,5,NA
+Climbing Perch,Anabas testudineus,BLAST,Anabantidae,Anabantiformes,Actinopteri,1,Tropical,Asia,0,1,0,0,BE,1,0,0,0,TL,3,25,NA,0.388,BP,0,1,0,0,TL,3.4,95,13,NA
+Atlantic Wolffish,Anarhichas lupus,Nielands 1947,Anarhichadidae,Perciformes,Actinopteri,0,Temperate,Worldwide,1,NA,0,1,BE,1,0,0,0,TL,3.6,150,NA,0.352,BE,1,0,0,0,TL,4.2,200,36,0.532
+Wolf-eel,Anarrhichthys ocellatus,BLAST,Anarhichadidae,Perciformes,Actinopteri,0,Temperate,Worldwide,0,1,0,1,BE,1,0,0,0,TL,3.5,240,NA,0.32,BP,0,1,0,1,TL,2.4,57,10,1.06
+Broad-Striped Anchovy,Anchoa hepsetus,Greig and Gnaedinger 1971,Engraulidae,Clupeiformes,Actinopteri,0,Subtropical,Worldwide,1,NA,1,1,PE,0,0,1,0,TL,3.3,15.3,NA,1.11,BP,0,1,0,1,TL,2,48,41,NA
+European Eel,Anguilla anguilla,BLAST,Anguillidae,Anguilliformes,Actinopteri,0,Temperate,Worldwide,0,1,0,0,BE,1,0,0,1,TL,3.6,122,88,1.27,BP,0,1,0,0,TL,4.3,150,50,1.07
+Japanese Eel,Anguilla japonica,Fujita 1954,Anguillidae,Anguilliformes,Actinopteri,0,Subtropical,Asia,1,NA,1,1,BE,1,0,0,0,TL,3.6,150,NA,0.757,BP,0,1,0,0,TL,3.2,100,50,1.55
+American Eel,Anguilla rostrata,"Greig and Gnaedinger 1971, Nielands 1947",Anguillidae,Anguilliformes,Actinopteri,0,Subtropical,Worldwide,1,NA,0,1,BE,1,0,0,0,TL,3.8,152,43,0.777,BE,1,0,0,1,TL,4.4,120,11,0.957
+NA,Aphyosemion striatum,BLAST,Nothobranchiidae,Cyprinodontiformes,Actinopteri,1,Tropical,Africa,0,1,0,0,BP,0,1,0,0,IN,3.2,6,NA,NA,BP,0,1,0,1,IN,3.8,97,23,0.397
+Freshwater Drum,Aplodinotus grunniens,Greig and Gnaedinger 1971,Sciaenidae,Eupercaria,Actinopteri,0,Subtropical,North America,1,NA,0,0,BP,0,1,0,0,TL,3.4,95,13,NA,BP,0,1,0,0,TL,3.3,9,5,NA
+Flier Cichlid,Archocentrus centrarchus,BLAST,Cichlidae,Cichliformes,Actinopteri,1,Tropical,Central America,0,1,0,0,BP,0,1,0,0,IN,2.6,11,NA,NA,BP,0,1,0,1,TL,4.1,137,30,0.632
+Burton'S Mouthbrooder,Astatotilapia burtoni,BLAST,Cichlidae,Cichliformes,Actinopteri,1,Tropical,Africa,0,1,1,0,BP,0,1,0,0,IN,3.1,15,NA,NA,BP,0,1,0,1,IN,3.3,40,12,NA
+Eastern Happy,Astatotilapia calliptera,BLAST,Cichlidae,Cichliformes,Actinopteri,1,Tropical,Africa,0,1,0,0,BP,0,1,0,0,IN,3,15,NA,NA,BE,1,0,0,1,TL,3,35.6,7,1.57
+Mexican Tetra,Astyanax mexicanus,BLAST,Characidae,Characiformes,Actinopteri,0,Subtropical,North America,0,1,1,0,BP,0,1,0,0,IN,3.2,12,NA,NA,PE,0,0,1,1,TL,4.1,122,11,1.44
+NA,Austrofundulus limnaeus,BLAST,Rivulidae,Cyprinodontiformes,Actinopteri,1,Tropical,South America,0,1,0,0,BP,0,1,0,0,IN,3.3,8,NA,NA,BP,0,1,0,0,IN,3.4,43,18,NA
+Frigate Tuna,Auxis thazard,Fujita 1954,Scombridae,Scombriformes ,Actinopteri,1,Tropical,Worldwide,1,NA,1,1,PE,0,0,1,0,TL,4.4,65,5,0.358,BE,1,0,0,1,TL,3.3,30,6,NA
+Giant Devil Catfish,Bagarius yarrelli,BLAST,Sisoridae,Siluriformes,Actinopteri,1,Tropical,Asia,0,1,1,0,BE,1,0,0,0,IN,3.7,200,NA,0.171,BE,1,0,0,0,TL,3.3,59,16,NA
+Siamese Fighting Fish,Betta splendens,BLAST,Osphronemidae,Anabantiformes,Actinopteri,1,Tropical,Asia,0,1,0,0,BP,0,1,0,0,IN,3.3,6.5,2,NA,BP,0,1,0,0,IN,4.1,76,18,NA
+White Bream,Blicca bjoerkna,Chaet and Bishop 1952,Leuciscidae,Cypriniformes ,Actinopteri,0,Temperate,Europe,1,NA,1,0,BE,1,0,0,0,TL,3.2,45.5,NA,NA,BE,1,0,0,0,TL,3.9,60,14,0.903
+Great Blue Spotted Mudskipper,Boleophthalmus pectinirostris,BLAST,Oxudercidae,Gobiiformes,Actinopteri,1,Tropical,Asia,0,1,0,1,BE,1,0,0,0,TL,2,20,4,NA,BP,0,1,0,1,IN,3.6,69,26,NA
+Gulf Menhaden,Brevoortia patronus,Greig and Gnaedinger 1971,Clupeidae,Clupeiformes,Actinopteri,0,Subtropical,North America,1,NA,1,1,PE,0,0,1,0,TL,2.2,35,NA,0.552,BE,1,0,0,0,IN,2.1,15,5,NA
+Atlantic Menhaden,Brevoortia tyrannus,Greig and Gnaedinger 1971,Clupeidae,Clupeiformes,Actinopteri,0,Subtropical,North America,1,NA,1,1,PE,0,0,1,0,TL,3.2,50,NA,1.22,BP,0,1,0,0,TL,4.5,107,29,0.429
+Cusk,Brosme brosme,"Greig and Gnaedinger 1971, Nielands 1947",Lotidae,Gadiformes,Actinopteri,0,Temperate,Worldwide,1,NA,0,1,BE,1,0,0,0,TL,3.9,120,20,0.371,BP,0,1,0,0,TL,4,45,9,NA
+Ghost Shark,Callorhinchus milii,BLAST,Callorhinchidae,Chimaeriformes,Holocephali,0,Subtropical,Indo-Pacific,0,1,0,1,BE,1,0,0,0,TL,3.6,125,NA,0.489,BP,0,1,0,1,TL,3.1,58,16,0.68
+Central Stoneroller,Campostoma anomalum,"Boggs et al. 2019, Kraft et al. 2014",Leuciscidae,Cypriniformes ,Actinopteri,0,Subtropical,North America,1,NA,1,0,BP,0,1,0,0,IN,2,22,NA,NA,BP,0,1,0,0,IN,2.8,65,12,1.28
+Bluefin Trevally,Caranx melampygus,BLAST,Carangidae,Carangiformes,Actinopteri,1,Tropical,Indo-Pacific,0,1,0,1,BE,1,0,0,0,TL,4.5,117,NA,0.291,BP,0,1,0,0,TL,3.7,50,11,0.305
+Goldfish,Carassius auratus,"BLAST, Greig and Gnaedinger 1971",Cyprinidae,Cypriniformes ,Actinopteri,0,Subtropical,Worldwide,1,1,1,0,BP,0,1,0,1,TL,2,48,41,NA,PE,0,0,1,0,TL,3.3,15.3,NA,1.11
+Crucian Carp,Carassius carassius,"Wistbacka et al. 2009, Chaet and Bishop 1952, Fujita 1954, Suomalainen and Pihlgren 1955",Cyprinidae,Cypriniformes ,Actinopteri,0,Temperate,Asia,1,NA,1,0,BE,1,0,0,1,TL,3.1,64,10,1.45,PE,0,0,1,0,TL,3.1,24.8,7,0.989
+Great White Shark,Carcharodon carcharias ,BLAST,Lamnidae,Lamniformes,Elasmobranchii,0,Subtropical,Worldwide,0,1,0,1,PE,0,0,1,0,TL,4.5,640,36,NA,BE,1,0,0,0,TL,3.9,120,20,0.371
+White Sucker,Catostomus commersonii,"Greig and Gnaedinger 1971, Boggs et al. 2019, Kraft et al. 2014, Nielands 1947",Catostomidae,Cypriniformes ,Actinopteri,0,Temperate,North America,1,NA,1,0,BP,0,1,0,0,IN,2.8,65,12,1.28,BE,1,0,0,0,TL,4,55,5,0.607
+Black Seabass,Centropristis striata,Greig and Gnaedinger 1971,Serranidae,Perciformes,Actinopteri,0,Temperate,North America,1,NA,0,1,BE,1,0,0,0,TL,3.9,66,20,0.354,BE,1,0,0,0,TL,3.6,64,14,0.359
+Snakehead,Channa argus,BLAST,Channidae,Anabantiformes,Actinopteri,0,Subtropical,Asia,0,1,0,0,BP,0,1,0,1,IN,4.4,100,NA,NA,BP,0,1,0,0,TL,3.9,30,NA,0.781
+Milkfish,Chanos chanos,BLAST,Chanidae,Gonorynchiformes,Actinopteri,1,Tropical,Indo-Pacific,0,1,1,1,BP,0,1,0,0,TL,2.4,180,15,0.248,BE,1,0,0,0,TL,3.7,38,6,0.35
+Humphead Wrasse,Cheilinus undulatus,BLAST,Labridae,Eupercaria,Actinopteri,1,Tropical,Indo-Pacific,0,1,0,1,BE,1,0,0,0,TL,4,229,32,0.0774,BP,0,1,0,0,TL,4.4,234,15,0.447
+Copperband Butterflyfish,Chelmon rostratus,BLAST,Chaetodontidae,Acanthuriformes,Actinopteri,1,Tropical,Indo-Pacific,0,1,0,1,BE,1,0,0,0,TL,3.5,20,10,0.318,BP,0,1,0,0,TL,4.4,160,75,1.48
+Whitespotted Bambooshark,Chiloscyllium plagiosum,BLAST,Hemiscylliidae,Orectolobiformes,Elasmobranchii,1,Tropical,Indo-Pacific,0,1,0,1,BE,1,0,0,0,TL,4,83,25,0.106,BE,1,0,0,0,TL,4.2,110,18,0.8
+Magur,Clarias magur,BLAST,Clariidae,Siluriformes,Actinopteri,1,Tropical,Asia,0,1,1,0,BE,1,0,0,1,TL,3.4,35,NA,NA,BE,1,0,0,0,TL,4.5,200,24,0.22
+Atlantic Herring,Clupea harengus,"BLAST, Greig and Gnaedinger 1971, Hirn and Pekkanen 1975, Nielands 1947, Wistbacka and Bylund 2008",Clupeidae,Clupeiformes,Actinopteri,0,Temperate,Worldwide,1,1,1,1,BP,0,1,0,0,TL,3.4,45,25,1.83,BE,1,0,0,0,TL,4,112,20,0.55
+Goldspotted Grenadier Anchovy,Coilia dussumieri,Deolalkar and Sohonie 1954,Engraulidae,Clupeiformes,Actinopteri,1,Tropical,Indo-Pacific,1,NA,1,1,PE,0,0,1,0,TL,3.3,20,NA,0.746,BE,1,0,0,0,TL,4,66,14,NA
+Big Head Croaker,Collichthys lucidus,BLAST,Sciaenidae,Eupercaria,Actinopteri,0,Subtropical,Indo-Pacific,0,1,0,1,BE,1,0,0,0,TL,3.6,19.8,NA,0.413,BE,1,0,0,0,TL,4,470,50,0.321
+Cachama,Colossoma macropomum,BLAST,Serrasalmidae,Characiformes,Actinopteri,1,Tropical,South America,0,1,1,0,BP,0,1,0,0,IN,2,108,NA,0.204,BP,0,1,0,0,TL,3.4,45,25,1.83
+Whitespotted Conger,Conger myriaster,Fujita 1954,Congridae,Anguilliformes,Actinopteri,0,Temperate,Asia,1,NA,0,1,BE,1,0,0,0,TL,4,100,8,0.523,BE,1,0,0,0,TL,3.5,50,NA,0.679
+Redbelly Tilapia,Coptodon zillii,Okonji et al. 2013,Cichlidae,Cichliformes,Actinopteri,1,Tropical,Africa,1,NA,1,0,BP,0,1,0,1,TL,2.5,40,7,0.462,BE,1,0,0,0,TL,3.6,64,14,0.359
+Vendace,Coregonus albula,Hirn and Pekkanen 1975,Salmonidae,Salmoniformes,Actinopteri,0,Temperate,Europe,1,NA,0,1,BP,0,1,0,0,TL,3.1,48,10,1.74,BE,1,0,0,0,TL,4.5,53.8,NA,0.17
+Cisco,Coregonus artedi,Greig and Gnaedinger 1971,Salmonidae,Salmoniformes,Actinopteri,0,Temperate,North America,1,NA,0,1,PE,0,0,1,0,TL,3.4,57,11,NA,BP,0,1,0,0,TL,3.9,61,13,0.408
+Lake Whitefish,Coregonus clupeaformis,"BLAST, Greig and Gnaedinger 1971",Salmonidae,Salmoniformes,Actinopteri,0,Temperate,North America,1,1,0,0,BP,0,1,0,0,TL,3.2,100,50,1.55,PE,0,0,1,0,TL,3.4,64,18,0.397
+Bloater,Coregonus hoyi,"Tillitt et al. 2005, Greig and Gnaedinger 1971, Zajicek et al. 2005",Salmonidae,Salmoniformes,Actinopteri,0,Temperate,North America,1,NA,0,0,PE,0,0,1,0,IN,3.3,37,11,NA,PE,0,0,1,0,TL,3.6,60,17,1.34
+Roundnose Grenadier,Coryphaenoides rupestris,BLAST,Macrouridae,Gadiformes,Actinopteri,0,Deep-water,Worldwide,0,1,0,1,BP,0,1,0,0,TL,3.7,110,54,0.228,PE,0,0,1,0,TL,3.2,50,NA,1.22
+Channel Bull Blenny,Cottoperca gobio,BLAST,Bovichtidae,Perciformes,Actinopteri,0,Subtropical,South America,0,1,0,1,BE,1,0,0,0,TL,4.3,80,NA,0.399,PE,0,0,1,0,TL,2.2,35,NA,0.552
+Slimy Sculpin,Cottus cognatus,Honeyfield et al. 2010,Cottidae,Perciformes,Actinopteri,0,Temperate,Worldwide,1,NA,1,0,BE,1,0,0,0,TL,3.4,12.1,7,NA,BE,1,0,0,0,TL,4.1,90,NA,0.25
+Lumpfish,Cyclopterus lumpus,"BLAST, Greig and Gnaedinger 1971, Nielands 1947",Cyclopteridae,Perciformes,Actinopteri,0,Polar,Worldwide,1,1,0,1,BP,0,1,0,0,TL,3.9,61,13,0.408,BP,0,1,0,0,TL,2.5,100,16,0.761
+Tongue Sole,Cynoglossus semilaevis,BLAST,Cynoglossidae,Pleuronectiformes,Actinopteri,0,Subtropical,Asia,0,1,0,1,BE,1,0,0,0,TL,3.7,61.1,NA,NA,BE,1,0,0,0,TL,4.1,82.6,30,0.366
+Sand Weakfish,Cynoscion arenarius,Greig and Gnaedinger 1971,Sciaenidae,Eupercaria,Actinopteri,0,Subtropical,North America,1,NA,0,1,BE,1,0,0,0,TL,4.2,63.5,5,0.75,BE,1,0,0,0,TL,4.3,130,25,0.584
+Spotfin Shiner,Cyprinella spiloptera,Boggs et al. 2019,Leuciscidae,Cypriniformes ,Actinopteri,0,Subtropical,North America,1,NA,1,0,BP,0,1,0,0,IN,2.8,12,5,NA,BE,1,0,0,0,TL,3.8,46,NA,0.37
+White Sands Pupfish,Cyprinodon tularosa,BLAST,Cyprinodontidae,Cyprinodontiformes,Actinopteri,0,Subtropical,North America,0,1,1,0,BP,0,1,0,0,TL,2.7,5,5,NA,BE,1,0,0,0,TL,3.4,21.2,3,0.499
+Sheepshead Minnow,Cyprinodon variegatus,BLAST,Cyprinodontidae,Cyprinodontiformes,Actinopteri,0,Subtropical,Worldwide,0,1,0,1,BP,0,1,0,0,TL,2.4,9,NA,0.731,PE,0,0,1,0,TL,4,100,60,1.29
+Common Carp,Cyprinus carpio,"BLAST, Greig and Gnaedinger 1971, Fujita et al. 1954, Chaet and Bishop 1952, Gaedinger and Krzeczkowski 1966",Cyprinidae,Cypriniformes ,Actinopteri,0,Subtropical,Worldwide,1,1,1,0,BP,0,1,0,1,TL,3.1,120,38,0.709,BE,1,0,0,0,TL,3.9,66,20,0.354
+Zebra Fish,Danio rerio,BLAST,Danionidae,Cypriniformes ,Actinopteri,1,Tropical,Asia,1,1,1,0,BP,0,1,0,0,IN,3.1,3.8,5.5,NA,BE,1,0,0,0,TL,3.2,70,NA,0.259
+Denticle Herring,Denticeps clupeoides,BLAST,Denticipitidae,Clupeiformes,Actinopteri,1,Tropical,Africa,0,1,1,0,PE,0,0,1,0,IN,3.3,15,NA,NA,BE,1,0,0,0,TL,4.5,64,NA,0.645
+Antarctic Toothfish,Dissostichus mawsoni,BLAST,Nototheniidae,Perciformes,Actinopteri,0,Polar,Antarctica,0,1,0,1,PE,0,0,1,0,TL,3.9,200,39,0.339,BE,1,0,0,0,TL,3.7,35,NA,0.387
+Gizzard Shad,Dorosoma cepedianum,"Tillitt et al. 2005, Greig and Gnaedinger 1971, Boggs et al. 2019, Lepak et al. 2013, Zajicek et al. 2005, Gnaedinger and Krzeczkowski 1966",Clupeidae,Clupeiformes,Actinopteri,0,Subtropical,North America,1,NA,1,0,BP,0,1,0,1,TL,2.4,57,10,1.06,BE,1,0,0,0,TL,3.6,46,11,1.18
+Live Sharksucker,Echeneis naucrates,BLAST,Echeneidae,Carangiformes,Actinopteri,0,Subtropical,Worldwide,0,1,0,1,BE,1,0,0,0,TL,3.7,110,NA,0.27,BE,1,0,0,0,TL,3.5,61,NA,0.911
+Electric Eel,Electrophorus electricus,BLAST,Gymnotidae,Gymnotiformes,Actinopteri,1,Tropical,South America,0,1,1,0,BP,0,1,0,0,IN,3.9,250,NA,NA,BE,1,0,0,0,TL,3.2,36,4,0.684
+NA,Eleotris oxycephala,Fujita 1954,Eleotridae,Gobiiformes,Actinopteri,0,Subtropical,Asia,1,NA,1,1,BE,1,0,0,0,TL,3.7,19,NA,NA,BE,1,0,0,0,TL,3.3,91,34,0.342
+Californian Anchovy,Engraulis mordax,Greig and Gnaedinger 1971,Engraulidae,Clupeiformes,Actinopteri,0,Subtropical,North America,1,NA,1,1,PE,0,0,1,0,TL,3.1,24.8,7,0.989,BE,1,0,0,0,TL,4.2,63.5,5,0.75
+Giant Grouper,Epinephelus lanceolatus,BLAST,Serranidae,Perciformes,Actinopteri,1,Tropical,Indo-Pacific,0,1,0,1,BE,1,0,0,0,TL,4,270,NA,0.2,BE,1,0,0,0,TL,4.5,76,12,0.277
+Streamline Chub,Erimystax dissimilis,Boggs et al. 2019,Leuciscidae,Cypriniformes ,Actinopteri,0,Temperate,North America,1,NA,1,0,BE,1,0,0,0,IN,2.9,14,NA,NA,BE,1,0,0,0,TL,3.2,60,25,0.335
+Reedfish,Erpetoichthys calabaricus,BLAST,Polypteridae,Polypteriformes,Cladistii,1,Tropical,Africa,0,1,0,0,BE,1,0,0,0,TL,3.3,37,NA,NA,BE,1,0,0,0,TL,3.3,64,12,0.343
+Northern Pike,Esox lucius,"BLAST, Greig and Gnaedinger 1971",Esocidae,Esociformes,Actinopteri,0,Subtropical,North America,1,1,0,0,BP,0,1,0,1,TL,4.1,137,30,0.632,BP,0,1,0,0,IN,3.1,3.8,5.5,NA
+Greenside Darter,Etheostoma blennioides,Boggs et al. 2019,Percidae,Perciformes,Actinopteri,0,Temperate,North America,1,NA,0,0,BP,0,1,0,0,IN,3.4,17,5,NA,BP,0,1,0,0,IN,2.9,9.7,NA,NA
+Arkansas Darter,Etheostoma cragini,BLAST,Percidae,Perciformes,Actinopteri,0,Subtropical,North America,0,1,0,0,BP,0,1,0,0,IN,3.2,6,3,NA,BP,0,1,0,0,IN,NA,26.5,NA,NA
+Fantail Darter,Etheostoma flabellare,Kraft et al. 2014,Percidae,Perciformes,Actinopteri,0,Temperate,North America,1,NA,0,0,BP,0,1,0,0,IN,3.2,8.4,4,NA,BP,0,1,0,0,IN,NA,13.3,NA,NA
+Tessellated Darter,Etheostoma olmstedi,"Boggs et al. 2019, Kraft et al. 2014",Percidae,Perciformes,Actinopteri,0,Temperate,North America,1,NA,0,0,BP,0,1,0,0,IN,2.9,11,4,NA,BP,0,1,0,0,TL,2.2,200,10,0.351
+Orangethroat Darter,Etheostoma spectabile,BLAST,Percidae,Perciformes,Actinopteri,0,Temperate,North America,0,1,0,0,BP,0,1,0,0,IN,3.3,7.2,NA,NA,BP,0,1,0,0,IN,2.9,10,NA,NA
+Banded Darter,Etheostoma zonale,Boggs et al. 2019,Percidae,Perciformes,Actinopteri,0,Temperate,North America,1,NA,0,0,BP,0,1,0,0,IN,3.3,7.8,4,NA,BP,0,1,0,0,IN,2.9,7,NA,NA
+Sand-Table Dwarfgoby,Eviota abax,Fujita 1954,Gobiidae,Gobiiformes,Actinopteri,0,Temperate,Asia,1,NA,1,1,BE,1,0,0,0,TL,3.2,4,NA,NA,BP,0,1,0,0,IN,3.2,15.6,NA,NA
+Cutlip Minnow,Exoglossum maxillingua,"Boggs et al. 2019, Kraft et al. 2014",Leuciscidae,Cypriniformes ,Actinopteri,0,Temperate,North America,1,NA,1,0,BE,1,0,0,0,IN,3,16,2,NA,BP,0,1,0,0,IN,3.1,130,NA,0.16
+Red Cornet Fish,Fistularia petimba,Nishimune et al. 2008,Fistulariidae,Syngnathiformes,Actinopteri,1,Tropical,Worldwide,1,NA,1,1,BE,1,0,0,0,TL,4.4,200,NA,0.211,BE,1,0,0,0,IN,3.5,34.5,NA,NA
+Banded Killifish,Fundulus diaphanus,"Boggs et al. 2019, Kraft et al. 2014, Nielands 1947",Fundulidae,Cyprinodontiformes,Actinopteri,0,Temperate,North America,1,NA,1,0,BP,0,1,0,0,TL,3.3,13,NA,NA,BP,0,1,0,0,IN,2,108,NA,0.204
+Mummichog,Fundulus heteroclitus,"BLAST, Nielands 1947",Fundulidae,Cyprinodontiformes,Actinopteri,0,Temperate,North America,1,1,1,1,BP,0,1,0,1,TL,3.6,15,4,1.55,BE,1,0,0,0,IN,3.7,130,NA,0.238
+Cod,Gadus morhua,"BLAST, Greig and Gnaedinger 1971, Nielands 1947",Gadidae,Gadiformes,Actinopteri,0,Temperate,Worldwide,1,1,0,1,BP,0,1,0,0,TL,4.1,200,25,0.953,PE,0,0,1,0,IN,3.7,50,NA,0.572
+Hardhead Sea Catfish,Ariopsis felis,Greig and Gnaedinger 1971,Ariidae,Siluriformes,Actinopteri,0,Subtropical,North America,1,NA,0,1,BE,1,0,0,0,TL,3.2,70,NA,0.259,BP,0,1,0,0,IN,3.2,12,NA,NA
+Mosquitofish,Gambusia affinis,BLAST,Poeciliidae,Cyprinodontiformes,Actinopteri,0,Subtropical,Worldwide,0,1,1,0,BP,0,1,0,1,TL,3.1,5.1,3,NA,BP,0,1,0,0,TL,2.4,180,15,0.248
+Three-Spined Stickleback,Gasterosteus aculeatus,"BLAST, Wistbacka and Bylund 2008",Gasterosteidae,Perciformes,Actinopteri,0,Subtropical,Worldwide,1,1,0,1,BP,0,1,0,0,TL,3.3,11,8,0.997,BE,1,0,0,0,IN,4.2,114,NA,NA
+Witch Flounder,Glyptocephalus cynoglossus,Nielands 1947,Pleuronectidae,Pleuronectiformes,Actinopteri,0,Temperate,Worldwide,1,NA,0,1,BE,1,0,0,0,TL,3.2,60,25,0.335,PE,0,0,1,0,TL,3.5,76,13,1.52
+NA,Gnathopogon caerulescens,Fujita 1954,Gobionidae,Cypriniformes ,Actinopteri,0,Temperate,Asia,1,NA,1,0,BP,0,1,0,0,IN,3.2,NA,NA,NA,BP,0,1,0,0,IN,3.9,250,NA,NA
+Blunt-Nosed Clingfish,Gouania willdenowi,BLAST,Gobiesocidae,Gobiesociformes,Actinopteri,0,Subtropical,Europe,0,1,0,1,BE,1,0,0,0,TL,3.1,4.6,NA,NA,BE,1,0,0,0,IN,3.7,200,NA,0.171
+Ploughfish,Gymnodraco acuticeps,BLAST,Bathydraconidae,Perciformes,Actinopteri,0,Polar,Antarctica,0,1,0,1,BE,1,0,0,0,TL,4.2,38.5,NA,NA,PE,0,0,1,0,TL,3,69,10,2.4
+Ocellated Moray,Gymnothorax ocellatus,Greig and Gnaedinger 1971,Muraenidae,Anguilliformes,Actinopteri,1,Tropical,Worldwide,1,NA,1,1,BE,1,0,0,0,TL,4.1,90,NA,0.25,BP,0,1,0,1,TL,3.6,15,4,1.55
+NA,Haplochromis nyererei,BLAST,Cichlidae,Cichliformes,Actinopteri,1,Tropical,Africa,0,1,0,0,BP,0,1,0,0,IN,2.6,7.7,NA,NA,BP,0,1,0,0,TL,2.7,5,5,NA
+Scaled Herring,Harengula jaguana,Greig and Gnaedinger 1971,Clupeidae,Clupeiformes,Actinopteri,1,Tropical,North America,1,NA,1,1,BE,1,0,0,0,TL,3.4,21.2,3,0.499,BP,0,1,0,0,IN,3.4,9,NA,NA
+Asian Redtail Catfish,Hemibagrus wyckioides,BLAST,Bagridae,Siluriformes,Actinopteri,0,Subtropical,Asia,0,1,1,0,BE,1,0,0,0,IN,3.7,130,NA,0.238,BP,0,1,0,1,TL,2,60,9,0.407
+Red-Tipped Halfbeak,Hyporhamphus xanthopterus,Deolalkar and Sohonie 1954,Hemiramphidae,Beloniformes,Actinopteri,1,Tropical,Indo-Pacific,1,NA,1,1,PE,0,0,1,0,TL,3,29.6,NA,NA,BP,0,1,0,1,TL,2.1,45.7,NA,0.428
+Sea Raven,Hemitripterus americanus,"Greig and Gnaedinger 1971, Nielands 1947",Agonidae,Perciformes,Actinopteri,0,Temperate,North America,1,NA,0,1,BE,1,0,0,0,TL,4.5,64,NA,0.645,BP,0,1,0,1,TL,3.2,14,NA,NA
+Tiger Tail Seahorse,Hippocampus comes,BLAST,Syngnathidae,Syngnathiformes,Actinopteri,1,Tropical,Indo-Pacific,0,1,0,1,BE,1,0,0,0,TL,3.4,18.7,NA,0.13,PE,0,0,1,0,TL,3.2,15,2,1.21
+American Plaice,Hippoglossoides platessoides,"Greig and Gnaedinger 1971, Nielands 1947",Pleuronectidae,Pleuronectiformes,Actinopteri,0,Temperate,Worldwide,1,NA,0,1,BE,1,0,0,0,TL,4.1,82.6,30,0.366,PE,0,0,1,0,IN,3.3,15,NA,NA
+Atlantic Halibut,Hippoglossus hippoglossus,"BLAST, Nielands 1947",Pleuronectidae,Pleuronectiformes,Actinopteri,0,Temperate,Worldwide,1,1,0,1,BE,1,0,0,0,TL,4,470,50,0.321,BP,0,1,0,1,TL,2,15,NA,NA
+Pacific Halibut,Hippoglossus stenolepis,BLAST,Pleuronectidae,Pleuronectiformes,Actinopteri,0,Temperate,Worldwide,0,1,0,1,BE,1,0,0,0,TL,4.1,258,55,0.36,BP,0,1,0,1,IN,3.2,4,NA,NA
+Mississippi Silvery Minnow,Hybognathus nuchalis,Chaet and Bishop 1952,Leuciscidae,Cypriniformes ,Actinopteri,0,Subtropical,North America,1,NA,1,0,BP,0,1,0,0,IN,NA,18,2,NA,BP,0,1,0,0,TL,2.5,9.6,NA,NA
+Pond Smelt,Hypomesus olidus,Fujita 1954,Osmeridae,Osmeriformes,Actinopteri,0,Boreal,Worldwide,1,NA,1,1,PE,0,0,1,0,TL,3.2,20,10,,BP,0,1,0,1,TL,2,11,NA,NA
+Ohio Lamprey,Ichthyomyzon bdellium,Boggs et al. 2019,Petromyzontidae,Petromyzontiformes,Petromyzonti,0,Temperate,North America,1,NA,0,0,BE,1,0,0,0,IN,4.4,30,1,NA,BP,0,1,0,0,IN,3.1,15,NA,NA
+Channel Catfish,Ictalurus punctatus,"BLAST, Greig and Gnaedinger 1971",Ictaluridae,Siluriformes,Actinopteri,0,Subtropical,North America,1,1,1,0,BE,1,0,0,1,IN,4.2,132,24,0.403,BP,0,1,0,1,TL,3.1,5.1,3,NA
+NA,Ischikauia steenackeri,Fujita 1954,Xenocyprididae,Cypriniformes ,Actinopteri,0,Temperate,Asia,1,NA,1,0,BE,1,0,0,0,IN,3.2,30,NA,NA,BE,1,0,0,0,TL,3.5,8.2,NA,0.589
+Mangrove Rivulus,Kryptolebias marmoratus,BLAST,Rivulidae,Cyprinodontiformes,Actinopteri,1,Tropical,Worldwide,0,1,0,1,BP,0,1,0,0,TL,3.2,4.5,NA,NA,BE,1,0,0,1,TL,3.4,35,NA,NA
+Boggut Labeo,Labeo boggut,Deolalkar and Sohonie 1954,Cyprinidae,Cypriniformes ,Actinopteri,1,Tropical,Asia,1,NA,1,0,BP,0,1,0,0,IN,NA,29,NA,NA,BP,0,1,0,0,TL,3.4,4,NA,NA
+Roho Labeo,Labeo rohita,BLAST,Cyprinidae,Cypriniformes ,Actinopteri,1,Tropical,Asia,0,1,1,0,BP,0,1,0,0,TL,2.2,200,10,0.351,BP,0,1,0,0,TL,3.5,150,44,0.434
+Ballan Wrasse,Labrus bergylta,BLAST,Labridae,Eupercaria,Actinopteri,0,Temperate,Europe,0,1,0,1,BE,1,0,0,0,TL,3.2,65.9,29,0.295,BP,0,1,0,0,IN,3.2,13.5,NA,NA
+Large Yellow Croaker,Larimichthys crocea,BLAST,Sciaenidae,Eupercaria,Actinopteri,0,Temperate,Asia,0,1,0,1,BP,0,1,0,0,TL,3.7,80,NA,0.996,BE,1,0,0,0,TL,4.5,250,55,0.433
+Barramundi,Lates calcarifer,BLAST,Latidae,Carangaria,Actinopteri,1,Tropical,Indo-Pacific,0,1,0,1,BE,1,0,0,0,TL,3.8,200,NA,0.407,BP,0,1,0,0,IN,3.9,90,NA,NA
+Coelacanth,Latimeria chalumnae,BLAST,Latimeriidae,Coelacanthiformes,Coelacanthi,0,Deep-water,Africa,0,1,0,1,BE,1,0,0,0,TL,4.4,168,48,NA,BE,1,0,0,0,TL,4.4,200,NA,0.211
+Spot Croaker,Leiostomus xanthurus,Greig and Gnaedinger 1971,Sciaenidae,Eupercaria,Actinopteri,0,Subtropical,North America,1,NA,0,1,BE,1,0,0,0,TL,3.2,36,4,0.684,BE,1,0,0,1,TL,3.1,64,10,1.45
+Spotted Gar,Lepisosteus oculatus,BLAST,Lepisosteidae,Lepisosteiformes,Actinopteri,0,Subtropical,North America,0,1,1,0,BE,1,0,0,0,TL,4,150,18,0.518,BE,1,0,0,0,TL,3.4,12.1,7,NA
+Longnose Gar,Lepisosteus osseus oxyurus,Greig and Gnaedinger 1971,Lepisosteidae,Lepisosteiformes,Actinopteri,0,Subtropical,North America,1,NA,0,0,BE,1,0,0,0,TL,4.2,200,36,0.532,PE,0,0,1,0,TL,3,16,6,1.16
+Redbreast Sunfish,Lepomis auritus,"Boggs et al. 2019, Chaet and Bishop 1952",Centrarchidae,Centrarchiformes,Actinopteri,0,Temperate,North America,1,NA,0,0,BE,1,0,0,1,IN,3.2,30.5,NA,NA,BP,0,1,0,0,TL,3.3,11,8,0.997
+Pumpkinseed,Lepomis gibbosus,"Greig and Gnaedinger 1971, Chaet and Bishop 1952",Centrarchidae,Centrarchiformes,Actinopteri,0,Subtropical,North America,1,NA,0,0,BP,0,1,0,1,IN,3.3,40,12,NA,BP,0,1,0,0,TL,4.5,150,13,1.81
+Bluegill,Lepomis macrochirus,"Riley and Evans 2008, Chaet and Bishop 1952",Centrarchidae,Centrarchiformes,Actinopteri,0,Subtropical,North America,1,NA,0,0,BP,0,1,0,1,IN,3.2,41,10,0.372,BP,0,1,0,0,TL,3.3,13,NA,NA
+Common Dace,Leuciscus leuciscus,Hirn and Pekkanen 1975,Leuciscidae,Cypriniformes ,Actinopteri,0,Temperate,Eurasia,1,NA,1,0,BP,0,1,0,1,TL,2.9,40,16,NA,BE,1,0,0,1,IN,3.7,55,9,NA
+Asp,Leuciscus aspius,Chaet and Bishop 1952,Leuciscidae,Cypriniformes ,Actinopteri,0,Temperate,Eurasia,1,NA,1,0,BP,0,1,0,0,TL,4.5,120,11,1.51,BP,0,1,0,0,TL,4.1,200,25,0.953
+Ide,Leuciscus idus,"Chaet and Bishop 1952, Suomalainen and Pihlgren 1955",Leuciscidae,Cypriniformes ,Actinopteri,0,Temperate,Eurasia,1,NA,1,0,BP,0,1,0,0,TL,3.8,85,18,1.37,BP,0,1,0,0,TL,3.1,48,10,1.74
+Ice Goby,Leucopsarion petersii,Fujita 1954,Gobiidae,Gobiiformes,Actinopteri,0,Subtropical,Asia,1,NA,0,1,BE,1,0,0,0,TL,3.3,5.8,NA,NA,BP,0,1,0,1,TL,2.5,40,7,0.462
+Yellowtail Flouder,Limanda ferruginea,Nielands 1947,Pleuronectidae,Pleuronectiformes,Actinopteri,0,Temperate,North America,1,NA,0,1,BE,1,0,0,0,TL,3.3,64,12,0.343,BE,1,0,0,0,TL,3.2,45.5,NA,NA
+Tanaka's Snailfish,Liparis tanakae,BLAST,Liparidae,Perciformes,Actinopteri,0,Temperate,Asia,0,1,0,1,BE,1,0,0,0,TL,4.3,56.3,NA,0.611,BP,0,1,0,0,TL,3.1,82,23,1.24
+Angler,Lophius piscatorius,"Greig and Gnaedinger 1971, Nielands 1947",Lophiidae,Lophiiformes,Actinopteri,0,Deep-water,Europe,1,NA,0,1,BE,1,0,0,0,TL,4.5,200,24,0.22,BP,0,1,0,0,TL,3.3,50,15,NA
+Burbot,Lota lota,Greig and Gnaedinger 1971,Lotidae,Gadiformes,Actinopteri,0,Temperate,Worldwide,1,NA,1,0,BE,1,0,0,0,TL,3.8,152,20,0.666,BP,0,1,0,0,TL,4.5,120,11,1.51
+Toothed Cuban Cusk-Eel,Lucifuga dentata,BLAST,Bythitidae,Ophidiiformes,Actinopteri,1,Tropical,Central America,0,1,0,1,BE,1,0,0,0,TL,3.3,15.2,NA,NA,BP,0,1,0,0,IN,NA,18,2,NA
+Common Shiner,Luxilus cornutus,"Boggs et al. 2019, Kraft et al. 2014",Leuciscidae,Cypriniformes ,Actinopteri,0,Temperate,North America,1,NA,1,0,BE,1,0,0,0,IN,2.8,18,6,NA,BP,0,1,0,1,TL,2.9,61.7,19,1.25
+Smooth Skate,Malacoraja senta,Nielands 1947,Rajidae,Rajiformes,Actinopteri,0,Deep-water,North America,1,NA,0,1,BE,1,0,0,0,TL,3.5,61,NA,0.911,BP,0,1,0,0,TL,3.8,85,18,1.37
+Zig-Zag Eel,Mastacembelus armatus,BLAST,Mastacembelidae,Synbranchiformes,Actinopteri,1,Tropical,Asia,0,1,0,0,BE,1,0,0,0,TL,2.8,90,NA,0.314,BP,0,1,0,1,TL,3,50.2,14,0.8
+Zebra Mbuna,Maylandia zebra,BLAST,Cichlidae,Cichliformes,Actinopteri,1,Tropical,Africa,0,1,0,0,BE,1,0,0,0,IN,2.3,11.3,NA,NA,BE,1,0,0,0,IN,3.4,51,6,NA
+Tarpon,Megalops atlanticus,BLAST,Megalopidae,Elopiformes,Actinopteri,0,Subtropical,Worldwide,0,1,1,1,BE,1,0,0,0,TL,4.5,250,55,0.433,BP,0,1,0,0,IN,2.8,6.5,NA,NA
+Indo-Pacific Tarpon,Megalops cyprinoides,BLAST,Megalopidae,Elopiformes,Actinopteri,1,Tropical,Indo-Pacific,0,1,1,1,BP,0,1,0,0,TL,3.5,150,44,0.434,BE,1,0,0,0,IN,2.8,18,6,NA
+Haddock,Melanogrammus aeglefinus,"Greig and Gnaedinger 1971, Nielands 1947",Gadidae,Gadiformes,Actinopteri,0,Temperate,Worldwide,1,NA,0,1,BE,1,0,0,0,TL,4,112,20,0.55,BP,0,1,0,0,IN,3,7.6,2,NA
+Boeseman's Rainbowfish,Melanotaenia boesemani,BLAST,Melanotaeniidae,Atheriniformes,Actinopteri,1,Tropical,Asia,0,1,0,0,BP,0,1,0,0,IN,2.9,9,NA,NA,BE,1,0,0,0,IN,3.1,12.4,3,NA
+Atlantic Silverside,Menidia menidia,BLAST,Atherinopsidae,Atheriniformes,Actinopteri,0,Temperate,North America,0,1,1,0,PE,0,0,1,0,TL,3.2,15,2,1.21,BE,1,0,0,0,TL,3.7,70,NA,1.49
+Southern Kingcroaker,Menticirrhus americanus,Greig and Gnaedinger 1971,Sciaenidae,Eupercaria,Actinopteri,0,Subtropical,Worldwide,1,NA,0,1,BE,1,0,0,0,TL,3.5,50,NA,0.679,BE,1,0,0,1,IN,3.2,30.5,NA,NA
+Silver Hake,Merluccius bilinearis,Nielands 1947,Merlucciidae,Gadiformes,Actinopteri,0,Temperate,North America,1,NA,0,1,BE,1,0,0,0,TL,4.5,76,12,0.277,BE,1,0,0,0,TL,2.7,14,NA,0.135
+Atlantic Croaker,Micropogonias undulatus,Greig and Gnaedinger 1971,Sciaenidae,Eupercaria,Actinopteri,0,Subtropical,Worldwide,1,NA,0,1,BE,1,0,0,0,TL,4,55,5,0.607,BE,1,0,0,0,TL,3.8,40,NA,0.747
+Smallmouth Bass,Micropterus dolomieu,"Greig and Gnaedinger 1971, Chaet and Bishop 1952",Centrarchidae,Centrarchiformes,Actinopteri,0,Subtropical,North America,1,NA,0,0,BP,0,1,0,1,IN,3.6,69,26,NA,BE,1,0,0,0,TL,3.6,125,20,0.808
+Largemouth Bass,Micropterus salmoides,"BLAST, Greig and Gnaedinger 1971, Boggs et al. 2019, Chaet and Bishop 1952",Centrarchidae,Centrarchiformes,Actinopteri,0,Subtropical,Worldwide,1,1,0,0,BP,0,1,0,1,IN,3.8,97,23,0.397,BE,1,0,0,0,TL,3.3,90,NA,0.0927
+Pond Loach,Misgurnus anguillicaudatus,Fujita 1954,Cobitidae,Cypriniformes ,Actinopteri,0,Subtropical,Worldwide,1,NA,1,0,BE,1,0,0,1,TL,3.2,28,NA,NA,BE,1,0,0,0,TL,4.2,105,28,0.927
+Asian Swamp Eel,Monopterus albus,BLAST,Synbranchidae,Synbranchiformes,Actinopteri,1,Tropical,Asia,0,1,0,0,BE,1,0,0,0,TL,2.9,100,NA,0.313,BE,1,0,0,0,TL,3.1,11,NA,0.173
+White Perch,Morone americana,"Greig and Gnaedinger 1971, Neilands 1947",Moronidae,Eupercaria,Actinopteri,0,Temperate,North America,1,NA,0,0,BP,0,1,0,1,TL,3.1,58,16,0.68,BE,1,0,0,0,TL,3,25,NA,0.388
+White Bass,Morone chrysops,Greig and Gnaedinger 1971,Moronidae,Eupercaria,Actinopteri,0,Temperate,North America,1,NA,1,0,BP,0,1,0,0,TL,4,45,9,NA,BE,1,0,0,0,TL,3.5,240,NA,0.32
+Striped Bass,Morone saxatilis,BLAST,Moronidae,Eupercaria,Actinopteri,0,Temperate,North America,0,1,0,1,BE,1,0,0,0,TL,4.7,200,30,1.17,BE,1,0,0,1,TL,3.6,122,88,1.27
+Shorthead Redhorse,Moxostoma macrolepidotum,Boggs et al. 2019,Catostomidae,Cypriniformes ,Actinopteri,0,Temperate,North America,1,NA,1,0,BE,1,0,0,0,TL,3.1,75,9,NA,BP,0,1,0,0,IN,2.6,11,NA,NA
+Flathead Grey Mullet,Mugil cephalus,"Greig and Gnaedinger 1971, Fujita 1954",Mugilidae,Mugiliformes,Actinopteri,0,Subtropical,Worldwide,1,NA,0,1,BP,0,1,0,0,TL,2.5,100,16,0.761,BP,0,1,0,0,IN,3,15,NA,NA
+Longhorn Sculpin,Myoxocephalus octodecemspinosus,Nielands 1947,Cottidae,Perciformes,Actinopteri,0,Temperate,North America,1,NA,0,1,BE,1,0,0,0,TL,3.6,46,11,1.18,BP,0,1,0,0,IN,3.3,8,NA,NA
+Fourhorn Sculpin,Myoxocephalus quadricornis,Greig and Gnaedinger 1971,Cottidae,Perciformes,Actinopteri,0,Polar,North America,1,NA,1,1,BE,1,0,0,0,TL,3.9,60,14,0.903,BP,0,1,0,0,IN,3.3,6.5,2,NA
+Deepwater Sculpin,Myoxocephalus thompsonii,Tillitt et al. 2005,Cottidae,Perciformes,Actinopteri,0,Temperate,North America,1,NA,1,0,BE,1,0,0,0,IN,3.2,23,NA,NA,BE,1,0,0,0,TL,2,20,4,NA
+Pinecone Soldierfish,Myripristis murdjan,BLAST,Holocentridae,Holocentriformes,Actinopteri,1,Tropical,Indo-Pacific,0,1,0,1,BE,1,0,0,0,TL,3.4,60,NA,0.136,BE,1,0,0,0,TL,3.6,125,NA,0.489
+Rio Pearlfish,Nematolebias whitei,BLAST,Rivulidae,Cyprinodontiformes,Actinopteri,1,Tropical,South America,0,1,0,0,BP,0,1,0,0,IN,3.3,8,NA,NA,BE,1,0,0,0,TL,4.5,117,NA,0.291
+Round Goby,Neogobius melanostomus,"Tillitt et al. 2005, Honeyfield et al. 2012, Honeyfield et al. 2010",Gobiidae,Gobiiformes,Actinopteri,0,Temperate,Eurasia,1,NA,0,0,BE,1,0,0,1,TL,3.3,30,6,NA,PE,0,0,1,0,TL,4.5,640,36,NA
+Fairy Cichlid,Neolamprologus brichardi,BLAST,Cichlidae,Cichliformes,Actinopteri,1,Tropical,Africa,0,1,1,0,BP,0,1,0,0,IN,3.4,9,NA,NA,BP,0,1,0,1,IN,4.4,100,NA,NA
+Yellow Drum,Nibea albiflora,BLAST,Sciaenidae,Eupercaria,Actinopteri,0,Temperate,Asia,0,1,0,1,BP,0,1,0,0,TL,4,43.5,4,0.585,BE,1,0,0,0,TL,4,229,32,0.0774
+River Chub,Nocomis micropogon,Boggs et al. 2019,Leuciscidae,Cypriniformes ,Actinopteri,0,Temperate,North America,1,NA,1,0,BE,1,0,0,0,IN,3.2,33,5,NA,BE,1,0,0,0,TL,3.5,20,10,0.318
+Golden Shiner,Notemigonus crysoleucas,Boggs et al. 2019,Leuciscidae,Cypriniformes ,Actinopteri,0,Subtropical,North America,1,NA,1,0,BE,1,0,0,0,TL,2.7,32,9,NA,BE,1,0,0,0,TL,4,83,25,0.106
+Turquoise Killifish,Nothobranchius furzeri,BLAST,Nothobranchiidae,Cyprinodontiformes,Actinopteri,1,Tropical,Africa,0,1,0,0,BP,0,1,0,0,IN,3.2,6.5,NA,0,BE,1,0,0,0,TL,3.6,19.8,NA,0.413
+NA,Nothobranchius kadleci,BLAST,Nothobranchiidae,Cyprinodontiformes,Actinopteri,1,Tropical,Africa,0,1,0,0,PE,0,0,1,0,IN,3.2,3.9,NA,NA,BP,0,1,0,0,TL,3.7,110,54,0.228
+Korthausae Killifish,Nothobranchius korthausae,BLAST,Nothobranchiidae,Cyprinodontiformes,Actinopteri,1,Tropical,Africa,0,1,0,0,BP,0,1,0,0,IN,3.2,5,NA,NA,BE,1,0,0,0,TL,4.3,80,NA,0.399
+Spotted Killifish,Nothobranchius kuhntae,BLAST,Nothobranchiidae,Cyprinodontiformes,Actinopteri,1,Tropical,Africa,0,1,0,0,BP,0,1,0,0,IN,3.3,10,NA,NA,BE,1,0,0,0,TL,3.7,61.1,NA,NA
+NA,Nothobranchius pienaari,BLAST,Nothobranchiidae,Cyprinodontiformes,Actinopteri,1,Tropical,Africa,0,1,0,0,BP,0,1,0,0,IN,3.2,3.9,NA,NA,BP,0,1,0,0,TL,2.4,9,NA,0.731
+Bluefin Notho,Nothobranchius rachovii,BLAST,Nothobranchiidae,Cyprinodontiformes,Actinopteri,1,Tropical,Africa,0,1,0,0,BP,0,1,0,0,IN,3.2,6,NA,NA,PE,0,0,1,0,TL,3.9,200,39,0.339
+Spotty,Notolabrus celidotus,BLAST,Labridae,Eupercaria,Actinopteri,0,Temperate,Indo-Pacific,0,1,0,1,BE,1,0,0,0,TL,3.4,23.9,7,0.714,BE,1,0,0,0,TL,3.7,110,NA,0.27
+Black Rockcod,Notothenia coriiceps,BLAST,Nototheniidae,Perciformes,Actinopteri,0,Polar,Antarctica,0,1,0,1,BE,1,0,0,0,TL,2.8,62,NA,0.289,BE,1,0,0,0,TL,4,270,NA,0.2
+Emerald Shiner,Notropis atherinoides,"Riley and Evans 2008, Chaet and Bishop 1952",Leuciscidae,Cypriniformes ,Actinopteri,0,Temperate,North America,1,NA,1,0,PE,0,0,1,0,IN,2.8,13,4,NA,BE,1,0,0,0,TL,3.3,37,NA,NA
+Spottail Shiner,Notropis hudsonius,"Tillitt et al. 2005, Greig and Gnaedinger 1971, Boggs et al. 2019, Zajicek et al. 2005, Chaet and Bishop 1952, Gnaedinger and Krzeczkowski 1966",Leuciscidae,Cypriniformes ,Actinopteri,0,Temperate,North America,1,NA,1,0,BE,1,0,0,0,IN,2.1,15,5,NA,BP,0,1,0,0,IN,3.2,6,3,NA
+Swallowtail Shiner,Notropis procne,Boggs et al. 2019,Leuciscidae,Cypriniformes ,Actinopteri,0,Temperate,North America,1,NA,1,0,BP,0,1,0,0,IN,2.8,7.2,3,NA,BP,0,1,0,0,IN,3.3,7.2,NA,NA
+Rosyface Shiner,Notropis rubellus,Boggs et al. 2019,Leuciscidae,Cypriniformes ,Actinopteri,0,Temperate,North America,1,NA,1,0,BP,0,1,0,0,IN,3.1,11,3,NA,BE,1,0,0,0,TL,3.1,4.6,NA,NA
+Bridle Shiner,Notropis bifrenatus,Chaet and Bishop 1952,Leuciscidae,Cypriniformes ,Actinopteri,0,Temperate,North America,1,NA,1,0,BP,0,1,0,0,IN,2.8,6.5,NA,NA,BE,1,0,0,0,TL,4.2,38.5,NA,NA
+Mimic Shiner,Notropis volucellus,"Boggs et al. 2019, Chaet and Bishop 1952",Leuciscidae,Cypriniformes ,Actinopteri,0,Temperate,North America,1,NA,1,0,BP,0,1,0,0,IN,3,7.6,2,NA,BE,1,0,0,0,TL,3.4,18.7,NA,0.13
+Margined Madtom,Noturus insignis,Boggs et al. 2019,Ictaluridae,Siluriformes,Actinopteri,0,Temperate,North America,1,NA,0,0,BE,1,0,0,0,IN,3.3,15,NA,NA,BE,1,0,0,0,TL,4.1,258,55,0.36
+NA,Odontobutis obscurus,Fujita 1954,Odontobutidae,Gobiiformes,Actinopteri,0,Temperate,Asia,1,NA,1,0,BP,0,1,0,0,IN,3.2,17.5,NA,NA,BP,0,1,0,0,IN,3.2,6,NA,NA
+Chum Salmon,Oncorhynchus keta,BLAST,Salmonidae,Salmoniformes,Actinopteri,0,Temperate,Worldwide,0,1,0,1,BP,0,1,0,0,TL,3.7,100,7,2.35,BP,0,1,0,0,TL,3.2,4.5,NA,NA
+Coho Salmon,Oncorhynchus kisutch,"BLAST, Greig and Gnaedinger 1971",Salmonidae,Salmoniformes,Actinopteri,0,Temperate,Worldwide,1,1,0,1,PE,0,0,1,1,TL,4.2,108,5,1.88,BE,1,0,0,0,TL,3.2,65.9,29,0.295
+Rainbow Trout,Oncorhynchus mykiss,"BLAST, Greig and Gnaedinger 1971",Salmonidae,Salmoniformes,Actinopteri,0,Temperate,Worldwide,1,1,0,0,PE,0,0,1,1,TL,4.1,122,11,1.44,BP,0,1,0,0,TL,3.7,80,NA,0.996
+Sockeye Salmon,Oncorhynchus nerka,BLAST,Salmonidae,Salmoniformes,Actinopteri,0,Temperate,Worldwide,0,1,0,1,PE,0,0,1,0,TL,3.5,84,8,2.88,BE,1,0,0,0,TL,3.8,200,NA,0.407
+Chinook Salmon,Oncorhynchus tshawytscha,BLAST,Salmonidae,Salmoniformes,Actinopteri,0,Temperate,Worldwide,0,1,0,1,BP,0,1,0,1,TL,4.4,150,9,1.5,BE,1,0,0,0,TL,4.4,168,48,NA
+NA,Onychostoma macrolepis,BLAST,Cyprinidae,Cypriniformes ,Actinopteri,0,Subtropical,Asia,0,1,1,0,BP,0,1,0,0,IN,NA,26.5,NA,NA,BE,1,0,0,0,TL,4,150,18,0.518
+Blue Tilapia,Oreochromis aureus,BLAST,Cichlidae,Cichliformes,Actinopteri,1,Tropical,Worldwide,0,1,1,0,BP,0,1,0,1,TL,2.1,45.7,NA,0.428,BE,1,0,0,0,TL,4.3,56.3,NA,0.611
+Nile Tilapia,Oreochromis niloticus,BLAST,Cichlidae,Cichliformes,Actinopteri,1,Tropical,Africa,0,1,1,0,BP,0,1,0,1,TL,2,60,9,0.407,BE,1,0,0,0,TL,3.3,15.2,NA,NA
+Javenese Ricefish,Oryzias javanicus,BLAST,Adrianichthyidae,Beloniformes,Actinopteri,1,Tropical,Asia,0,1,0,0,BP,0,1,0,0,IN,3.4,4.5,NA,NA,BE,1,0,0,0,TL,2.8,90,NA,0.314
+Japenese Rice Fish,Oryzias latipes,BLAST,Adrianichthyidae,Beloniformes,Actinopteri,0,Subtropical,Asia,0,1,1,0,BP,0,1,0,0,TL,3.4,4,NA,NA,BE,1,0,0,0,IN,2.3,11.3,NA,NA
+Indian Medaka,Oryzias melastigma,BLAST,Adrianichthyidae,Beloniformes,Actinopteri,1,Tropical,Asia,0,1,0,0,BP,0,1,0,0,TL,3.3,4,NA,NA,BP,0,1,0,0,IN,2.9,9,NA,NA
+European Smelt,Osmerus eperlanus,Hirn and Pekkanen 1975,Osmeridae,Osmeriformes,Actinopteri,0,Temperate,Europe,1,NA,0,1,PE,0,0,1,0,TL,3.5,45,10,1.7,BE,1,0,0,0,TL,2.9,100,NA,0.313
+Rainbow Smelt,Osmerus mordax,"Tillitt et al. 2005, Greig and Gnaedinger 1971, Zajicek et al. 2005, Kraft et al. 2014, Honeyfield et al. 2010, Nielands 1947, Gnaedinger and Krzeczkowski 1966",Osmeridae,Osmeriformes,Actinopteri,0,Temperate,Worldwide,1,NA,1,0,BE,1,0,0,1,TL,3,35.6,7,1.57,BE,1,0,0,0,TL,4.7,200,30,1.17
+Striped Catfish,Pangasianodon hypophthalmus,BLAST,Pangasiidae,Siluriformes,Actinopteri,1,Tropical,Asia,0,1,1,0,BP,0,1,0,0,IN,3.1,130,NA,0.16,BE,1,0,0,0,TL,3.4,60,NA,0.136
+Bastard Halibut,Paralichthys olivaceus,BLAST,Paralichthyidae,Pleuronectiformes,Actinopteri,0,Subtropical,Indo-Pacific,0,1,0,1,BE,1,0,0,0,TL,4.5,103,NA,0.284,BP,0,1,0,0,IN,3.3,8,NA,NA
+Indian Glassy Fish,Pseudambassis ranga,BLAST,Ambassidae,Ovalentaria,Actinopteri,1,Tropical,Asia,0,1,1,0,BE,1,0,0,0,TL,3.5,8.2,NA,0.589,BP,0,1,0,0,TL,4,43.5,4,0.585
+NA,Paramormyrops kingsleyae,BLAST,Mormyridae,Osteoglossiformes,Actinopteri,1,Tropical,Africa,0,1,1,0,BP,0,1,0,0,IN,3.2,13.5,NA,NA,BP,0,1,0,0,IN,3.2,6.5,NA,0
+Yellow Perch,Perca flavescens,"BLAST, Tillitt et al. 2005, Greig and Gnaedinger 1971, Nielands 1947",Percidae,Perciformes,Actinopteri,0,Subtropical,North America,1,1,0,0,BP,0,1,0,0,TL,3.7,50,11,0.305,BP,0,1,0,0,TL,3.7,100,7,2.35
+European Perch,Perca fluviatilis,"BLAST, Arsan 1970",Percidae,Perciformes,Actinopteri,0,Temperate,Eurasia,0,1,0,0,BE,1,0,0,1,TL,4.4,60,22,0.56,PE,0,0,1,0,TL,3.5,84,8,2.88
+Logperch,Percina caprodes,Boggs et al. 2019,Percidae,Perciformes,Actinopteri,0,Temperate,North America,1,NA,0,0,BP,0,1,0,0,IN,3.4,18,3,NA,BP,0,1,0,1,TL,4.4,150,9,1.5
+Longhead Darter,Percina macrocephala,Boggs et al. 2019,Percidae,Perciformes,Actinopteri,0,Temperate,North America,1,NA,0,0,BP,0,1,0,0,IN,3.4,12,4,NA,BP,0,1,0,0,IN,3.4,4.5,NA,NA
+Mudskipper,Periophthalmus magnuspinnatus,BLAST,Oxudercidae,Gobiiformes,Actinopteri,0,Temperate,Asia,0,1,0,0,BE,1,0,0,0,IN,3.2,10.3,NA,NA,BP,0,1,0,0,TL,3.3,4,NA,NA
+Lamprey,Petromyzon marinus,"BLAST, Greig and Gnaedinger 1971",Petromyzontidae,Petromyzontiformes,Petromyzonti,0,Temperate,Worldwide,1,1,0,1,BE,1,0,0,1,TL,4.4,120,11,0.957,PE,0,0,1,0,IN,3.2,3.9,NA,NA
+Fathead Minnow,Pimephales promelas,"BLAST, Greig and Gnaedinger 1971, Chaet and Bishop 1952",Leuciscidae,Cypriniformes ,Actinopteri,0,Subtropical,North America,1,1,1,0,BE,1,0,0,0,IN,2.4,10.1,5,NA,BP,0,1,0,0,IN,3.2,5,NA,NA
+Bluntnose Minnow,Pimephales notatus,Boggs et al. 2019,Leuciscidae,Cypriniformes ,Actinopteri,0,Temperate,North America,1,NA,1,0,BE,1,0,0,0,IN,2.7,11,5,NA,BP,0,1,0,0,IN,3.3,10,NA,NA
+Ayu Sweetfish,Plecoglossus altivelis,Fujita 1954,Plecoglossidae,Osmeriformes,Actinopteri,0,Subtropical,Asia,1,NA,0,1,BE,1,0,0,0,TL,2.8,70,3,0.657,BP,0,1,0,0,IN,3.2,3.9,NA,NA
+Leopard Coralgrouper,Plectropomus leopardus,BLAST,Serranidae,Perciformes,Actinopteri,1,Tropical,Indo-Pacific,0,1,0,1,BE,1,0,0,0,TL,4.4,120,26,0.143,BP,0,1,0,0,IN,3.2,6,NA,NA
+Amazon Molly,Poecilia formosa,BLAST,Poeciliidae,Cyprinodontiformes,Actinopteri,0,Subtropical,North America,0,1,1,0,BP,0,1,0,0,TL,2.5,9.6,NA,NA,BE,1,0,0,0,TL,3.4,23.9,7,0.714
+Sailfin Molly,Poecilia latipinna,BLAST,Poeciliidae,Cyprinodontiformes,Actinopteri,0,Subtropical,North America,0,1,1,1,BP,0,1,0,1,TL,2,15,NA,NA,BE,1,0,0,0,TL,2.8,62,NA,0.289
+Shortfin Molly,Poecilia mexicana,BLAST,Poeciliidae,Cyprinodontiformes,Actinopteri,1,Tropical,Central America,0,1,1,0,BP,0,1,0,1,TL,2,11,NA,NA,BE,1,0,0,0,TL,4.5,103,NA,0.284
+Guppy,Poecilia reticulata,BLAST,Poeciliidae,Cyprinodontiformes,Actinopteri,1,Tropical,South America,0,1,0,0,BP,0,1,0,1,TL,3.2,6,NA,NA,BE,1,0,0,1,TL,4.4,60,22,0.56
+Blackstripe Livebearer,Poeciliopsis prolifica,BLAST,Poeciliidae,Cyprinodontiformes,Actinopteri,0,Subtropical,Central America,0,1,0,0,BP,0,1,0,0,TL,NA,3,NA,NA,BE,1,0,0,0,IN,3.2,10.3,NA,NA
+Saithe,Pollachius virens,"Greig and Gnaedinger 1971, Nielands 1947",Gadidae,Gadiformes,Actinopteri,0,Temperate,Worldwide,1,NA,0,1,BE,1,0,0,0,TL,4.3,130,25,0.584,BE,1,0,0,0,TL,4.4,120,26,0.143
+Mississippi Paddlefish,Polyodon spathula,BLAST,Polyodontidae,Acipenseriformes,Actinopteri,0,Subtropical,North America,0,1,1,0,BE,1,0,0,1,IN,3.4,221,55,0.285,BP,0,1,0,1,TL,3.2,6,NA,NA
+Gray Bichir,Polypterus senegalus,BLAST,Polypteridae,Polypteriformes,Actinopteri,1,Tropical,Africa,0,1,1,0,BE,1,0,0,0,IN,3.5,70,NA,0.227,BP,0,1,0,0,TL,NA,3,NA,NA
+Black Crappie,Pomoxis nigromaculatus,"Greig and Gnaedinger 1971, Chaet and Bishop 1952",Centrarchidae,Centrarchiformes,Actinopteri,0,Subtropical,North America,1,NA,0,0,BP,0,1,0,0,IN,3.8,49,15,0.397,BE,1,0,0,1,IN,3.4,221,55,0.285
+Atlantic Butterfish,Peprilus triacanthus,Greig and Gnaedinger 1971,Stromateidae,Scombriformes ,Actinopteri,0,Subtropical,North America,1,NA,1,1,BP,0,1,0,0,TL,3.9,30,NA,0.781,BE,1,0,0,0,IN,3.5,70,NA,0.227
+Bighead Searobin,Prionotus tribulus,Greig and Gnaedinger 1971,Triglidae,Perciformes,Actinopteri,0,Subtropical,North America,1,NA,0,1,BE,1,0,0,0,TL,3.7,35,NA,0.387,BE,1,0,0,0,IN,3.8,100,NA,NA
+Round Whitefish,Prosopium cylindraceum,Riley and Evans 2008,Salmonidae,Salmoniformes,Actinopteri,0,Temperate,Worldwide,1,NA,1,0,BE,1,0,0,0,TL,3.3,59,16,NA,BE,1,0,0,0,TL,3.4,60,NA,0.335
+West African Lungfish,Protopterus annectens,BLAST,Protopteridae,Ceratodontiformes,Actinopteri,1,Tropical,Africa,0,1,0,0,BE,1,0,0,0,IN,3.8,100,NA,NA,BP,0,1,0,0,IN,2.6,7.7,NA,NA
+South Georgia Icefish,Pseudochaenichthys georgianus,BLAST,Channichthyidae,Perciformes,Actinopteri,0,Polar,Antarctica,0,1,0,1,BE,1,0,0,0,TL,3.4,60,NA,0.335,PE,0,0,1,0,TL,3.6,1700,80,NA
+Winter Flounder,Pseudopleuronectes americanus,"Greig and Gnaedinger 1971, Nielands 1947",Pleuronectidae,Pleuronectiformes,Actinopteri,0,Temperate,North America,1,NA,0,1,BE,1,0,0,0,TL,3.6,64,14,0.359,BE,1,0,0,0,TL,2,14,NA,0.186
+Winter Flounder,Pseudopleuronectes americanus dignabilis,Greig and Gnaedinger 1971,Pleuronectidae,Pleuronectiformes,Actinopteri,0,Temperate,North America,1,NA,0,1,BE,1,0,0,0,TL,3.6,64,14,0.359,BP,0,1,0,0,TL,4.4,107,40,1.82
+Ninespine Stickleback,Pungitius pungitius,"BLAST, Tillitt et al. 2005",Gasterosteidae,Perciformes,Actinopteri,0,Boreal,Worldwide,1,1,0,0,BP,0,1,0,0,TL,3.3,9,5,NA,PE,0,0,1,1,TL,4,100,17,1.15
+Sumatra Barb,Puntigrus tetrazona,BLAST,Cyprinidae,Cypriniformes ,Actinopteri,1,Tropical,Asia,0,1,1,0,BP,0,1,0,0,IN,2.9,7,NA,NA,BE,1,0,0,0,TL,4.4,100,25,0.592
+Red Pirahna,Pygocentrus nattereri,BLAST,Serrasalmidae,Characiformes,Actinopteri,0,Subtropical,South America,0,1,1,0,PE,0,0,1,0,IN,3.7,50,NA,0.572,BE,1,0,0,0,TL,3.8,100,12,0.202
+Whale Shark,Rhincodon typus,BLAST,Rhincodontidae,Orectolobiformes,Elasmobranchii,0,Subtropical,Worldwide,0,1,0,1,PE,0,0,1,0,TL,3.6,1700,80,NA,BE,1,0,0,0,TL,3.6,29.8,NA,NA
+Longnose Dace,Rhinichthys cataractae,"Boggs et al. 2019, Kraft et al. 2014",Leuciscidae,Cypriniformes ,Actinopteri,0,Subtropical,North America,1,NA,1,0,BE,1,0,0,0,IN,3.2,22.5,5,NA,BE,1,0,0,0,TL,4.5,190,15,0.224
+Blacknose Dace,Rhinichthys atratulus,"Kraft et al. 2014, Chaet and Bishop 1952",Leuciscidae,Cypriniformes ,Actinopteri,0,Temperate,North America,1,NA,1,0,BE,1,0,0,0,IN,3.1,12.4,3,NA,BP,0,1,0,0,TL,4.2,250,12,0.679
+NA,Rhinogobius similis,Fujita 1954,Gobiidae,Gobiiformes,Actinopteri,0,Temperate,Asia,1,NA,1,0,BP,0,1,0,1,IN,3.3,10,NA,NA,BP,0,1,0,0,IN,2,19.5,NA,NA
+Roach,Rutilus rutilus,"Chaet and Bishop 1952, Arsan 1970",Leuciscidae,Cypriniformes ,Actinopteri,0,Subtropical,Europe,1,NA,1,0,BP,0,1,0,1,TL,3,50.2,14,0.8,BP,0,1,0,0,IN,4.5,70,9,NA
+Jewelled Blenny,Salarias fasciatus,BLAST,Blenniidae,Blenniiformes,Actinopteri,1,Tropical,Indo-Pacific,0,1,0,1,BE,1,0,0,0,TL,2,14,NA,0.186,BP,0,1,0,0,IN,2.9,23,NA,NA
+Atlantic Salmon,Salmo salar,"BLAST, Greig and Gnaedinger 1971, Nielands 1947",Salmonidae,Salmoniformes,Actinopteri,0,Temperate,Worldwide,1,1,0,1,BP,0,1,0,0,TL,4.5,150,13,1.81,BE,1,0,0,0,TL,3.3,60,NA,0.158
+Brown Trout,Salmo trutta,"BLAST, Greig and Gnaedinger 1971",Salmonidae,Salmoniformes,Actinopteri,0,Temperate,Worldwide,1,1,0,1,PE,0,0,1,1,TL,3.4,140,38,1.09,BE,1,0,0,0,TL,3.7,70,11,1.29
+Arctic Char,Salvelinus alpinus,BLAST,Salmonidae,Salmoniformes,Actinopteri,0,Temperate,Worldwide,0,1,0,1,BP,0,1,0,0,TL,4.4,107,40,1.82,BE,1,0,0,0,TL,3.6,10,NA,0.163
+Lake Trout,Salvelinus namaycush,"BLAST, Greig and Gnaedinger 1971",Salmonidae,Salmoniformes,Actinopteri,0,Temperate,North America,1,1,0,0,BP,0,1,0,0,TL,4.3,150,50,1.07,BE,1,0,0,0,TL,2,10,NA,0.141
+Sauger,Sander canadensis,Greig and Gnaedinger 1971,Percidae,Perciformes,Actinopteri,0,Subtropical,North America,1,NA,1,0,BP,0,1,0,0,IN,4.1,76,18,NA,BE,1,0,0,0,TL,3.3,50,NA,NA
+Pike-Perch,Sander lucioperca,BLAST,Percidae,Perciformes,Actinopteri,0,Temperate,Eurasia,0,1,0,0,PE,0,0,1,1,TL,4,100,17,1.15,BE,1,0,0,0,TL,3.4,30,NA,NA
+Walleye,Sander vitreus,"Greig and Gnaedinger 1971, Boggs et al. 2019",Percidae,Perciformes,Actinopteri,0,Subtropical,North America,1,NA,0,0,BP,0,1,0,0,TL,4.5,107,29,0.429,BE,1,0,0,0,TL,3.4,35,NA,NA
+Fringescale Sardinella,Sardinella fimbriata,Deolalkar and Sohonie 1954,Clupeidae,Clupeiformes,Actinopteri,1,Tropical,Indo-Pacific,1,NA,1,1,PE,0,0,1,0,TL,2.7,19,NA,0.765,BE,1,0,0,0,TL,3.6,80,NA,1.09
+Rudd,Scardinius erythrophthalmus,"Chaet and Bishop 1952, Arsan 1970",Leuciscidae,Cypriniformes ,Actinopteri,0,Temperate,Eurasia,1,NA,1,0,BP,0,1,0,1,TL,2.9,61.7,19,1.25,BE,1,0,0,0,IN,3.4,17,NA,NA
+Asian Bonytongue,Scleropages formosus,BLAST,Osteoglossidae,Osteoglossiformes,Actinopteri,1,Tropical,Asia,0,1,1,0,BP,0,1,0,0,IN,3.9,90,NA,NA,BE,1,0,0,0,IN,3.4,9.3,NA,NA
+Club Mackerel,Scomber japonicus,Greig and Gnaedinger 1971,Scombridae,Scombriformes ,Actinopteri,0,Subtropical,Indo-Pacific,1,NA,1,1,PE,0,0,1,0,TL,3.4,64,18,0.397,PE,0,0,1,0,TL,4.4,239,9,0.573
+Atlantic Mackerel,Scomber scombrus,"Greig and Gnaedinger 1971, Nielands 1947",Scombridae,Scombriformes ,Actinopteri,0,Temperate,Worldwide,1,NA,0,1,PE,0,0,1,0,TL,3.6,60,17,1.34,PE,0,0,1,0,TL,3.9,245,20,0.639
+Turbot,Scophthalmus maximus,BLAST,Scophthalmidae,Pleuronectiformes,Actinopteri,0,Temperate,Europe,0,1,0,1,BE,1,0,0,0,TL,4.4,100,25,0.592,BE,1,0,0,0,TL,2.6,30,NA,NA
+Lesser Spotted Dogfish,Scyliorhinus canicula,BLAST,Scyliorhinidae,Carcharhiniformes,Elasmobranchii,0,Subtropical,Europe,0,1,0,1,BE,1,0,0,0,TL,3.8,100,12,0.202,BE,1,0,0,0,TL,3.4,28,10,0.359
+Golden Redfish,Serranus scriba,Greig and Gnaedinger 1971,Sebastidae,Perciformes,Actinopteri,0,Temperate,Worldwide,1,NA,0,1,PE,0,0,1,0,TL,4,100,60,1.29,PE,0,0,1,0,TL,4.5,455,NA,0.322
+Honeycomb Rockfish,Sebastes umbrosus,BLAST,Sebastidae,Perciformes,Actinopteri,0,Subtropical,North America,0,1,0,1,BE,1,0,0,0,TL,3.6,29.8,NA,NA,BP,0,1,0,0,IN,3.1,6,NA,NA
+Creek Chub,Semotilus atromaculatus,"Kraft et al. 2014, Chaet and Bishop 1952",Leuciscidae,Cypriniformes ,Actinopteri,0,Temperate,North America,1,NA,1,0,BE,1,0,0,0,IN,4,30.3,8,NA,BE,1,0,0,0,IN,2.7,11,5,NA
+Fallfish,Semotilus corporalis,Chaet and Bishop 1952,Leuciscidae,Cypriniformes ,Actinopteri,0,Temperate,North America,1,NA,1,0,BE,1,0,0,0,IN,3.4,51,6,NA,BE,1,0,0,0,TL,2.7,32,9,NA
+Fallfish,Semotilus corporalis,"Boggs et al. 2019, Kraft et al. 2014",Leuciscidae,Cypriniformes ,Actinopteri,0,Temperate,North America,1,NA,1,0,BE,1,0,0,0,IN,3.4,51,6,NA,BP,0,1,0,0,IN,2.8,7.2,3,NA
+Greater Amberjack,Seriola dumerili,BLAST,Carangidae,Carangiformes,Actinopteri,0,Subtropical,Worldwide,0,1,0,1,BE,1,0,0,0,TL,4.5,190,15,0.224,BE,1,0,0,0,IN,3,16,2,NA
+Yellowtail Amberjack,Seriola lalandi,BLAST,Carangidae,Carangiformes,Actinopteri,0,Subtropical,Worldwide,0,1,0,1,BP,0,1,0,0,TL,4.2,250,12,0.679,BE,1,0,0,0,IN,2.9,14,NA,NA
+Chinese Large-Mouth Catfish,Silurus meridionalis,BLAST,Siluridae,Siluriformes,Actinopteri,0,Subtropical,Asia,0,1,1,0,BE,1,0,0,0,IN,4.2,114,NA,NA,BP,0,1,0,0,IN,3.1,11,3,NA
+Amur Catfish,Silurus asotus,Fujita 1954,Siluridae,Siluriformes,Actinopteri,0,Temperate,Asia,1,NA,1,0,BE,1,0,0,0,IN,4.4,130,NA,NA,BE,1,0,0,0,IN,3.2,22.5,5,NA
+NA,Simochromis diagramma,BLAST,Cichlidae,Cichliformes,Actinopteri,1,Tropical,Africa,0,1,0,0,BP,0,1,0,0,IN,2,19.5,NA,NA,BE,1,0,0,0,IN,3.2,33,5,NA
+Mandarin Fish,Siniperca chuatsi,BLAST,Sinipercidae,Centrarchiformes,Actinopteri,0,Temperate,Asia,0,1,0,0,BP,0,1,0,0,IN,4.5,70,9,NA,BE,1,0,0,0,TL,3.1,75,9,NA
+NA,Sinocyclocheilus anshuiensis,BLAST,Cyprinidae,Cypriniformes ,Actinopteri,0,Subtropical,Asia,0,1,1,0,BP,0,1,0,0,IN,2.9,10,NA,NA,BP,0,1,0,0,IN,3.4,18,3,NA
+Golden-Line Barbel,Sinocyclocheilus grahami,BLAST,Cyprinidae,Cypriniformes ,Actinopteri,0,Temperate,Asia,0,1,1,0,BP,0,1,0,0,IN,2.9,23,NA,NA,BE,1,0,0,0,IN,3.4,51,6,NA
+NA,Sinocyclocheilus rhinocerous,BLAST,Cyprinidae,Cypriniformes ,Actinopteri,0,Subtropical,Asia,0,1,1,0,BP,0,1,0,0,IN,2.9,9.7,NA,NA,BP,0,1,0,0,IN,2.9,11,4,NA
+Sengalese Sole,Solea senegalensis,BLAST,Soleidae,Pleuronectiformes,Actinopteri,1,Tropical,Africa,0,1,0,1,BE,1,0,0,0,TL,3.3,60,NA,0.158,BP,0,1,0,0,IN,3.3,7.8,4,NA
+Gilthead Seabream,Sparus aurata,BLAST,Sparidae,Eupercaria,Actinopteri,0,Subtropical,Europe,0,1,0,1,BE,1,0,0,0,TL,3.7,70,11,1.29,BP,0,1,0,0,IN,3.4,17,5,NA
+Orbiculate Cardinalfish,Sphaeramia orbicularis,BLAST,Apogonidae,Kurtiformes,Actinopteri,1,Tropical,Indo-Pacific,0,1,0,1,BE,1,0,0,0,TL,3.6,10,NA,0.163,BP,0,1,0,0,IN,3.4,12,4,NA
+European Sprat,Sprattus sprattus,Wistbacka and Bylund 2008,Clupeidae,Clupeiformes,Actinopteri,0,Temperate,Europe,1,NA,1,1,PE,0,0,1,0,TL,3,16,6,1.16,BE,1,0,0,0,IN,4.4,30,1,NA
+Picked Dogfish,Squalus acanthias,"Greig and Gnaedinger 1971, Nielands 1947",Squalidae,Squaliformes,Elasmobranchii,0,Temperate,Worldwide,1,NA,0,1,BP,0,1,0,0,TL,4.4,160,75,1.48,BE,1,0,0,0,IN,3.3,15,NA,NA
+Bicolor Damselfish,Stegastes partitus,BLAST,Pomacentridae,Ovalentaria,Actinopteri,1,Tropical,Worldwide,0,1,0,1,BE,1,0,0,0,TL,2,10,NA,0.141,BE,1,0,0,0,IN,3.8,109,30,NA
+Scup,Stenotomus chrysops,Greig and Gnaedinger 1971,Sparidae,Eupercaria,Actinopteri,0,Subtropical,North America,1,NA,0,1,BE,1,0,0,0,TL,3.8,46,NA,0.37,BP,0,1,0,0,IN,2.8,12,5,NA
+Greater Pipefish,Syngnathus acus,BLAST,Syngnathidae ,Syngnathiformes,Actinopteri,0,Subtropical,Worldwide,0,1,0,1,BE,1,0,0,0,TL,3.3,50,NA,NA,BE,1,0,0,0,IN,4,30.3,8,NA
+Inshore Lizardfish,Synodus foetens,Greig and Gnaedinger 1971,Synodontidae,Aulopiformes ,Actinopteri,1,Tropical,Worldwide,1,NA,0,1,BE,1,0,0,0,TL,4.5,53.8,NA,0.17,BP,0,1,0,0,IN,3.2,8.4,4,NA
+Olive Barb,Systomus sarana,Deolalkar and Sohonie 1954,Cyprinidae,Cypriniformes ,Actinopteri,1,Tropical,Asia,1,NA,1,0,BP,0,1,0,0,TL,2.9,42,NA,0.553,PE,0,0,1,0,TL,4.1,60,NA,2.9
+Yellow Catfish,Tachysurus fulvidraco,BLAST,Bagridae,Siluriformes,Actinopteri,0,Subtropical,Asia,0,1,1,0,BE,1,0,0,0,IN,3.5,34.5,NA,NA,BE,1,0,0,0,TL,3.6,150,NA,0.352
+NA,Takifugu bimaculatus,BLAST,Tetraodontidae,Tetraodontiformes,Actinopteri,0,Subtropical,Asia,0,1,0,1,BE,1,0,0,0,TL,3.4,30,NA,NA,PE,0,0,1,0,TL,3.5,45,10,1.7
+Yellowbelly Pufferfish,Takifugu flavidus,BLAST,Tetraodontidae,Tetraodontiformes,Actinopteri,0,Temperate,Asia,0,1,0,1,BE,1,0,0,0,TL,3.4,35,NA,NA,BP,0,1,0,1,TL,2.9,40,16,NA
+Japenese Pufferfish,Takifugu rubripes,BLAST,Tetraodontidae,Tetraodontiformes,Actinopteri,0,Temperate,Asia,0,1,0,1,BE,1,0,0,0,TL,3.6,80,NA,1.09,BE,1,0,0,0,IN,4.4,130,NA,NA
+Tautog,Tautoga onitis,Greig and Gnaedinger 1971,Labridae,Eupercaria,Actinopteri,0,Subtropical,North America,1,NA,0,1,BE,1,0,0,0,TL,3.3,91,34,0.342,BE,1,0,0,1,TL,3.2,28,NA,NA
+Cunner,Tautogolabrus adspersus,Greig and Gnaedinger 1971,Labridae,Eupercaria,Actinopteri,0,Temperate,North America,1,NA,0,1,BE,1,0,0,0,TL,3.7,38,6,0.35,BE,1,0,0,0,TL,3.7,19,NA,NA
+Spotted Green Pufferfish,Dichotomyctere nigroviridis,BLAST,Tetraodontidae,Tetraodontiformes,Actinopteri,1,Tropical,Asia,0,1,0,0,BE,1,0,0,0,IN,3.4,17,NA,NA,PE,0,0,1,0,TL,4.4,65,5,0.358
+NA,Thalassophryne amazonica,BLAST,Batrachoididae,Batrachoidiformes,Actinopteri,1,Tropical,South America,0,1,0,0,BE,1,0,0,0,IN,3.4,9.3,NA,NA,BE,1,0,0,0,TL,3.6,150,NA,0.757
+Eulachon,Thaleichthys pacificus,Csepp et al. 2017,Osmeridae,Osmeriformes,Actinopteri,0,Temperate,North America,1,NA,1,1,PE,0,0,1,0,TL,3.3,34,5,2.49,BE,1,0,0,0,TL,3.4,30,NA,NA
+Yellowfin Tuna,Thunnus albacares,BLAST,Scombridae,Scombriformes ,Actinopteri,1,Tropical,Worldwide,0,1,0,1,PE,0,0,1,0,TL,4.4,239,9,0.573,BE,1,0,0,0,IN,3.2,30,NA,NA
+Southern Bluefin Tuna,Thunnus maccoyii,BLAST,Scombridae,Scombriformes ,Actinopteri,0,Temperate,Worldwide,0,1,0,1,PE,0,0,1,0,TL,3.9,245,20,0.639,BP,0,1,0,0,IN,3.2,17.5,NA,NA
+Tench,Tinca tinca,"Chaet and Bishop 1952, Suomalainen and Pihlgren 1955",Tincidae,Cypriniformes ,Actinopteri,0,Temperate,Eurasia,1,NA,1,0,BE,1,0,0,0,TL,3.7,70,NA,1.49,NA,0,0,0,NA,NA,NA,NA,NA,NA
+Banded Archerfish,Toxotes jaculatrix,BLAST,Toxotidae,Carangaria,Actinopteri,1,Tropical,Worldwide,0,1,0,1,BE,1,0,0,0,TL,2.6,30,NA,NA,BP,0,1,0,1,IN,3.3,10,NA,NA
+Emerald Rockcod,Trematomus bernacchii,BLAST,Nototheniidae,Perciformes,Actinopteri,0,Polar,Antarctica,0,1,0,1,BE,1,0,0,0,TL,3.4,28,10,0.359,PE,0,0,1,0,TL,3.2,20,10,
+Largehead Hairtail,Trichiurus lepturus,Greig and Gnaedinger 1971,Trichiuridae,Scombriformes ,Actinopteri,0,Subtropical,Worldwide,1,NA,0,1,BP,0,1,0,0,TL,4.4,234,15,0.447,BE,1,0,0,0,TL,3.2,4,NA,NA
+NA,Triplophysa tibetana,BLAST,Nemacheilidae,Cypriniformes ,Actinopteri,0,High-altitude,Asia,0,1,1,0,BP,0,1,0,0,IN,NA,13.3,NA,NA,BE,1,0,0,0,TL,3.3,5.8,NA,NA
+Central Mudminnow,Umbra limi,Greig and Gnaedinger 1971,Umbridae,Esociformes,Actinopteri,0,Temperate,North America,1,NA,1,0,BE,1,0,0,0,IN,3.7,14,4,NA,BE,1,0,0,0,TL,4,100,8,0.523
+Hake,Urophycis cirrata,"Greig and Gnaedinger 1971, Nielands 1947",Phycidae,Gadiformes,Actinopteri,0,Deep-water,Worldwide,1,NA,0,1,BE,1,0,0,0,TL,4,66,14,NA,BE,1,0,0,0,TL,2.8,70,3,0.657
+Vimba Bream,Vimba vimba,Chaet and Bishop 1952,Leuciscidae,Cypriniformes ,Actinopteri,0,Subtropical,Eurasia,1,NA,1,0,BP,0,1,0,0,TL,3.3,50,15,NA,PE,0,0,1,0,TL,3.3,34,5,2.49
+Swordfish,Xiphias gladius,BLAST,Xiphiidae,Carangiformes,Actinopteri,0,Temperate,Worldwide,0,1,0,1,PE,0,0,1,0,TL,4.5,455,NA,0.322,BP,0,1,0,0,TL,2.9,42,NA,0.553
+Monterrey Platyfish,Xiphophorus couchianus,BLAST,Poeciliidae,Cyprinodontiformes,Actinopteri,1,Tropical,North America,0,1,0,0,BP,0,1,0,0,IN,3.1,6,NA,NA,BP,0,1,0,0,IN,NA,29,NA,NA
+Green Swordtail,Xiphophorus hellerii,BLAST,Poeciliidae,Cyprinodontiformes,Actinopteri,1,Tropical,Worldwide,0,1,1,0,BP,0,1,0,1,TL,3.2,14,NA,NA,PE,0,0,1,0,TL,3,15,NA,NA
+Southern Platyfish,Xiphophorus maculatus,BLAST,Poeciliidae,Cyprinodontiformes,Actinopteri,1,Tropical,Central America,0,1,1,0,BP,0,1,0,1,IN,3.2,4,NA,NA,PE,0,0,1,0,TL,3.3,20,NA,0.746
+Ocean Pout,Zoarces americanus,"Greig and Gnaedinger 1971, Nielands 1947",Zoarcidae,Perciformes,Actinopteri,0,Temperate,North America,1,NA,0,1,BE,1,0,0,0,TL,4.2,110,18,0.8,PE,0,0,1,0,TL,2.7,19,NA,0.765
 Silver Carp,Hypophthalmichthys molitrix,Cypriniformes ,Actinopteri,1,0,0,0,1,0,0,0,1,Subtropical,Asia,1,NA,1,0,,,0,NS,BP,0,1,0,1,TL,2,120,20,0.306
