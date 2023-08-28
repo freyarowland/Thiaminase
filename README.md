@@ -16,7 +16,7 @@ A repository related to the manuscript exploring the evolutionary and ecological
 #### .csv files
 - [AllData.csv](<data/AllData.csv>) includes all ecological fish data from https://www.fishbase.de/ paired with thiaminase presence/absence
 - [OrderPresAbs.csv](<data/OrderPresAbs.csv>) is a csv file with presence of absence of thiaminase within each fish order in the Rabosky phylogeny
-- [OrderPresAbsNA.csv](<OrderPresAbsNA.csv>) includes NA for orders not present in our dataset but are in the Rabosky phylogeny
+- [OrderPresAbsNA.csv](<data/OrderPresAbsNA.csv>) includes NA for orders not present in our dataset but are in the Rabosky phylogeny
 
 #### .tre files
 - [fishorder_skeletal.tre](<data/fishorder_skeletal.tre>) is the evolutionary phylogeny from [Rabosky et al. 2018](<https://www.nature.com/articles/s41586-018-0273-1>) downloaded from <https://fishtreeoflife.org/>
