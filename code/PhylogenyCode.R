@@ -106,11 +106,11 @@ phylANOVA(tree = pruned_tree, x= pruned_tree$tip.label, y = fmode, nsim = 200, p
 
 # make simulation of probability of thiaminase ----
 # equal probability across the whole tree? LOL
-# thia.trees<-make.simmap(drop.tip(fish.tree, no_data),
-#                         fmode,
-#                         nsim=200)
-# obj<-densityMap(thia.trees,states=c("present","absent"),plot=FALSE)
-# plot(obj,lwd=4,outline=TRUE,fsize=c(0.7,0.9),legend=50)
+thia.trees<-make.simmap(drop.tip(fish.tree, remove_taxa),
+                        fmode,
+                        nsim=200)
+obj<-densityMap(thia.trees,states=c("present","absent"),plot=FALSE)
+plot(obj,lwd=4,outline=TRUE,fsize=c(0.7,0.9),legend=50)
 
 # stochastic mapping ----
 smap.trees <- make.simmap(pruned_tree, fmode, 

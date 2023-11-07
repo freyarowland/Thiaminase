@@ -1,39 +1,36 @@
 # Evolutionary and ecological correlates of thiaminase in fishes
 
 ## Authors
-- Freya Rowland
-- Cathy Richter
-- Don Tillitt
-- David Walters
+- Freya Rowland<sup>1</sup>
+- Cathy Richter<sup>1</sup>
+- Don Tillitt<sup>1</sup>
+- David Walters<sup>1</sup>
 
-A repository for exploring the evolutionary and ecological factors driving thiaminase production in fishes
+<sup>1</sup>U.S. Geological Survey, Columbia Environmental Research Center, Columbia MO USA
 
-## Data files
+A repository related to the manuscript exploring the evolutionary and ecological factors driving thiaminase production in fishes. Archived on Zenodo [![DOI](https://zenodo.org/badge/428418093.svg)](https://zenodo.org/badge/latestdoi/428418093)
 
+## data
+### Includes all data files used in the study
+
+#### .csv files
 - [AllData.csv](<data/AllData.csv>) includes all ecological fish data from https://www.fishbase.de/ paired with thiaminase presence/absence
-- [fishorder_skeletal.tre](<data/fishorder_skeletal.tre>) is the evolutionary phylogeny from [Rabosky et al. 2018](<https://www.nature.com/articles/s41586-018-0273-1>) downloaded from <https://fishtreeoflife.org/>
-- [BecanturTree.tre](<data/BecanturTree.tre>) family-level phylogeny from [Betancur et al. 2017](<https://bmcecolevol.biomedcentral.com/articles/10.1186/s12862-017-0958-3>) who also has a GitHub repository https://github.com/projectdigest/betancur_r-fish-tree/
 - [OrderPresAbs.csv](<data/OrderPresAbs.csv>) is a csv file with presence of absence of thiaminase within each fish order in the Rabosky phylogeny
-- [OrderPresAbsNA.csv](<OrderPresAbsNA.csv>) includes NA for orders not present in our dataset but are in the Rabosky phylogeny
+- [OrderPresAbsNA.csv](<data/OrderPresAbsNA.csv>) includes NA for orders not present in our dataset but are in the Rabosky phylogeny
 
-## R Scripts
+#### .tre files
+- [fishorder_skeletal.tre](<data/fishorder_skeletal.tre>) is the evolutionary phylogeny from [Rabosky et al. 2018](<https://www.nature.com/articles/s41586-018-0273-1>) downloaded from <https://fishtreeoflife.org/>
+- [BetancurTree.tre](<data/Betancur2017.tre>) family-level phylogeny from [Betancur-R et al. 2017](<https://bmcecolevol.biomedcentral.com/articles/10.1186/s12862-017-0958-3>) who also has a GitHub repository https://github.com/projectdigest/betancur_r-fish-tree/
+
+#### .xlsx file of all data plus metadata
+- [Appendix_ThiaminaseManuscript.xlsx](<data/Appendix_ThiaminaseManuscript.xlsx>) is the full dataset including all references for thiaminase presence/absence, metadata for each column, and verified names
+
+## code
+### R scripts for analysis and figures
 
 - [Models.R](<code/Models.R>) includes Bayesian models for predicting thiaminase based on ecological fish characteristics from https://www.fishbase.de/
 - [PhylogenyCode.R](<code/PhylogenyCode.R>) order-level phylogeny based on https://fishtreeoflife.org/taxonomy/ and analysis to see if node distance can predict thiaminase presence/absence
-- [code/PruningBetancur.R](<code/PruningBetancur.R>) is the family-level code for pruning the Betancur et al. data to family-level and plotting the character simulations at each node
+- [PruningBetancur.R](<code/PruningBetancur.R>) is the family-level code for pruning the Betancur et al. data to family-level and plotting the character simulations at each node
 
 ## Figures
-
-Figures for publication.
-
-### Family-level phylogeny. No evolutionary relationship between probability of thiaminase expression within a family.
-![Family_phylogeny](figures/family_phylogeny_v2.png)
-
-### Order-level phylogeny has same pattern. No evolutionary relationship
-![order_phylogeny](figures/order_phylogeny_v2.png)
-
-### Multiple regression
-![multreg](figures/multreg_plot.png)
-
-### all significant plots
-![Allsig](figures/allsigplots.png)
+### All figures generated for the study
