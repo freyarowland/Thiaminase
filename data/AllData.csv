@@ -301,4 +301,4 @@ Monterrey Platyfish,Xiphophorus couchianus,BLAST,Poeciliidae,Cyprinodontiformes,
 Green Swordtail,Xiphophorus hellerii,BLAST,Poeciliidae,Cyprinodontiformes,Actinopteri,1,Tropical,Worldwide,0,1,1,0,BP,0,1,0,1,TL,3.2,14,NA,NA,PE,0,0,1,0,TL,3,15,NA,NA
 Southern Platyfish,Xiphophorus maculatus,BLAST,Poeciliidae,Cyprinodontiformes,Actinopteri,1,Tropical,Central America,0,1,1,0,BP,0,1,0,1,IN,3.2,4,NA,NA,PE,0,0,1,0,TL,3.3,20,NA,0.746
 Ocean Pout,Zoarces americanus,"Greig and Gnaedinger 1971, Nielands 1947",Zoarcidae,Perciformes,Actinopteri,0,Temperate,North America,1,NA,0,1,BE,1,0,0,0,TL,4.2,110,18,0.8,PE,0,0,1,0,TL,2.7,19,NA,0.765
-Silver Carp,Hypophthalmichthys molitrix,"Wolfe et al. 2023",Cypriniformes ,Actinopteri,1,0,0,0,1,0,0,0,1,Subtropical,Asia,1,NA,1,0,,,0,NS,BP,0,1,0,1,TL,2,120,20,0.306
+Silver Carp,Hypophthalmichthys molitrix,"Wolfe et al. 2023",Cypriniformes ,Actinopteri,1,0,0,0,1,0,0,0,1,Subtropical,Asia,1,NA,1,0,0,NS,BP,0,1,0,1,TL,2,120,20,0.306
